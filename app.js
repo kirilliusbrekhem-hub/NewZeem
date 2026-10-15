@@ -233,9 +233,9 @@
   }
 
   /* ---------- building the issue ---------- */
-  function fetchTopic(id) {
+  function fetchTopic(id, retry) {
     var ac = new AbortController(), timer = setTimeout(function () { ac.abort(); }, 25000);
-    return fetch('/api/topic?t=' + encodeURIComponent(id) + '&lang=' + S.lang, { signal: ac.signal })
+    return fetch('/api/topic?t=' + encodeURIComponent(id) + '&lang=' + S.lang + (retry ? '&r=' + Date.now() : ''), { signal: ac.signal })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) { return j && Array.isArray(j.items) ? { id: id, items: j.items, ai: !!j.ai } : null; })
       .catch(function () { return null; })
@@ -245,6 +245,8 @@
   // Fits the stories into the time budget: a few top stories first, then the topics take turns until the five minutes are full.
   function assemble(results, mins) {
     var budget = (mins || 5) * 60;
+    var told = results.filter(function (r) { return r.ai; });
+    if (S.lang !== 'en' && told.length) results = told; // untranslated source headlines are not shown in another language
     var pool = [];
     var seenIds = {};
     results.forEach(function (r) { r.items.forEach(function (it, i) { if (seenIds[it.id]) return; seenIds[it.id] = 1; pool.push(Object.assign({}, it, { topic: r.id, pos: i })); }); });
@@ -294,6 +296,13 @@
     }
     var done = 0, ids = S.topics.slice();
     Promise.all(ids.map(function (id) { return fetchTopic(id).then(function (r) { done++; bar.textContent = t('loading', { n: done, m: ids.length }); return r; }); })).then(function (rs) {
+      // A topic whose AI retelling failed (a busy moment at the provider) is asked for once more before we give up on it.
+      var weak = rs.map(function (r, i) { return r && !r.ai ? i : -1; }).filter(function (i) { return i >= 0; });
+      var again = weak.length ? new Promise(function (ok) { setTimeout(ok, 2500); }).then(function () {
+        return Promise.all(weak.map(function (i) { return fetchTopic(ids[i], true).then(function (r) { if (r && r.ai) rs[i] = r; }); }));
+      }) : Promise.resolve();
+      return again.then(function () { return rs; });
+    }).then(function (rs) {
       var ok = rs.filter(Boolean), failed = ids.filter(function (id, i) { return !rs[i]; });
       if (key !== S.topics.join(',')) return; // the reader changed topics meanwhile
       if (!ok.length) { if (!quiet) drawFail(); return; }
@@ -393,7 +402,6 @@
       h('p.meta', t('meta', { n: d.count, m: Math.max(1, Math.round(d.total / 60)) })),
       h('div.acts', canSpeak() ? h('button.listen', { type: 'button', onclick: function () { Say.start(0); } }, ico('play'), t('listen')) : null,
         h('div.dwrap', h('span.dlab', t('howLong')), dial(function () { var c = S.cache; if (c && c.results) draw(assemble(c.results, S.mins), c.failed || []); else renderDigest(); })))));
-    if (!d.ai) main.appendChild(h('p.notice', t('noai')));
     if (failed && failed.length) main.appendChild(h('p.notice', t('skipped', { t: failed.map(topicName).join(', ') })));
     var nav = h('nav.jump', { 'aria-label': t('sections') }, d.sections.map(function (s) {
       var tp = TP.byId[s.id];

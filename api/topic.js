@@ -117,7 +117,8 @@ async function build(topic, lg) {
   aiCalls++;
   const material = list.map((x, i) => '[' + (i + 1) + '] (' + x.source + ') ' + x.title + (x.desc ? ' — ' + x.desc : '')).join('\n');
   try {
-    const j = await AI.askJson(SYSTEM(topic[lg] || topic.en, lg), '<stories>\n' + material + '\n</stories>', { temperature: 0.2, maxTokens: 2400 });
+    const ask = () => AI.askJson(SYSTEM(topic[lg] || topic.en, lg), '<stories>\n' + material + '\n</stories>', { temperature: 0.2, maxTokens: 2400 });
+    let j; try { j = await ask(); } catch (e1) { await new Promise((r) => setTimeout(r, 1500)); j = await ask(); } // one more try: providers are sometimes busy for a second
     const seen = new Set(), items = [];
     (Array.isArray(j.stories) ? j.stories : []).forEach((s) => {
       const n = Math.floor(Number(s && s.ref)), src = list[n - 1];
@@ -154,8 +155,8 @@ module.exports = async (req, res) => {
   if (!topic) return send(400, { error: 'topic' });
   const key = topic.id + '|' + lg;
   const hit = mem.get(key);
-  const ttl = hit && hit.ai ? 3 * 3600e3 : 10 * 60e3;
-  if (hit && Date.now() - hit.at < ttl) return send(200, hit.body, hit.ai ? 'public, s-maxage=10800, stale-while-revalidate=43200' : 'public, s-maxage=300, stale-while-revalidate=600');
+  const ttl = hit && hit.ai ? 3 * 3600e3 : AI.configured() ? 20e3 : 10 * 60e3;
+  if (hit && (hit.ai || !u.searchParams.get('r')) && Date.now() - hit.at < ttl) return send(200, hit.body, hit.ai ? 'public, s-maxage=10800, stale-while-revalidate=43200' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
   const r = await build(topic, lg);
   if (!r.ok) {
     if (hit) return send(200, hit.body, 'public, s-maxage=60'); // serve the last good copy rather than nothing
@@ -164,6 +165,6 @@ module.exports = async (req, res) => {
   const body = { topic: topic.id, lang: lg, at: new Date().toISOString(), ai: r.ai, items: r.items };
   mem.set(key, { at: Date.now(), ai: r.ai, body });
   // A copy made without the AI is cached briefly, so the real digest replaces it as soon as the AI works.
-  send(200, body, r.ai ? 'public, s-maxage=10800, stale-while-revalidate=43200' : 'public, s-maxage=300, stale-while-revalidate=600');
+  send(200, body, r.ai ? 'public, s-maxage=10800, stale-while-revalidate=43200' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
 };
 module.exports._test = { parseFeed, pick, similar, supported, text, clip, decode };
