@@ -16,7 +16,8 @@
       fail: 'Не удалось собрать выпуск. Проверьте соединение и попробуйте ещё раз.', retry: 'Повторить', skipped: 'Не загрузились темы: {t}.',
       endH: 'На сегодня всё.', endP: 'Вы прочитали главное. Остальное подождёт, и это нормально. Следующий выпуск будет завтра.', streak: 'Серия: {n} дн.', streak1: 'Первый выпуск прочитан',
       share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'newzeem. Читай меньше. Знай больше. Новости за 5 минут: бесплатно, без рекламы и регистрации.',
-      foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник.'
+      foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник.',
+      viewsH: 'Два взгляда', viewsSub: 'Одно событие у разных изданий. Смотрите, как каждое его подаёт.', viewsNote: 'Сравнение написал ИИ по заголовкам самих изданий. Он не решает, кто прав.', followH: 'Что изменилось с вчера', followWas: 'Вчера', followNow: 'Сегодня', predH: 'Прогноз дня', predSub: 'Один тап. Узнайте, что думает мир, и возвращайтесь за результатом.', predYes: 'Да', predNo: 'Нет', predFirst: 'Вы одним из первых. Загляните позже: увидите, что думает мир.', predN: 'Голосов: {n}', predWait: 'Результат появится здесь в течение 3 дней.', predY: 'Сбылось', predNn: 'Не сбылось', predX: 'Закрыт: в новостях нет ясного ответа', predRight: 'Вы угадали', predWrong: 'В этот раз нет', predRecord: 'Ваш счёт: {a} из {b}', predNote: 'Итог подвёл ИИ по заголовкам новостей. Сверьтесь с источником.', predEarlier: 'Прошлый прогноз'
     },
     en: {
       topics: 'Topics', rx0: 'Worried', rx1: 'Glad', rx2: 'Angry', rx3: 'Surprised', rx4: 'Don\'t care', rxQ: 'How do you feel about it?', rxWith: 'You are with {p}% of readers', rxAlone: 'Only {p}% feel the same', rxIn: 'In {c}: {p}% feel the same', rxFirst: 'You are among the first to react. Come back later to see the world.', rxN: '{n} readers so far', rxNote: 'Anonymous reactions from unverified readers', rxFail: 'Could not send your reaction', worldH: 'You and the world', worldSub: 'You felt the same as most readers on {a} of {b} stories', quizH: 'Check yourself', quizSub: 'Questions about what you just read', quizFrom: 'From: {h}', quizShare: 'Share result', more: 'More', less: 'Less', detailLoad: 'Reading the article…', detailFail: 'Could not retell this one. Open the original.', detailNote: 'Retold in detail by AI. Check the original.', howLong: 'How much time do you have?', listen: 'Listen', pauseL: 'Pause', playL: 'Play', nextS: 'Next story', prevS: 'Previous story', stopL: 'Stop', noVoice: 'This device has no voice for this language',
@@ -28,7 +29,8 @@
       fail: 'Could not build your issue. Check your connection and try again.', retry: 'Try again', skipped: 'These topics did not load: {t}.',
       endH: 'That is all for today.', endP: 'You have read what matters. The rest can wait, and that is fine. The next issue is tomorrow.', streak: 'Streak: {n} days', streak1: 'First issue read',
       share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'newzeem. Read less. Know more. Your news in 5 minutes: free, no ads, no sign-up.',
-      foot: 'newzeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link.'
+      foot: 'newzeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link.',
+      viewsH: 'Two views', viewsSub: 'One event, reported by different outlets. See how each one frames it.', viewsNote: 'Comparison written by AI from the outlets\' own headlines. It does not say who is right.', followH: 'What changed since yesterday', followWas: 'Yesterday', followNow: 'Today', predH: 'Prediction of the day', predSub: 'One tap. See what the world thinks, then come back for the result.', predYes: 'Yes', predNo: 'No', predFirst: 'You are among the first. Come back later to see the world.', predN: '{n} votes', predWait: 'The result will appear here within 3 days.', predY: 'It happened', predNn: 'It did not happen', predX: 'Closed: nothing clear in the news', predRight: 'You called it', predWrong: 'Not this time', predRecord: 'Your record: {a} of {b}', predNote: 'Settled by AI from news headlines. Check the source.', predEarlier: 'Earlier prediction'
     }
   };
 
@@ -39,7 +41,7 @@
   function guess() { var l = String(navigator.language || 'en').slice(0, 2).toLowerCase(); return TP.langs.indexOf(l) >= 0 ? l : 'en'; }
   var memStore = null;
   function load() { try { return JSON.parse(localStorage.getItem('newzeem.v1') || 'null') || memStore; } catch (e) { return memStore; } }
-  var S = Object.assign({ lang: guess(), topics: [], read: {}, last: '', streak: 0, cache: null, mins: 5, days: [], rx: {}, did: '' }, load() || {});
+  var S = Object.assign({ lang: guess(), topics: [], read: {}, last: '', streak: 0, cache: null, mins: 5, days: [], rx: {}, did: '', pr: {}, hist: {} }, load() || {});
   if (TP.langs.indexOf(S.lang) < 0) S.lang = 'en';
   var MINS = [1, 3, 5, 10];
   if (MINS.indexOf(S.mins) < 0) S.mins = 5;
@@ -435,14 +437,20 @@
       } }, secLabel(s.id));
     }));
     main.appendChild(nav);
-    d.sections.forEach(function (s) {
+    var fu = followBlock(d); if (fu) main.appendChild(fu);
+    var viewsEl = h('section.views', { hidden: 'hidden' }), predEl = h('section.pred', { hidden: 'hidden' });
+    d.sections.forEach(function (s, si) {
       var tp = TP.byId[s.id];
       main.appendChild(h('section.sec', { id: 'sec-' + s.id, style: '--c:' + (tp ? tp.c : '#C8321B') },
         h('h2', secLabel(s.id), h('span.dot', '.'), h('span.cnt', String(s.items.length))),
         s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main'); })));
+      if (si === 0) main.appendChild(viewsEl);
     });
+    if (!d.sections.length) main.appendChild(viewsEl);
+    loadViews(viewsEl);
     worldEl = h('section.world', { hidden: 'hidden' }); main.appendChild(worldEl);
     Rx.probe.then(updateWorld);
+    main.appendChild(predEl); loadPred(predEl);
     if (d.quiz && d.quiz.length >= 2) main.appendChild(quizBlock(d.quiz));
     var streak = h('span.streak'), week = weekRow(); streak.hidden = true;
     var end = h('section.end', streak, week,
@@ -569,6 +577,158 @@
     box.appendChild(res); finish();
     return box;
   }
+
+  /* ---------- what changed since yesterday: stories you saw yesterday that have moved on (matched on this device, no AI) ---------- */
+  function toks(s) {
+    var out = {}, str = String(s).toLowerCase();
+    (str.match(/[㐀-鿿]+/g) || []).forEach(function (run) { for (var i = 0; i + 1 < run.length; i++) out[run.substr(i, 2)] = 1; });
+    str.replace(/[㐀-鿿]+/g, ' ').split(/[^\p{L}\p{M}\p{N}]+/u).forEach(function (w) {
+      if (w.length >= (/^[a-zà-ÿа-яё\d]+$/.test(w) ? 4 : 3)) out[w] = 1;
+    });
+    return out;
+  }
+  function overlap(a, b) {
+    var ka = Object.keys(a), n = 0; if (!ka.length) return 0;
+    ka.forEach(function (k) { if (b[k]) n++; });
+    var m = Math.min(ka.length, Object.keys(b).length);
+    return n >= 2 && m ? n / m : 0;
+  }
+  function followBlock(d) {
+    var td = today(), items = [];
+    d.sections.forEach(function (s) { s.items.forEach(function (it) { items.push(it); }); });
+    S.hist = S.hist || {};
+    var days = Object.keys(S.hist).filter(function (k) { return k < td; }).sort(), pd = days[days.length - 1];
+    var prev = pd && S.hist[pd].lang === S.lang && (Date.parse(td) - Date.parse(pd)) / 864e5 <= 3 ? S.hist[pd].items : [];
+    var pk = prev.map(function (p) { return toks(p.h + ' ' + (p.g || '')); }), pids = {}, usedPrev = {}, found = [];
+    prev.forEach(function (p) { pids[p.id] = 1; });
+    items.forEach(function (it) {
+      if (found.length >= 3 || pids[it.id]) return;
+      var tk = toks(it.headline + ' ' + (it.gist || '')), best = -1, bs = 0;
+      pk.forEach(function (k, i) { if (usedPrev[i]) return; var sc = overlap(tk, k); if (sc > bs) { bs = sc; best = i; } });
+      if (best >= 0 && bs >= 0.5) { usedPrev[best] = 1; found.push({ was: prev[best].h, now: it }); }
+    });
+    S.hist[td] = { lang: S.lang, items: items.slice(0, 40).map(function (it) { return { id: it.id, h: it.headline, g: it.gist || '' }; }) };
+    Object.keys(S.hist).sort().slice(0, -4).forEach(function (k) { delete S.hist[k]; });
+    save();
+    if (!found.length) return null;
+    return h('section.follow', h('h2', dotted(t('followH') + '.')),
+      found.map(function (f) {
+        return h('button.fu', { type: 'button', onclick: function () {
+          var el = document.querySelector('[data-id="' + f.now.id + '"]'); if (!el) return;
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.classList.add('flash'); setTimeout(function () { el.classList.remove('flash'); }, 1600);
+        } }, h('span.fuw', h('b', t('followWas')), ' ', f.was), h('span.fun', h('b', t('followNow')), ' ', f.now.headline));
+      }));
+  }
+
+  /* ---------- two views: the same event as different outlets word it ---------- */
+  var viewsMemo = {};
+  function viewsTopic() {
+    if (S.topics.indexOf('world') >= 0) return 'world';
+    var ok = S.topics.filter(function (id) { return TP.byId[id] && TP.byId[id].feeds.length >= 3; });
+    return ok[0] || null;
+  }
+  function loadViews(el) {
+    var tp = viewsTopic(); if (!tp) return;
+    var k = tp + '|' + S.lang;
+    var go = viewsMemo[k] ? Promise.resolve(viewsMemo[k]) : fetch('/api/views?t=' + tp + '&lang=' + S.lang)
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) { if (j && Array.isArray(j.events)) viewsMemo[k] = j.events; return viewsMemo[k] || []; })
+      .catch(function () { return []; });
+    go.then(function (evs) {
+      if (!el.isConnected || !evs.length) return;
+      el.hidden = false; clear(el);
+      el.appendChild(h('h2', dotted(t('viewsH') + '.')));
+      el.appendChild(h('p.qsub', t('viewsSub')));
+      evs.forEach(function (e) {
+        el.appendChild(h('div.vev', h('h3', e.title),
+          h('ul.vlist', e.views.map(function (v) {
+            return h('li', h('a.vsrc', { href: safeUrl(v.url), target: '_blank', rel: 'noopener noreferrer', title: v.headline }, v.source + ' ↗'), h('span.vang', v.angle));
+          })),
+          e.diff ? h('p.vdiff', e.diff) : null));
+      });
+      el.appendChild(h('p.dnote', t('viewsNote')));
+    });
+  }
+
+  /* ---------- prediction of the day: one tap, the world's split, and the result a few days later ---------- */
+  var Pred = { s: {} };
+  function prune() { var ks = Object.keys(S.pr).sort(); ks.slice(0, -20).forEach(function (k) { delete S.pr[k]; }); }
+  function loadPred(el) {
+    S.pr = S.pr || {};
+    function get(retry) {
+      return fetch('/api/predict?lang=' + S.lang + '&d=' + encodeURIComponent(did())).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+        .then(function (j) { return j && j.on && !j.q && !retry ? new Promise(function (ok) { setTimeout(ok, 6000); }).then(function () { return get(true); }) : j; });
+    }
+    get(false).then(function (j) {
+      if (!el.isConnected || !j || !j.on || !j.q) return;
+      var id = j.q.id, e = S.pr[id] = Object.assign(S.pr[id] || {}, { q: j.q.text });
+      if (j.mine) e.v = j.mine;
+      if (j.s) Pred.s[id] = j.s;
+      Pred.cc = j.cc || ''; prune(); save();
+      predDraw(el, id);
+      // old questions the reader voted on: ask whether the news has settled them
+      Object.keys(S.pr).filter(function (k) { return k !== id && S.pr[k].v && !S.pr[k].o; }).slice(-3).forEach(function (k) {
+        fetch('/api/predict?resolve=' + k).then(function (r) { return r.ok ? r.json() : null; }).then(function (r) {
+          if (!r || !r.o || !S.pr[k]) return;
+          S.pr[k].o = r.o; S.pr[k].src = r.source ? { source: r.source, url: r.url, title: r.title } : null; save();
+          if (el.isConnected) predDraw(el, id);
+        }).catch(function () { /* settled next time */ });
+      });
+    });
+  }
+  function predDraw(el, id) {
+    var e = S.pr[id]; clear(el); el.hidden = false;
+    el.appendChild(h('h2', dotted(t('predH') + '.')));
+    el.appendChild(h('p.qsub', t('predSub')));
+    // earlier questions that have been settled and not shown yet
+    Object.keys(S.pr).filter(function (k) { return k !== id && S.pr[k].o && !S.pr[k].seen; }).forEach(function (k) {
+      var p = S.pr[k], res = p.o === 'y' ? t('predY') : p.o === 'n' ? t('predNn') : t('predX');
+      el.appendChild(h('div.qcard.pold', h('p.qsub', t('predEarlier')), h('p.qq', p.q),
+        h('p.pres' + (p.o === p.v ? '.ok' : ''), res + (p.o === 'x' ? '' : ' · ' + (p.o === p.v ? t('predRight') : t('predWrong')))),
+        p.src ? h('p.qfrom', h('a', { href: safeUrl(p.src.url), target: '_blank', rel: 'noopener noreferrer' }, p.src.source + ': ' + p.src.title)) : null));
+      p.seen = 1;
+    });
+    save();
+    var card = h('div.qcard', h('p.qq', e.q));
+    if (!e.v) {
+      var row = h('div.pbtns');
+      [['y', t('predYes')], ['n', t('predNo')]].forEach(function (b) {
+        var btn = h('button.pbtn', { type: 'button' }, b[1]);
+        btn.addEventListener('click', function () { predVote(el, id, b[0], row); });
+        row.appendChild(btn);
+      });
+      card.appendChild(row);
+    } else {
+      var s = Pred.s[id], tot = s ? s.y + s.n : 0;
+      if (!s || tot < 5) card.appendChild(h('p.rxnote', (e.v === 'y' ? t('predYes') : t('predNo')) + ' · ' + t('predFirst')));
+      else {
+        var py = Math.round(s.y / tot * 100), pn = 100 - py;
+        card.appendChild(h('div.rxres', [['y', t('predYes'), py], ['n', t('predNo'), pn]].map(function (r) {
+          return h('div.rxr.prow' + (r[0] === e.v ? '.me' : ''), h('span.rxl', r[1]), h('span.rxbar', h('i', { style: 'width:' + Math.max(3, r[2]) + '%' })), h('span.rxp', r[2] + '%'));
+        })));
+        card.appendChild(h('p.rxnote', t('predN', { n: tot })));
+      }
+      card.appendChild(h('p.rxnote', t('predWait')));
+    }
+    el.appendChild(card);
+    var done = Object.keys(S.pr).filter(function (k) { return S.pr[k].v && (S.pr[k].o === 'y' || S.pr[k].o === 'n'); });
+    if (done.length) {
+      var right = done.filter(function (k) { return S.pr[k].o === S.pr[k].v; }).length;
+      el.appendChild(h('p.qsub', t('predRecord', { a: right, b: done.length })));
+    }
+    if (Object.keys(S.pr).some(function (k) { return S.pr[k].o; })) el.appendChild(h('p.dnote', t('predNote')));
+  }
+  function predVote(el, id, v, row) {
+    Array.prototype.forEach.call(row.children, function (b) { b.disabled = true; });
+    fetch('/api/predict', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: id, v: v, d: did() }) })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (j) {
+        if (!j || !j.s) throw 0;
+        S.pr[id].v = j.mine || v; Pred.s[id] = j.s; save(); predDraw(el, id);
+      })
+      .catch(function () { toast(t('rxFail')); Array.prototype.forEach.call(row.children, function (b) { b.disabled = false; }); });
+  }
+
 
   // A thin line under the header shows how far through the issue the reader is. It is not a timer.
   function progress() {
