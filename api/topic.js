@@ -1,5 +1,5 @@
 'use strict';
-// GET /api/topic?t=<topic>&lang=ru|en
+// GET /api/topic?t=<topic>&lang=en|es|pt|fr|de|ru|hi|zh|ar
 // Reads the topic's public RSS feeds, asks the AI to pick the stories that matter and retell them in two sentences,
 // then answers with items whose headline text is the AI's but whose source and link are always the real ones from the feed.
 // The response is cached on the CDN, so a topic costs one AI call per few hours for ALL readers, not one per reader.
@@ -76,12 +76,15 @@ function pick(all) {
 }
 
 const hash = (s) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0; return h.toString(36); };
-const secsFor = (...parts) => Math.max(8, Math.ceil(words(parts.join(' ')).length / TOPICS.WPM * 60));
+const secsFor = (...parts) => {
+  const txt = parts.join(' '), cjk = (txt.match(/[\u3040-\u30ff\u3400-\u9fff]/g) || []).length; // no spaces in Chinese/Japanese: count characters (about 350 a minute)
+  return Math.max(8, Math.ceil(words(txt.replace(/[\u3040-\u30ff\u3400-\u9fff]/g, ' ')).length / TOPICS.WPM * 60 + cjk / 350 * 60));
+};
 
-const LANG = { ru: 'Russian', en: 'English' };
+const LANG = { en: 'English', es: 'Spanish', pt: 'Brazilian Portuguese', fr: 'French', de: 'German', ru: 'Russian', hi: 'Hindi', zh: 'Simplified Chinese', ar: 'Modern Standard Arabic' };
 const SYSTEM = (topic, lg) => `You are the editor of a short daily briefing. Reader: busy, wants only what matters in the topic "${topic}", skimmed in about 2 minutes.
 From the numbered stories below choose the ${STORIES} most important and distinct ones. Skip gossip, ads, horoscopes, listicles and repeats of the same event.
-Write everything in ${LANG[lg]}. Use ONLY facts present in the given text; never add numbers, names, causes, dates or quotes that are not there.
+Write everything in ${LANG[lg]}, but write all numbers with Western digits 0-9. Use ONLY facts present in the given text; never add numbers, names, causes, dates or quotes that are not there.
 For each chosen story give:
 "ref": its number;
 "headline": punchy and neutral, at most 80 characters, no clickbait, no emoji;

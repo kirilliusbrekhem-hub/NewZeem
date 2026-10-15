@@ -1,4 +1,4 @@
-# NewZeem
+# newzeem
 
 A free daily paper that fits your topics into five minutes. No sign-up, no ads, no endless feed.
 

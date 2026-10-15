@@ -2,39 +2,45 @@
 (function () {
   'use strict';
   var TP = window.NZ_TOPICS;
+  var SLOGAN = 'Read less. Know more.', TITLE = 'newzeem. ' + SLOGAN;
   var BUDGET = TP.BUDGET_SEC, MAX_TOPICS = 8, DEFAULTS = ['world', 'tech', 'business'];
 
   var D = {
     ru: {
-      title: 'NewZeem: главное за 5 минут', slogan: 'Главное за 5 минут. Без шума.', topics: 'Темы', other: 'EN',
-      heroH: 'Главное за 5 минут. Без шума.', heroP: 'Выберите темы, и мы соберём выпуск, который читается за пять минут. Ленты без дна здесь нет.',
+      topics: 'Темы',
+      heroP: 'Выберите темы, и мы соберём выпуск на пять минут: только главное, без шума. Ленты без дна здесь нет.',
       p1: 'Бесплатно', p2: 'Без рекламы', p3: 'Без регистрации', pickH: 'Что вам интересно?', pickN: 'Выбрано: {n} из {m}', build: 'Собрать выпуск', save: 'Сохранить темы',
       pickHint: 'Выбор хранится только на этом устройстве.', max: 'Можно выбрать не больше {m} тем',
       issue: 'Ваш выпуск', issueLead: 'Вот ваш выпуск на 5 минут.', sections: 'Разделы', rt: '{m} мин', gMorning: 'Доброе утро', gDay: 'Добрый день', gEvening: 'Добрый вечер', gNight: 'Доброй ночи', meta: '{n} историй, около {m} мин чтения', main: 'Главное', loading: 'Собираю выпуск: {n} из {m}', why: 'Почему это важно:',
       read: 'Источник: {s}', noai: 'Пересказ ИИ сейчас недоступен. Показаны заголовки и описания источников, часть на английском.',
       fail: 'Не удалось собрать выпуск. Проверьте соединение и попробуйте ещё раз.', retry: 'Повторить', skipped: 'Не загрузились темы: {t}.',
       endH: 'На сегодня всё.', endP: 'Вы прочитали главное. Остальное подождёт, и это нормально. Следующий выпуск будет завтра.', streak: 'Серия: {n} дн.', streak1: 'Первый выпуск прочитан',
-      share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'NewZeem: ваши новости за 5 минут. Бесплатно, без рекламы и регистрации.',
-      foot: 'NewZeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник.'
+      share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'newzeem. Читай меньше. Знай больше. Новости за 5 минут: бесплатно, без рекламы и регистрации.',
+      foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник.'
     },
     en: {
-      title: 'NewZeem: what matters, in 5 minutes', slogan: 'What matters, in 5 minutes.', topics: 'Topics', other: 'RU',
-      heroH: 'What matters, in 5 minutes.', heroP: 'Pick your topics and we build an issue you can read in five minutes. There is no endless feed here.',
+      topics: 'Topics',
+      heroP: 'Pick your topics and we build a five-minute issue: what matters, no noise. There is no endless feed here.',
       p1: 'Free', p2: 'No ads', p3: 'No sign-up', pickH: 'What are you interested in?', pickN: 'Selected: {n} of {m}', build: 'Build my issue', save: 'Save topics',
       pickHint: 'Your choice is stored on this device only.', max: 'You can pick up to {m} topics',
       issue: 'Your issue', issueLead: 'Here is your 5‑minute issue.', sections: 'Sections', rt: '{m} min', gMorning: 'Good morning', gDay: 'Good afternoon', gEvening: 'Good evening', gNight: 'Good night', meta: '{n} stories, about {m} min to read', main: 'Top stories', loading: 'Building your issue: {n} of {m}', why: 'Why it matters:',
       read: 'Source: {s}', noai: 'The AI summary is unavailable right now. You see headlines and descriptions from the sources.',
       fail: 'Could not build your issue. Check your connection and try again.', retry: 'Try again', skipped: 'These topics did not load: {t}.',
       endH: 'That is all for today.', endP: 'You have read what matters. The rest can wait, and that is fine. The next issue is tomorrow.', streak: 'Streak: {n} days', streak1: 'First issue read',
-      share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'NewZeem: your news in 5 minutes. Free, no ads, no sign-up.',
-      foot: 'NewZeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link.'
+      share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'newzeem. Read less. Know more. Your news in 5 minutes: free, no ads, no sign-up.',
+      foot: 'newzeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link.'
     }
   };
 
+  Object.keys(window.NZ_I18N || {}).forEach(function (k) { D[k] = window.NZ_I18N[k]; });
+  var LANGS = TP.langs;
+
   /* ---------- small helpers ---------- */
+  function guess() { var l = String(navigator.language || 'en').slice(0, 2).toLowerCase(); return TP.langs.indexOf(l) >= 0 ? l : 'en'; }
   var memStore = null;
   function load() { try { return JSON.parse(localStorage.getItem('newzeem.v1') || 'null') || memStore; } catch (e) { return memStore; } }
-  var S = Object.assign({ lang: /^ru\b/i.test(navigator.language || '') ? 'ru' : 'en', topics: [], read: {}, last: '', streak: 0, cache: null }, load() || {});
+  var S = Object.assign({ lang: guess(), topics: [], read: {}, last: '', streak: 0, cache: null }, load() || {});
+  if (TP.langs.indexOf(S.lang) < 0) S.lang = 'en';
   function save() { memStore = S; try { localStorage.setItem('newzeem.v1', JSON.stringify(S)); } catch (e) { /* private mode: keep in memory */ } }
   function t(k, p) { var s = (D[S.lang] || D.en)[k] || D.en[k] || k; if (p) Object.keys(p).forEach(function (x) { s = s.replace('{' + x + '}', p[x]); }); return s; }
   function h(spec, attrs) {
@@ -57,6 +63,12 @@
   function today() { return ymd(new Date()); }
   function toast(msg) { var box = $('toasts'), el = h('div.toast', msg); box.appendChild(el); setTimeout(function () { el.remove(); }, 2600); }
   function topicName(id) { var x = TP.byId[id]; return x ? x[S.lang] || x.en : id; }
+  // Every full stop in a headline is vermilion: the brand's way of saying "this ends here".
+  function dotted(str) {
+    var out = [];
+    String(str).split(/([.。।])/).forEach(function (p) { if (!p) return; out.push(/^[.。।]$/.test(p) ? h('span.dot', p) : p); });
+    return out;
+  }
   function safeUrl(u) { return /^https?:\/\//i.test(u) ? u : '#'; }
 
   var cleanup = null; // removes listeners of the current view
@@ -64,10 +76,11 @@
 
   function chrome() {
     document.documentElement.lang = S.lang;
-    document.title = t('title');
+    document.documentElement.dir = TP.rtl.indexOf(S.lang) >= 0 ? 'rtl' : 'ltr';
+    document.title = TITLE;
     var tb = $('btn-topics'); tb.textContent = t('topics'); tb.hidden = !S.topics.length;
-    $('btn-lang').textContent = t('other');
-    $('slogan').textContent = t('slogan');
+    $('lang').value = S.lang;
+    $('slogan').textContent = SLOGAN;
     clear($('foot')).appendChild(document.createTextNode(t('foot')));
   }
 
@@ -76,10 +89,11 @@
     chrome();
     var main = view();
     var sel = (S.topics.length ? S.topics : DEFAULTS).slice();
-    var counter = h('p.hint'), go = h('button.go', { type: 'button' }, editing ? t('save') : t('build'));
-    function refresh() { counter.textContent = t('pickN', { n: sel.length, m: MAX_TOPICS }) + '. ' + t('pickHint'); go.disabled = !sel.length; }
-    var chips = h('div.chips', { role: 'group', 'aria-label': t('pickH') }, TP.list.map(function (tp) {
-      var b = h('button.chip', { type: 'button', 'aria-pressed': sel.indexOf(tp.id) >= 0 ? 'true' : 'false' }, tp.e + ' ' + topicName(tp.id));
+    var counter = h('p.count'), go = h('button.go', { type: 'button' }, editing ? t('save') : t('build'));
+    function refresh() { counter.textContent = t('pickN', { n: sel.length, m: MAX_TOPICS }); go.disabled = !sel.length; }
+    var tiles = h('div.tiles', { role: 'group', 'aria-label': t('pickH') }, TP.list.map(function (tp) {
+      var b = h('button.tile', { type: 'button', style: '--c:' + tp.c, 'aria-pressed': sel.indexOf(tp.id) >= 0 ? 'true' : 'false' },
+        h('span.te', tp.e), h('span.tn', topicName(tp.id)), h('span.tk', { 'aria-hidden': 'true' }, '✓'));
       b.addEventListener('click', function () {
         var i = sel.indexOf(tp.id);
         if (i >= 0) sel.splice(i, 1); else { if (sel.length >= MAX_TOPICS) return toast(t('max', { m: MAX_TOPICS })); sel.push(tp.id); }
@@ -89,8 +103,9 @@
     }));
     go.addEventListener('click', function () { S.topics = sel.slice(); S.cache = null; save(); renderDigest(); });
     main.appendChild(h('section.hero',
-      editing ? null : h('div', h('h1', t('heroH')), h('p', t('heroP')), h('ul.promise', h('li', t('p1')), h('li', t('p2')), h('li', t('p3')))),
-      h('h2.pick-h', t('pickH')), chips, go, counter));
+      editing ? null : h('div.intro', h('h1', dotted(SLOGAN)), h('p.sub', t('heroP')), h('ul.promise', h('li', t('p1')), h('li', t('p2')), h('li', t('p3')))),
+      h('h2.pick-h', t('pickH')), tiles,
+      h('div.bar', h('div.barin', counter, go)), h('p.hint', t('pickHint'))));
     refresh();
   }
 
@@ -151,7 +166,7 @@
     var main = $('main');
     var bar = h('p.hint', t('loading', { n: 0, m: S.topics.length }));
     if (!quiet) {
-      clear(main).appendChild(h('div', h('div.mast', h('div.date', dateLabel()), h('h1', t('issue'))), bar, h('div.skel'), h('div.skel'), h('div.skel')));
+      clear(main).appendChild(h('div', h('div.mast', h('div.date', dateLabel()), h('h1', dotted(t('issue') + '.'))), bar, h('div.skel'), h('div.skel'), h('div.skel')));
     }
     var done = 0, ids = S.topics.slice();
     Promise.all(ids.map(function (id) { return fetchTopic(id).then(function (r) { done++; bar.textContent = t('loading', { n: done, m: ids.length }); return r; }); })).then(function (rs) {
@@ -164,7 +179,7 @@
     });
   }
 
-  function dateLabel() { return new Date().toLocaleDateString(S.lang === 'ru' ? 'ru-RU' : 'en-US', { weekday: 'long', day: 'numeric', month: 'long' }); }
+  function dateLabel() { return new Date().toLocaleDateString({ en: 'en-US', zh: 'zh-CN', pt: 'pt-BR' }[S.lang] || S.lang, { weekday: 'long', day: 'numeric', month: 'long' }); }
 
   function drawFail() {
     var main = clear($('main'));
@@ -198,7 +213,7 @@
 
   function draw(d, failed) {
     var main = view();
-    main.appendChild(h('div.mast', h('div.date', dateLabel()), h('h1', greeting() + '. ' + t('issueLead')),
+    main.appendChild(h('div.mast', h('div.date', dateLabel()), h('h1', dotted(greeting() + '.')), h('p.lede', t('issueLead')),
       h('p.meta', t('meta', { n: d.count, m: Math.max(1, Math.round(d.total / 60)) }))));
     if (!d.ai) main.appendChild(h('p.notice', t('noai')));
     if (failed && failed.length) main.appendChild(h('p.notice', t('skipped', { t: failed.map(topicName).join(', ') })));
@@ -212,14 +227,23 @@
     d.sections.forEach(function (s) {
       var tp = TP.byId[s.id];
       main.appendChild(h('section.sec', { id: 'sec-' + s.id, style: '--c:' + (tp ? tp.c : '#C8321B') },
-        h('h2', secLabel(s.id), h('span.cnt', String(s.items.length))),
+        h('h2', secLabel(s.id), h('span.dot', '.'), h('span.cnt', String(s.items.length))),
         s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main'); })));
     });
     var streak = h('span.streak'); streak.hidden = true;
-    var end = h('section.end', h('h2', t('endH')), h('p', t('endP')), streak,
+    var end = h('section.end', h('h2', dotted(t('endH'))), h('p', t('endP')), streak,
       h('div.row', h('button.btn', { type: 'button', onclick: share }, t('share')), h('button.btn', { type: 'button', onclick: function () { renderPick(true); } }, t('change'))));
     main.appendChild(end);
     wire(end, streak);
+    progress();
+  }
+
+  // A thin line under the header shows how far through the issue the reader is. It is not a timer.
+  function progress() {
+    var bar = $('prog'), prev = cleanup;
+    function on() { var max = document.documentElement.scrollHeight - window.innerHeight; bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')'; }
+    window.addEventListener('scroll', on, { passive: true }); on();
+    cleanup = function () { window.removeEventListener('scroll', on); bar.style.transform = 'scaleX(0)'; if (prev) prev(); };
   }
 
   // The streak is counted when the reader reaches the end of the issue.
@@ -239,13 +263,15 @@
   }
 
   function share() {
-    var data = { title: 'NewZeem', text: t('shareText'), url: location.origin };
+    var data = { title: 'newzeem.', text: t('shareText'), url: location.origin };
     if (navigator.share) { navigator.share(data).catch(function () { /* cancelled */ }); return; }
     var done = function () { toast(t('copied')); };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(location.origin).then(done, done); else done();
   }
 
-  $('btn-lang').addEventListener('click', function () { S.lang = S.lang === 'ru' ? 'en' : 'ru'; save(); S.topics.length ? renderDigest() : renderPick(false); });
+  var sel = $('lang');
+  TP.langNames.forEach(function (l) { sel.appendChild(h('option', { value: l[0], lang: l[0] }, l[1])); });
+  sel.addEventListener('change', function () { S.lang = sel.value; save(); S.topics.length ? renderDigest() : renderPick(false); });
   $('btn-topics').addEventListener('click', function () { renderPick(true); });
   if (S.topics.length) renderDigest(); else renderPick(false);
 })();
