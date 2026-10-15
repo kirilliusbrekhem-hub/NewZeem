@@ -7,7 +7,7 @@
 
   var D = {
     ru: {
-      topics: 'Темы', more: 'Подробнее', less: 'Свернуть', detailLoad: 'Читаю статью…', detailFail: 'Не получилось пересказать. Откройте оригинал.', detailNote: 'Подробный пересказ от ИИ. Сверьтесь с оригиналом.', howLong: 'Сколько у вас времени?', listen: 'Слушать', pauseL: 'Пауза', playL: 'Продолжить', nextS: 'Следующая история', prevS: 'Предыдущая история', stopL: 'Стоп', noVoice: 'На устройстве нет голоса для этого языка',
+      topics: 'Темы', quizH: 'Проверь себя', quizSub: 'Вопросы по тому, что вы только что прочитали', quizFrom: 'Из новости: {h}', quizShare: 'Поделиться результатом', more: 'Подробнее', less: 'Свернуть', detailLoad: 'Читаю статью…', detailFail: 'Не получилось пересказать. Откройте оригинал.', detailNote: 'Подробный пересказ от ИИ. Сверьтесь с оригиналом.', howLong: 'Сколько у вас времени?', listen: 'Слушать', pauseL: 'Пауза', playL: 'Продолжить', nextS: 'Следующая история', prevS: 'Предыдущая история', stopL: 'Стоп', noVoice: 'На устройстве нет голоса для этого языка',
       heroP: 'Выберите темы, и мы соберём выпуск на пять минут: только главное, без шума. Ленты без дна здесь нет.',
       p1: 'Бесплатно', p2: 'Без рекламы', p3: 'Без регистрации', pickH: 'Что вам интересно?', pickN: 'Выбрано: {n} из {m}', build: 'Собрать выпуск', save: 'Сохранить темы',
       pickHint: 'Выбор хранится только на этом устройстве.', max: 'Можно выбрать не больше {m} тем',
@@ -19,7 +19,7 @@
       foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник.'
     },
     en: {
-      topics: 'Topics', more: 'More', less: 'Less', detailLoad: 'Reading the article…', detailFail: 'Could not retell this one. Open the original.', detailNote: 'Retold in detail by AI. Check the original.', howLong: 'How much time do you have?', listen: 'Listen', pauseL: 'Pause', playL: 'Play', nextS: 'Next story', prevS: 'Previous story', stopL: 'Stop', noVoice: 'This device has no voice for this language',
+      topics: 'Topics', quizH: 'Check yourself', quizSub: 'Questions about what you just read', quizFrom: 'From: {h}', quizShare: 'Share result', more: 'More', less: 'Less', detailLoad: 'Reading the article…', detailFail: 'Could not retell this one. Open the original.', detailNote: 'Retold in detail by AI. Check the original.', howLong: 'How much time do you have?', listen: 'Listen', pauseL: 'Pause', playL: 'Play', nextS: 'Next story', prevS: 'Previous story', stopL: 'Stop', noVoice: 'This device has no voice for this language',
       heroP: 'Pick your topics and we build a five-minute issue: what matters, no noise. There is no endless feed here.',
       p1: 'Free', p2: 'No ads', p3: 'No sign-up', pickH: 'What are you interested in?', pickN: 'Selected: {n} of {m}', build: 'Build my issue', save: 'Save topics',
       pickHint: 'Your choice is stored on this device only.', max: 'You can pick up to {m} topics',
@@ -237,7 +237,7 @@
     var ac = new AbortController(), timer = setTimeout(function () { ac.abort(); }, 25000);
     return fetch('/api/topic?t=' + encodeURIComponent(id) + '&lang=' + S.lang + (retry ? '&r=' + Date.now() : ''), { signal: ac.signal })
       .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (j) { return j && Array.isArray(j.items) ? { id: id, items: j.items, ai: !!j.ai } : null; })
+      .then(function (j) { return j && Array.isArray(j.items) ? { id: id, items: j.items, ai: !!j.ai, quiz: Array.isArray(j.quiz) ? j.quiz : [] } : null; })
       .catch(function () { return null; })
       .then(function (x) { clearTimeout(timer); return x; });
   }
@@ -272,7 +272,18 @@
     if (main.length) sections.push({ id: 'main', items: main });
     results.forEach(function (r) { if (picked[r.id].length) sections.push({ id: r.id, items: picked[r.id] }); });
     var count = sections.reduce(function (n, s) { return n + s.items.length; }, 0);
-    return { at: Date.now(), total: total, count: count, ai: results.every(function (r) { return r.ai; }), sections: sections };
+    // Up to three questions from different topics, only about stories that are in this issue.
+    var titles = {}; sections.forEach(function (s) { s.items.forEach(function (x) { titles[x.id] = x; }); });
+    var qs = [], used = {}, rounds = 0;
+    while (qs.length < 3 && rounds < 3) {
+      results.forEach(function (r) {
+        if (qs.length >= 3) return;
+        var q = (r.quiz || []).filter(function (x) { return titles[x.id] && !used[x.id]; })[0];
+        if (q) { used[q.id] = 1; qs.push(Object.assign({}, q, { h: titles[q.id].headline, u: titles[q.id].url })); }
+      });
+      rounds++;
+    }
+    return { at: Date.now(), total: total, count: count, ai: results.every(function (r) { return r.ai; }), sections: sections, quiz: qs };
   }
 
   function renderDigest() {
@@ -295,7 +306,8 @@
       clear(main).appendChild(h('div', h('div.mast', h('div.date', dateLabel()), h('h1', dotted(t('issue') + '.'))), bar, h('div.skel'), h('div.skel'), h('div.skel')));
     }
     var done = 0, ids = S.topics.slice();
-    Promise.all(ids.map(function (id) { return fetchTopic(id).then(function (r) { done++; bar.textContent = t('loading', { n: done, m: ids.length }); return r; }); })).then(function (rs) {
+    // Three topics at a time: the free AI plans limit tokens per minute, so a burst of ten requests would be refused.
+    pool(ids, 3, function (id) { return fetchTopic(id).then(function (r) { done++; bar.textContent = t('loading', { n: done, m: ids.length }); return r; }); }).then(function (rs) {
       // A topic whose AI retelling failed (a busy moment at the provider) is asked for once more before we give up on it.
       var weak = rs.map(function (r, i) { return r && !r.ai ? i : -1; }).filter(function (i) { return i >= 0; });
       var again = weak.length ? new Promise(function (ok) { setTimeout(ok, 2500); }).then(function () {
@@ -327,6 +339,17 @@
       row.appendChild(h('span.wd' + (on ? '.on' : '') + (k === 0 ? '.now' : ''), h('i'), h('b', d.toLocaleDateString(loc, { weekday: 'narrow' }))));
     }
     return row;
+  }
+  function pool(items, n, fn) {
+    var out = new Array(items.length), i = 0, fin = 0;
+    return new Promise(function (done) {
+      function next() {
+        if (i >= items.length) return;
+        var k = i++;
+        fn(items[k]).then(function (r) { out[k] = r; }).then(function () { if (++fin === items.length) done(out); else next(); });
+      }
+      for (var j = 0; j < Math.min(n, items.length); j++) next();
+    });
   }
   function dateLabel() { return new Date().toLocaleDateString({ en: 'en-US', zh: 'zh-CN', pt: 'pt-BR' }[S.lang] || S.lang, { weekday: 'long', day: 'numeric', month: 'long' }); }
 
@@ -416,6 +439,7 @@
         h('h2', secLabel(s.id), h('span.dot', '.'), h('span.cnt', String(s.items.length))),
         s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main'); })));
     });
+    if (d.quiz && d.quiz.length >= 2) main.appendChild(quizBlock(d.quiz));
     var streak = h('span.streak'), week = weekRow(); streak.hidden = true;
     var end = h('section.end', streak, week,
       h('div.row', h('button.btn', { type: 'button', onclick: share }, t('share')), h('button.btn', { type: 'button', onclick: function () { renderPick(true); } }, t('change'))));
@@ -423,6 +447,42 @@
     wire(end, streak, week);
     progress();
     Say.mount();
+  }
+
+  /* ---------- check yourself: a few questions on what was just read, and a result you can share ---------- */
+  function quizBlock(qs) {
+    var key = qs.map(function (q) { return q.id; }).join(','), saved = S.qz && S.qz.day === today() && S.qz.key === key ? S.qz.pick : [];
+    var picks = qs.map(function (q, i) { return saved[i] != null ? saved[i] : -1; });
+    var res = h('div.qres'), box = h('section.quiz', h('h2', dotted(t('quizH') + '.')), h('p.qsub', t('quizSub')));
+    function dots() { return picks.map(function (p, i) { return p === qs[i].a ? '●' : '○'; }).join(''); }
+    function score() { return picks.filter(function (p, i) { return p === qs[i].a; }).length; }
+    function finish() {
+      if (picks.some(function (p) { return p < 0; })) return;
+      clear(res);
+      res.appendChild(h('div.qdots', picks.map(function (p, i) { return h('span.qd' + (p === qs[i].a ? '.on' : ''), '●'); })));
+      res.appendChild(h('p.qscore', score() + ' / ' + qs.length));
+      res.appendChild(h('button.btn.qshare', { type: 'button', onclick: function () { shareText('newzeem. ' + dots() + ' ' + score() + '/' + qs.length + '\n' + SLOGAN); } }, t('quizShare')));
+    }
+    qs.forEach(function (q, i) {
+      var from = h('p.qfrom', { hidden: 'hidden' }, h('a', { href: safeUrl(q.u), target: '_blank', rel: 'noopener noreferrer' }, t('quizFrom', { h: q.h })));
+      var opts = h('div.qopts', q.o.map(function (txt, k) {
+        var b = h('button.qopt', { type: 'button' }, h('span.qm', { 'aria-hidden': 'true' }), h('span', txt));
+        b.addEventListener('click', function () { if (picks[i] >= 0) return; picks[i] = k; mark(); S.qz = { day: today(), key: key, pick: picks.slice() }; save(); finish(); });
+        return b;
+      }));
+      function mark() {
+        if (picks[i] < 0) return;
+        Array.prototype.forEach.call(opts.children, function (b, k) {
+          b.disabled = true; b.classList.toggle('right', k === q.a); b.classList.toggle('wrong', k === picks[i] && k !== q.a);
+          b.querySelector('.qm').textContent = k === q.a ? '✓' : k === picks[i] ? '✗' : '';
+        });
+        from.hidden = false;
+      }
+      box.appendChild(h('div.qcard', h('p.qq', h('b', (i + 1) + '. '), q.q), opts, from));
+      mark();
+    });
+    box.appendChild(res); finish();
+    return box;
   }
 
   // A thin line under the header shows how far through the issue the reader is. It is not a timer.
@@ -447,6 +507,13 @@
     else complete();
     if (S.last === today()) show();
     cleanup = function () { if (io) io.disconnect(); };
+  }
+
+  function shareText(text) {
+    var link = location.origin + '/?t=' + S.topics.join(',') + '&l=' + S.lang + '&m=' + S.mins;
+    if (navigator.share) { navigator.share({ title: 'newzeem.', text: text, url: link }).catch(function () { /* cancelled */ }); return; }
+    var done = function () { toast(t('copied')); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text + '\n' + link).then(done, done); else done();
   }
 
   function share() {

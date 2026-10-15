@@ -197,3 +197,32 @@ body.listening .toasts { bottom: 104px; }
 .detail .dnote, .detail .dload, .detail .dfail { font: 600 13px/1.4 var(--sans); color: var(--muted); }
 .detail .dload { animation: pulse 1.2s ease-in-out infinite; }
 @keyframes pulse { 50% { opacity: .45; } }
+
+/* check yourself */
+.quiz { margin-top: 50px; }
+.quiz > h2 { font-size: clamp(28px, 7vw, 36px); font-weight: 900; letter-spacing: -.045em; line-height: 1.1; padding-top: 12px; border-top: 4px solid var(--ink); }
+.qsub { margin: 6px 0 0; color: var(--muted); font: 600 15px/1.4 var(--sans); }
+.qcard { margin-top: 20px; padding: 18px 16px 16px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); }
+.qq { margin: 0 0 14px; font: 700 20px/1.3 var(--serif); }
+.qq b { font-family: var(--sans); color: var(--accent); }
+.qopts { display: grid; gap: 8px; }
+.qopt { display: flex; align-items: center; gap: 12px; width: 100%; text-align: start; padding: 14px 14px; border: 2px solid var(--line); border-radius: 14px; background: transparent; font: 700 16px/1.3 var(--sans); }
+.qopt:not(:disabled):hover { border-color: var(--ink); }
+.qm { flex: none; width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; border: 2px solid var(--line); font: 900 13px/1 var(--sans); }
+.qopt:disabled { cursor: default; opacity: .62; }
+.qopt.right { opacity: 1; border-color: #2B8A3E; background: color-mix(in srgb, #2B8A3E 14%, var(--card)); }
+.qopt.right .qm { background: #2B8A3E; border-color: #2B8A3E; color: #fff; }
+.qopt.wrong { opacity: 1; border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
+.qopt.wrong .qm { background: var(--accent); border-color: var(--accent); color: #fff; }
+.qfrom { margin: 12px 0 0; font: 600 13px/1.35 var(--sans); }
+.qfrom[hidden] { display: none; }
+.qfrom a { color: var(--muted); text-decoration: none; }
+.qfrom a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.qres { margin-top: 22px; text-align: center; }
+.qres:empty { display: none; }
+.qdots { display: flex; justify-content: center; gap: 12px; font-size: 38px; line-height: 1; }
+.qd { color: color-mix(in srgb, var(--ink) 18%, transparent); }
+.qd.on { color: var(--accent); }
+.qscore { margin: 8px 0 0; font: 900 28px/1 var(--sans); letter-spacing: -.03em; }
+.qshare { margin-top: 14px; color: var(--ink); }
+.qshare:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
