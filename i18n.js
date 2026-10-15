@@ -2,10 +2,10 @@
    The brand line "Read less. Know more." is never translated. Missing keys fall back to English. */
 window.NZ_I18N = {
   es: {
-    topics: 'Temas', heroP: 'Elige tus temas y armamos una edición de cinco minutos: solo lo importante, sin ruido. Aquí no hay feed infinito.',
+    topics: 'Temas', more: 'Más', less: 'Menos', detailLoad: 'Leyendo el artículo…', detailFail: 'No se pudo resumir. Abre el original.', detailNote: 'Resumen detallado por IA. Compáralo con el original.', howLong: '¿Cuánto tiempo tienes?', listen: 'Escuchar', pauseL: 'Pausa', playL: 'Reanudar', nextS: 'Siguiente noticia', prevS: 'Noticia anterior', stopL: 'Detener', noVoice: 'Tu dispositivo no tiene voz para este idioma', heroP: 'Elige tus temas y armamos una edición de cinco minutos: solo lo importante, sin ruido. Aquí no hay feed infinito.',
     p1: 'Gratis', p2: 'Sin anuncios', p3: 'Sin registro', pickH: '¿Qué te interesa?', pickN: 'Elegidos: {n} de {m}', build: 'Crear mi edición', save: 'Guardar temas',
     pickHint: 'Tu elección se guarda solo en este dispositivo.', max: 'Puedes elegir hasta {m} temas',
-    issue: 'Tu edición', issueLead: 'Aquí tienes tu edición de 5 minutos.', sections: 'Secciones', rt: '{m} min', gMorning: 'Buenos días', gDay: 'Buenas tardes', gEvening: 'Buenas noches', gNight: 'Buenas noches', meta: '{n} noticias, unos {m} min de lectura', main: 'Lo principal', loading: 'Preparando tu edición: {n} de {m}', why: 'Por qué importa:',
+    issue: 'Tu edición', issueLead: 'Aquí tienes tu edición de {m} min.', sections: 'Secciones', rt: '{m} min', gMorning: 'Buenos días', gDay: 'Buenas tardes', gEvening: 'Buenas noches', gNight: 'Buenas noches', meta: '{n} noticias, unos {m} min de lectura', main: 'Lo principal', loading: 'Preparando tu edición: {n} de {m}', why: 'Por qué importa:',
     read: 'Fuente: {s}', noai: 'El resumen con IA no está disponible ahora. Ves los titulares y descripciones de las fuentes, en su idioma original.',
     fail: 'No se pudo crear tu edición. Revisa la conexión e inténtalo de nuevo.', retry: 'Reintentar', skipped: 'Estos temas no se cargaron: {t}.',
     endH: 'Eso es todo por hoy.', endP: 'Ya leíste lo importante. Lo demás puede esperar, y está bien. La próxima edición será mañana.', streak: 'Racha: {n} días', streak1: 'Primera edición leída',
@@ -13,10 +13,10 @@ window.NZ_I18N = {
     foot: 'newzeem es gratis y no tiene anuncios. Tus temas se guardan solo en tu dispositivo y no te rastreamos. Los resúmenes los escribe una IA y puede equivocarse: comprueba el enlace a la fuente.'
   },
   pt: {
-    topics: 'Temas', heroP: 'Escolha seus temas e montamos uma edição de cinco minutos: só o que importa, sem ruído. Aqui não existe feed infinito.',
+    topics: 'Temas', more: 'Mais', less: 'Menos', detailLoad: 'Lendo o artigo…', detailFail: 'Não foi possível resumir. Abra o original.', detailNote: 'Resumo detalhado por IA. Confira o original.', howLong: 'Quanto tempo você tem?', listen: 'Ouvir', pauseL: 'Pausar', playL: 'Continuar', nextS: 'Próxima notícia', prevS: 'Notícia anterior', stopL: 'Parar', noVoice: 'Seu dispositivo não tem voz para este idioma', heroP: 'Escolha seus temas e montamos uma edição de cinco minutos: só o que importa, sem ruído. Aqui não existe feed infinito.',
     p1: 'Grátis', p2: 'Sem anúncios', p3: 'Sem cadastro', pickH: 'O que te interessa?', pickN: 'Selecionados: {n} de {m}', build: 'Montar minha edição', save: 'Salvar temas',
     pickHint: 'Sua escolha fica salva só neste dispositivo.', max: 'Você pode escolher até {m} temas',
-    issue: 'Sua edição', issueLead: 'Aqui está sua edição de 5 minutos.', sections: 'Seções', rt: '{m} min', gMorning: 'Bom dia', gDay: 'Boa tarde', gEvening: 'Boa noite', gNight: 'Boa noite', meta: '{n} notícias, cerca de {m} min de leitura', main: 'Destaques', loading: 'Montando sua edição: {n} de {m}', why: 'Por que importa:',
+    issue: 'Sua edição', issueLead: 'Aqui está sua edição de {m} min.', sections: 'Seções', rt: '{m} min', gMorning: 'Bom dia', gDay: 'Boa tarde', gEvening: 'Boa noite', gNight: 'Boa noite', meta: '{n} notícias, cerca de {m} min de leitura', main: 'Destaques', loading: 'Montando sua edição: {n} de {m}', why: 'Por que importa:',
     read: 'Fonte: {s}', noai: 'O resumo por IA não está disponível agora. Você vê manchetes e descrições das fontes, no idioma original.',
     fail: 'Não foi possível montar sua edição. Verifique a conexão e tente de novo.', retry: 'Tentar de novo', skipped: 'Estes temas não carregaram: {t}.',
     endH: 'Por hoje é só.', endP: 'Você leu o que importa. O resto pode esperar, e tudo bem. A próxima edição sai amanhã.', streak: 'Sequência: {n} dias', streak1: 'Primeira edição lida',
@@ -24,10 +24,10 @@ window.NZ_I18N = {
     foot: 'O newzeem é grátis e não tem anúncios. Seus temas ficam só no seu dispositivo e não rastreamos você. Os resumos são feitos por uma IA e podem errar: confira o link da fonte.'
   },
   fr: {
-    topics: 'Thèmes', heroP: 'Choisissez vos thèmes et nous composons une édition de cinq minutes : l’essentiel, sans bruit. Ici, pas de flux sans fin.',
+    topics: 'Thèmes', more: 'Plus', less: 'Moins', detailLoad: 'Lecture de l’article…', detailFail: 'Impossible de résumer. Ouvrez l’original.', detailNote: 'Résumé détaillé par IA. Vérifiez l’original.', howLong: 'Combien de temps avez-vous ?', listen: 'Écouter', pauseL: 'Pause', playL: 'Reprendre', nextS: 'Article suivant', prevS: 'Article précédent', stopL: 'Arrêter', noVoice: 'Votre appareil n’a pas de voix pour cette langue', heroP: 'Choisissez vos thèmes et nous composons une édition de cinq minutes : l’essentiel, sans bruit. Ici, pas de flux sans fin.',
     p1: 'Gratuit', p2: 'Sans publicité', p3: 'Sans inscription', pickH: 'Qu’est-ce qui vous intéresse ?', pickN: 'Sélectionnés : {n} sur {m}', build: 'Créer mon édition', save: 'Enregistrer les thèmes',
     pickHint: 'Votre choix est conservé uniquement sur cet appareil.', max: 'Vous pouvez choisir jusqu’à {m} thèmes',
-    issue: 'Votre édition', issueLead: 'Voici votre édition de 5 minutes.', sections: 'Rubriques', rt: '{m} min', gMorning: 'Bonjour', gDay: 'Bon après-midi', gEvening: 'Bonsoir', gNight: 'Bonne nuit', meta: '{n} articles, environ {m} min de lecture', main: 'À la une', loading: 'Préparation de votre édition : {n} sur {m}', why: 'Pourquoi c’est important :',
+    issue: 'Votre édition', issueLead: 'Voici votre édition de {m} min.', sections: 'Rubriques', rt: '{m} min', gMorning: 'Bonjour', gDay: 'Bon après-midi', gEvening: 'Bonsoir', gNight: 'Bonne nuit', meta: '{n} articles, environ {m} min de lecture', main: 'À la une', loading: 'Préparation de votre édition : {n} sur {m}', why: 'Pourquoi c’est important :',
     read: 'Source : {s}', noai: 'Le résumé par IA est indisponible pour le moment. Vous voyez les titres et descriptions des sources, dans leur langue d’origine.',
     fail: 'Impossible de créer votre édition. Vérifiez la connexion et réessayez.', retry: 'Réessayer', skipped: 'Ces thèmes n’ont pas chargé : {t}.',
     endH: 'C’est tout pour aujourd’hui.', endP: 'Vous avez lu l’essentiel. Le reste peut attendre, et c’est normal. La prochaine édition sera demain.', streak: 'Série : {n} jours', streak1: 'Première édition lue',
@@ -35,10 +35,10 @@ window.NZ_I18N = {
     foot: 'newzeem est gratuit et sans publicité. Vos thèmes restent uniquement sur votre appareil et nous ne vous suivons pas. Les résumés sont rédigés par une IA et peuvent contenir des erreurs : vérifiez le lien de la source.'
   },
   de: {
-    topics: 'Themen', heroP: 'Wähle deine Themen, und wir stellen eine Ausgabe für fünf Minuten zusammen: nur das Wichtige, ohne Lärm. Einen endlosen Feed gibt es hier nicht.',
+    topics: 'Themen', more: 'Mehr', less: 'Weniger', detailLoad: 'Lese den Artikel…', detailFail: 'Das hat nicht geklappt. Öffne das Original.', detailNote: 'Ausführlich von einer KI nacherzählt. Prüfe das Original.', howLong: 'Wie viel Zeit hast du?', listen: 'Anhören', pauseL: 'Pause', playL: 'Weiter', nextS: 'Nächste Meldung', prevS: 'Vorherige Meldung', stopL: 'Stopp', noVoice: 'Dieses Gerät hat keine Stimme für diese Sprache', heroP: 'Wähle deine Themen, und wir stellen eine Ausgabe für fünf Minuten zusammen: nur das Wichtige, ohne Lärm. Einen endlosen Feed gibt es hier nicht.',
     p1: 'Kostenlos', p2: 'Keine Werbung', p3: 'Ohne Anmeldung', pickH: 'Was interessiert dich?', pickN: 'Gewählt: {n} von {m}', build: 'Meine Ausgabe erstellen', save: 'Themen speichern',
     pickHint: 'Deine Auswahl bleibt nur auf diesem Gerät.', max: 'Du kannst bis zu {m} Themen wählen',
-    issue: 'Deine Ausgabe', issueLead: 'Hier ist deine 5-Minuten-Ausgabe.', sections: 'Ressorts', rt: '{m} Min.', gMorning: 'Guten Morgen', gDay: 'Guten Tag', gEvening: 'Guten Abend', gNight: 'Gute Nacht', meta: '{n} Meldungen, etwa {m} Min. Lesezeit', main: 'Top-Meldungen', loading: 'Deine Ausgabe entsteht: {n} von {m}', why: 'Warum es wichtig ist:',
+    issue: 'Deine Ausgabe', issueLead: 'Hier ist deine {m}-Minuten-Ausgabe.', sections: 'Ressorts', rt: '{m} Min.', gMorning: 'Guten Morgen', gDay: 'Guten Tag', gEvening: 'Guten Abend', gNight: 'Gute Nacht', meta: '{n} Meldungen, etwa {m} Min. Lesezeit', main: 'Top-Meldungen', loading: 'Deine Ausgabe entsteht: {n} von {m}', why: 'Warum es wichtig ist:',
     read: 'Quelle: {s}', noai: 'Die KI-Zusammenfassung ist gerade nicht verfügbar. Du siehst Überschriften und Beschreibungen der Quellen, in der Originalsprache.',
     fail: 'Deine Ausgabe konnte nicht erstellt werden. Prüfe die Verbindung und versuche es erneut.', retry: 'Erneut versuchen', skipped: 'Diese Themen wurden nicht geladen: {t}.',
     endH: 'Das war’s für heute.', endP: 'Du hast gelesen, was wichtig ist. Der Rest kann warten, und das ist in Ordnung. Die nächste Ausgabe kommt morgen.', streak: 'Serie: {n} Tage', streak1: 'Erste Ausgabe gelesen',
@@ -46,10 +46,10 @@ window.NZ_I18N = {
     foot: 'newzeem ist kostenlos und werbefrei. Deine Themen bleiben nur auf deinem Gerät, wir verfolgen dich nicht. Die Zusammenfassungen schreibt eine KI und sie kann sich irren: prüfe den Link zur Quelle.'
   },
   hi: {
-    topics: 'विषय', heroP: 'अपने विषय चुनिए, और हम पाँच मिनट का अंक तैयार करेंगे: सिर्फ़ ज़रूरी बातें, बिना शोर के। यहाँ कभी न ख़त्म होने वाली फ़ीड नहीं है।',
+    topics: 'विषय', more: 'और पढ़ें', less: 'कम', detailLoad: 'लेख पढ़ रहा हूँ…', detailFail: 'इसका सार नहीं बन सका। मूल लेख खोलें।', detailNote: 'AI द्वारा विस्तृत सार। मूल लेख से जाँच लें।', howLong: 'आपके पास कितना समय है?', listen: 'सुनें', pauseL: 'रोकें', playL: 'चलाएँ', nextS: 'अगली ख़बर', prevS: 'पिछली ख़बर', stopL: 'बंद करें', noVoice: 'इस डिवाइस में इस भाषा की आवाज़ नहीं है', heroP: 'अपने विषय चुनिए, और हम पाँच मिनट का अंक तैयार करेंगे: सिर्फ़ ज़रूरी बातें, बिना शोर के। यहाँ कभी न ख़त्म होने वाली फ़ीड नहीं है।',
     p1: 'मुफ़्त', p2: 'कोई विज्ञापन नहीं', p3: 'रजिस्ट्रेशन नहीं', pickH: 'आपको क्या पसंद है?', pickN: 'चुने गए: {m} में से {n}', build: 'मेरा अंक बनाएँ', save: 'विषय सहेजें',
     pickHint: 'आपका चुनाव सिर्फ़ इसी डिवाइस पर रहता है।', max: 'आप अधिकतम {m} विषय चुन सकते हैं',
-    issue: 'आपका अंक', issueLead: 'यह रहा आपका 5 मिनट का अंक।', sections: 'खंड', rt: '{m} मिनट', gMorning: 'सुप्रभात', gDay: 'नमस्कार', gEvening: 'शुभ संध्या', gNight: 'शुभ रात्रि', meta: '{n} ख़बरें, पढ़ने में लगभग {m} मिनट', main: 'मुख्य ख़बरें', loading: 'आपका अंक बन रहा है: {m} में से {n}', why: 'यह क्यों मायने रखता है:',
+    issue: 'आपका अंक', issueLead: 'यह रहा आपका {m} मिनट का अंक।', sections: 'खंड', rt: '{m} मिनट', gMorning: 'सुप्रभात', gDay: 'नमस्कार', gEvening: 'शुभ संध्या', gNight: 'शुभ रात्रि', meta: '{n} ख़बरें, पढ़ने में लगभग {m} मिनट', main: 'मुख्य ख़बरें', loading: 'आपका अंक बन रहा है: {m} में से {n}', why: 'यह क्यों मायने रखता है:',
     read: 'स्रोत: {s}', noai: 'AI सारांश अभी उपलब्ध नहीं है। आप स्रोतों की सुर्ख़ियाँ और विवरण देख रहे हैं, मूल भाषा में।',
     fail: 'आपका अंक नहीं बन सका। कनेक्शन जाँचें और फिर कोशिश करें।', retry: 'फिर कोशिश करें', skipped: 'ये विषय लोड नहीं हुए: {t}।',
     endH: 'आज के लिए बस इतना ही।', endP: 'आपने ज़रूरी बातें पढ़ लीं। बाकी इंतज़ार कर सकता है, और यह ठीक है। अगला अंक कल आएगा।', streak: 'लगातार: {n} दिन', streak1: 'पहला अंक पढ़ा',
@@ -57,10 +57,10 @@ window.NZ_I18N = {
     foot: 'newzeem मुफ़्त है और इसमें विज्ञापन नहीं हैं। आपके विषय सिर्फ़ आपके डिवाइस पर रहते हैं और हम आपको ट्रैक नहीं करते। सारांश AI लिखता है और उसमें ग़लती हो सकती है: स्रोत का लिंक देखकर जाँच लें।'
   },
   zh: {
-    topics: '主题', heroP: '选择你的主题，我们为你编一份五分钟的读报：只有重点，没有噪音。这里没有无底的信息流。',
+    topics: '主题', more: '详情', less: '收起', detailLoad: '正在阅读文章…', detailFail: '无法概述这篇文章，请打开原文。', detailNote: 'AI 详细概述，请以原文为准。', howLong: '你有多少时间？', listen: '收听', pauseL: '暂停', playL: '继续', nextS: '下一条', prevS: '上一条', stopL: '停止', noVoice: '此设备没有该语言的语音', heroP: '选择你的主题，我们为你编一份五分钟的读报：只有重点，没有噪音。这里没有无底的信息流。',
     p1: '免费', p2: '无广告', p3: '无需注册', pickH: '你对什么感兴趣？', pickN: '已选 {n} / {m}', build: '生成我的读报', save: '保存主题',
     pickHint: '你的选择只保存在这台设备上。', max: '最多可选 {m} 个主题',
-    issue: '你的读报', issueLead: '这是你的 5 分钟读报。', sections: '栏目', rt: '{m} 分钟', gMorning: '早上好', gDay: '下午好', gEvening: '晚上好', gNight: '夜深了', meta: '{n} 条新闻，约 {m} 分钟读完', main: '头条', loading: '正在生成你的读报：{n} / {m}', why: '为什么重要：',
+    issue: '你的读报', issueLead: '这是你的 {m} 分钟读报。', sections: '栏目', rt: '{m} 分钟', gMorning: '早上好', gDay: '下午好', gEvening: '晚上好', gNight: '夜深了', meta: '{n} 条新闻，约 {m} 分钟读完', main: '头条', loading: '正在生成你的读报：{n} / {m}', why: '为什么重要：',
     read: '来源：{s}', noai: 'AI 摘要暂时不可用。你看到的是来源的标题和说明，保持原文语言。',
     fail: '无法生成你的读报。请检查网络后重试。', retry: '重试', skipped: '这些主题没有加载：{t}。',
     endH: '今天就到这里。', endP: '你已经读完了重点。其余的可以等等，这很正常。下一期明天见。', streak: '已连续 {n} 天', streak1: '读完第一期',
@@ -68,10 +68,10 @@ window.NZ_I18N = {
     foot: 'newzeem 免费且无广告。你的主题只保存在你的设备上，我们不会追踪你。摘要由 AI 撰写，可能出错，请通过来源链接核对。'
   },
   ar: {
-    topics: 'المواضيع', heroP: 'اختر مواضيعك وسنُعدّ لك عددًا لخمس دقائق: المهم فقط، بلا ضجيج. لا يوجد هنا تدفّق لا ينتهي.',
+    topics: 'المواضيع', more: 'المزيد', less: 'أقل', detailLoad: 'جارٍ قراءة المقال…', detailFail: 'تعذّر تلخيص هذا الخبر. افتح الأصل.', detailNote: 'تلخيص مفصّل بالذكاء الاصطناعي. راجع الأصل.', howLong: 'كم لديك من الوقت؟', listen: 'استمع', pauseL: 'إيقاف مؤقت', playL: 'متابعة', nextS: 'الخبر التالي', prevS: 'الخبر السابق', stopL: 'إيقاف', noVoice: 'لا يوجد صوت لهذه اللغة على جهازك', heroP: 'اختر مواضيعك وسنُعدّ لك عددًا لخمس دقائق: المهم فقط، بلا ضجيج. لا يوجد هنا تدفّق لا ينتهي.',
     p1: 'مجاني', p2: 'بلا إعلانات', p3: 'بلا تسجيل', pickH: 'ما الذي يهمّك؟', pickN: 'المختار: {n} من {m}', build: 'أنشئ عددي', save: 'حفظ المواضيع',
     pickHint: 'اختيارك محفوظ على هذا الجهاز فقط.', max: 'يمكنك اختيار {m} مواضيع كحدّ أقصى',
-    issue: 'عددك', issueLead: 'هذا عددك لخمس دقائق.', sections: 'الأقسام', rt: '{m} د', gMorning: 'صباح الخير', gDay: 'نهارك سعيد', gEvening: 'مساء الخير', gNight: 'تصبح على خير', meta: '{n} أخبار، نحو {m} د للقراءة', main: 'الأبرز', loading: 'جارٍ إعداد عددك: {n} من {m}', why: 'لماذا يهم:',
+    issue: 'عددك', issueLead: 'هذا عددك لـ {m} د.', sections: 'الأقسام', rt: '{m} د', gMorning: 'صباح الخير', gDay: 'نهارك سعيد', gEvening: 'مساء الخير', gNight: 'تصبح على خير', meta: '{n} أخبار، نحو {m} د للقراءة', main: 'الأبرز', loading: 'جارٍ إعداد عددك: {n} من {m}', why: 'لماذا يهم:',
     read: 'المصدر: {s}', noai: 'ملخّص الذكاء الاصطناعي غير متاح الآن. ترى عناوين المصادر ووصفها بلغتها الأصلية.',
     fail: 'تعذّر إنشاء عددك. تحقّق من الاتصال وحاول مجددًا.', retry: 'حاول مجددًا', skipped: 'لم تُحمَّل هذه المواضيع: {t}.',
     endH: 'هذا كل شيء لليوم.', endP: 'قرأتَ أهمّ ما يلزم. الباقي يمكنه الانتظار، وهذا طبيعي. العدد القادم غدًا.', streak: 'سلسلة: {n} أيام', streak1: 'قرأتَ العدد الأول',
