@@ -231,7 +231,7 @@
         s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main'); })));
     });
     var streak = h('span.streak'); streak.hidden = true;
-    var end = h('section.end', h('h2', dotted(t('endH'))), h('p', t('endP')), streak,
+    var end = h('section.end', streak,
       h('div.row', h('button.btn', { type: 'button', onclick: share }, t('share')), h('button.btn', { type: 'button', onclick: function () { renderPick(true); } }, t('change'))));
     main.appendChild(end);
     wire(end, streak);

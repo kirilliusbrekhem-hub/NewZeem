@@ -109,14 +109,14 @@ main { max-width: 700px; margin: 0 auto; padding: 30px 16px 40px; outline: none;
 .skel { height: 150px; margin: 16px 0; border-radius: 20px; background: linear-gradient(90deg, var(--line), var(--card), var(--line)); background-size: 200% 100%; animation: sh 1.4s linear infinite; }
 @keyframes sh { to { background-position: -200% 0; } }
 
-.end { margin: 54px 0 8px; padding: 46px 24px 34px; text-align: center; border-radius: 26px; background: var(--ink); color: var(--paper); }
+.end { margin: 54px 0 8px; padding: 30px 24px 30px; text-align: center; border-radius: 26px; background: var(--ink); color: var(--paper); }
 .end h2 { font-size: clamp(40px, 11vw, 64px); line-height: .98; letter-spacing: -.055em; font-weight: 900; }
 .end .dot { color: var(--enddot); }
 .end p { color: color-mix(in srgb, var(--paper) 78%, transparent); margin: 16px auto 0; max-width: 26em; font: 19px/1.45 var(--serif); }
-.end .row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 26px; }
+.end .row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
 .btn { font: 800 15px/1 var(--sans); padding: 15px 22px; border-radius: 14px; border: 2px solid currentColor; background: transparent; }
 .btn:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
-.streak { display: inline-block; margin-top: 20px; font: 800 14px/1 var(--sans); background: var(--mark); color: #14201A; padding: 10px 14px; border-radius: 99px; }
+.streak { display: inline-block; margin: 0 0 4px; font: 800 14px/1 var(--sans); background: var(--mark); color: #14201A; padding: 10px 14px; border-radius: 99px; }
 .err { padding: 24px 0; font: 16px/1.5 var(--sans); }
 .err .btn { color: var(--ink); margin-top: 12px; }
 .err .btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
