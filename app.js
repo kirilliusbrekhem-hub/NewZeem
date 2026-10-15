@@ -6,24 +6,24 @@
 
   var D = {
     ru: {
-      title: 'NewZeem: ваши новости за 5 минут', topics: 'Темы', other: 'EN',
-      heroH: 'Газета на 5 минут. Только то, что важно вам.', heroP: 'Выберите темы, и мы соберём выпуск, который читается за пять минут. Ленты без дна здесь нет.',
+      title: 'NewZeem: главное за 5 минут', slogan: 'Главное за 5 минут. Без шума.', topics: 'Темы', other: 'EN',
+      heroH: 'Главное за 5 минут. Без шума.', heroP: 'Выберите темы, и мы соберём выпуск, который читается за пять минут. Ленты без дна здесь нет.',
       p1: 'Бесплатно', p2: 'Без рекламы', p3: 'Без регистрации', pickH: 'Что вам интересно?', pickN: 'Выбрано: {n} из {m}', build: 'Собрать выпуск', save: 'Сохранить темы',
       pickHint: 'Выбор хранится только на этом устройстве.', max: 'Можно выбрать не больше {m} тем',
-      issue: 'Ваш выпуск', meta: '{n} историй, около {m} мин чтения', main: 'Главное', loading: 'Собираю выпуск: {n} из {m}', why: 'Почему это важно:',
-      read: 'Читать у источника: {s}', left: 'осталось', noai: 'Пересказ ИИ сейчас недоступен. Показаны заголовки и описания источников, часть на английском.',
+      issue: 'Ваш выпуск', issueLead: 'Вот ваш выпуск на 5 минут.', sections: 'Разделы', rt: '{m} мин', gMorning: 'Доброе утро', gDay: 'Добрый день', gEvening: 'Добрый вечер', gNight: 'Доброй ночи', meta: '{n} историй, около {m} мин чтения', main: 'Главное', loading: 'Собираю выпуск: {n} из {m}', why: 'Почему это важно:',
+      read: 'Источник: {s}', noai: 'Пересказ ИИ сейчас недоступен. Показаны заголовки и описания источников, часть на английском.',
       fail: 'Не удалось собрать выпуск. Проверьте соединение и попробуйте ещё раз.', retry: 'Повторить', skipped: 'Не загрузились темы: {t}.',
       endH: 'На сегодня всё.', endP: 'Вы прочитали главное. Остальное подождёт, и это нормально. Следующий выпуск будет завтра.', streak: 'Серия: {n} дн.', streak1: 'Первый выпуск прочитан',
       share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'NewZeem: ваши новости за 5 минут. Бесплатно, без рекламы и регистрации.',
       foot: 'NewZeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник.'
     },
     en: {
-      title: 'NewZeem: your news in 5 minutes', topics: 'Topics', other: 'RU',
-      heroH: 'A paper that takes 5 minutes. Only what matters to you.', heroP: 'Pick your topics and we build an issue you can read in five minutes. There is no endless feed here.',
+      title: 'NewZeem: what matters, in 5 minutes', slogan: 'What matters, in 5 minutes.', topics: 'Topics', other: 'RU',
+      heroH: 'What matters, in 5 minutes.', heroP: 'Pick your topics and we build an issue you can read in five minutes. There is no endless feed here.',
       p1: 'Free', p2: 'No ads', p3: 'No sign-up', pickH: 'What are you interested in?', pickN: 'Selected: {n} of {m}', build: 'Build my issue', save: 'Save topics',
       pickHint: 'Your choice is stored on this device only.', max: 'You can pick up to {m} topics',
-      issue: 'Your issue', meta: '{n} stories, about {m} min to read', main: 'Top stories', loading: 'Building your issue: {n} of {m}', why: 'Why it matters:',
-      read: 'Read at the source: {s}', left: 'left', noai: 'The AI summary is unavailable right now. You see headlines and descriptions from the sources.',
+      issue: 'Your issue', issueLead: 'Here is your 5‑minute issue.', sections: 'Sections', rt: '{m} min', gMorning: 'Good morning', gDay: 'Good afternoon', gEvening: 'Good evening', gNight: 'Good night', meta: '{n} stories, about {m} min to read', main: 'Top stories', loading: 'Building your issue: {n} of {m}', why: 'Why it matters:',
+      read: 'Source: {s}', noai: 'The AI summary is unavailable right now. You see headlines and descriptions from the sources.',
       fail: 'Could not build your issue. Check your connection and try again.', retry: 'Try again', skipped: 'These topics did not load: {t}.',
       endH: 'That is all for today.', endP: 'You have read what matters. The rest can wait, and that is fine. The next issue is tomorrow.', streak: 'Streak: {n} days', streak1: 'First issue read',
       share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'NewZeem: your news in 5 minutes. Free, no ads, no sign-up.',
@@ -67,8 +67,8 @@
     document.title = t('title');
     var tb = $('btn-topics'); tb.textContent = t('topics'); tb.hidden = !S.topics.length;
     $('btn-lang').textContent = t('other');
+    $('slogan').textContent = t('slogan');
     clear($('foot')).appendChild(document.createTextNode(t('foot')));
-    $('fuse').hidden = true;
   }
 
   /* ---------- topic picker ---------- */
@@ -79,7 +79,7 @@
     var counter = h('p.hint'), go = h('button.go', { type: 'button' }, editing ? t('save') : t('build'));
     function refresh() { counter.textContent = t('pickN', { n: sel.length, m: MAX_TOPICS }) + '. ' + t('pickHint'); go.disabled = !sel.length; }
     var chips = h('div.chips', { role: 'group', 'aria-label': t('pickH') }, TP.list.map(function (tp) {
-      var b = h('button.chip', { type: 'button', 'aria-pressed': sel.indexOf(tp.id) >= 0 ? 'true' : 'false' }, topicName(tp.id));
+      var b = h('button.chip', { type: 'button', 'aria-pressed': sel.indexOf(tp.id) >= 0 ? 'true' : 'false' }, tp.e + ' ' + topicName(tp.id));
       b.addEventListener('click', function () {
         var i = sel.indexOf(tp.id);
         if (i >= 0) sel.splice(i, 1); else { if (sel.length >= MAX_TOPICS) return toast(t('max', { m: MAX_TOPICS })); sel.push(tp.id); }
@@ -90,7 +90,7 @@
     go.addEventListener('click', function () { S.topics = sel.slice(); S.cache = null; save(); renderDigest(); });
     main.appendChild(h('section.hero',
       editing ? null : h('div', h('h1', t('heroH')), h('p', t('heroP')), h('ul.promise', h('li', t('p1')), h('li', t('p2')), h('li', t('p3')))),
-      h('h2', { style: 'font-size:24px;margin:0 0 14px' }, t('pickH')), chips, go, counter));
+      h('h2.pick-h', t('pickH')), chips, go, counter));
     refresh();
   }
 
@@ -139,7 +139,7 @@
     var main = view();
     var key = S.topics.join(',');
     var c = S.cache;
-    if (c && c.day === today() && c.lang === S.lang && c.key === key && c.digest) {
+    if (c && c.v === 2 && c.day === today() && c.lang === S.lang && c.key === key && c.digest) {
       draw(c.digest, []);
       if (Date.now() - c.digest.at > 4 * 3600e3) build(key, true);
       return;
@@ -159,7 +159,7 @@
       if (key !== S.topics.join(',')) return; // the reader changed topics meanwhile
       if (!ok.length) { if (!quiet) drawFail(); return; }
       var digest = assemble(ok);
-      S.cache = { day: today(), lang: S.lang, key: key, digest: digest, failed: failed }; save();
+      S.cache = { v: 2, day: today(), lang: S.lang, key: key, digest: digest, failed: failed }; save();
       if (!quiet) draw(digest, failed);
     });
   }
@@ -172,52 +172,70 @@
   }
 
   /* ---------- the paper ---------- */
+  function greeting() {
+    var hr = new Date().getHours();
+    var k = hr >= 5 && hr < 11 ? 'gMorning' : hr >= 11 && hr < 17 ? 'gDay' : hr >= 17 && hr < 23 ? 'gEvening' : 'gNight';
+    return t(k);
+  }
+  function mins(secs) { return Math.max(1, Math.round(secs / 60)); }
+
   function item(it, lead, showTag) {
+    var tp = TP.byId[it.topic] || {};
     var a = h('a.src', { href: safeUrl(it.url), target: '_blank', rel: 'noopener noreferrer' }, t('read', { s: it.source }) + ' ↗');
-    var el = h('article.item' + (lead ? '.lead' : '') + (S.read[it.id] ? '.read' : ''),
-      showTag ? h('span.tag', topicName(it.topic)) : null, h('h3', it.headline), it.summary ? h('p', it.summary) : null,
-      it.why ? h('p.why', h('b', t('why') + ' '), h('span', it.why)) : null, a);
+    var pts = (it.points || []).length ? h('ul.pts', it.points.map(function (p) { return h('li', p); })) : null;
+    var el = h('article.item' + (lead ? '.lead' : '') + (S.read[it.id] ? '.read' : ''), { style: '--c:' + (tp.c || '#1C7ED6') },
+      showTag ? h('span.tag', (tp.e || '') + ' ' + topicName(it.topic)) : null,
+      h('h3', it.headline),
+      it.gist ? h('p.gist', it.gist) : null,
+      pts,
+      it.why ? h('p.why', h('b', t('why')), ' ', it.why) : null,
+      h('p.ifoot', a, h('span.rt', t('rt', { m: mins(it.secs) }))));
     a.addEventListener('click', function () { S.read[it.id] = 1; el.classList.add('read'); save(); });
     return el;
   }
 
+  function secLabel(id) { var tp = TP.byId[id]; return id === 'main' ? '⚡ ' + t('main') : (tp ? tp.e + ' ' : '') + topicName(id); }
+
   function draw(d, failed) {
     var main = view();
-    main.appendChild(h('div.mast', h('div.date', dateLabel()), h('h1', t('issue')), h('p.meta', t('meta', { n: d.count, m: Math.max(1, Math.round(d.total / 60)) }))));
+    main.appendChild(h('div.mast', h('div.date', dateLabel()), h('h1', greeting() + '. ' + t('issueLead')),
+      h('p.meta', t('meta', { n: d.count, m: Math.max(1, Math.round(d.total / 60)) }))));
     if (!d.ai) main.appendChild(h('p.notice', t('noai')));
     if (failed && failed.length) main.appendChild(h('p.notice', t('skipped', { t: failed.map(topicName).join(', ') })));
+    var nav = h('nav.jump', { 'aria-label': t('sections') }, d.sections.map(function (s) {
+      var tp = TP.byId[s.id];
+      return h('button.jchip', { type: 'button', style: '--c:' + (tp ? tp.c : '#C8321B'), onclick: function () {
+        var el = document.getElementById('sec-' + s.id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } }, secLabel(s.id));
+    }));
+    main.appendChild(nav);
     d.sections.forEach(function (s) {
-      main.appendChild(h('section.sec', h('h2', s.id === 'main' ? t('main') : topicName(s.id)), s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main'); })));
+      var tp = TP.byId[s.id];
+      main.appendChild(h('section.sec', { id: 'sec-' + s.id, style: '--c:' + (tp ? tp.c : '#C8321B') },
+        h('h2', secLabel(s.id), h('span.cnt', String(s.items.length))),
+        s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main'); })));
     });
     var streak = h('span.streak'); streak.hidden = true;
     var end = h('section.end', h('h2', t('endH')), h('p', t('endP')), streak,
       h('div.row', h('button.btn', { type: 'button', onclick: share }, t('share')), h('button.btn', { type: 'button', onclick: function () { renderPick(true); } }, t('change'))));
     main.appendChild(end);
-    wire(d, end, streak);
+    wire(end, streak);
   }
 
-  function wire(d, end, streak) {
-    var fuse = $('fuse'), bar = $('fuse-bar'), tx = $('fuse-t');
-    fuse.hidden = false;
-    function mmss(s) { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + (s % 60 < 10 ? '0' : '') + (s % 60); }
-    function tick() {
-      var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      var p = Math.min(1, Math.max(0, window.scrollY / max));
-      bar.style.width = (p * 100) + '%';
-      tx.textContent = mmss(d.total * (1 - p)) + ' ' + t('left');
-    }
-    window.addEventListener('scroll', tick, { passive: true }); window.addEventListener('resize', tick); tick();
+  // The streak is counted when the reader reaches the end of the issue.
+  function wire(end, streak) {
     var io = null;
+    function show() { streak.hidden = false; streak.textContent = S.streak > 1 ? t('streak', { n: S.streak }) : t('streak1'); }
     function complete() {
       var td = today();
       if (S.last !== td) { S.streak = S.last === ymd(new Date(Date.now() - 864e5)) ? (S.streak || 0) + 1 : 1; S.last = td; save(); }
-      streak.hidden = false; streak.textContent = S.streak > 1 ? t('streak', { n: S.streak }) : t('streak1');
+      show();
       if (io) io.disconnect();
     }
     if ('IntersectionObserver' in window) { io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) complete(); }, { threshold: 0.6 }); io.observe(end); }
     else complete();
-    if (S.last === today()) { streak.hidden = false; streak.textContent = S.streak > 1 ? t('streak', { n: S.streak }) : t('streak1'); }
-    cleanup = function () { window.removeEventListener('scroll', tick); window.removeEventListener('resize', tick); if (io) io.disconnect(); };
+    if (S.last === today()) show();
+    cleanup = function () { if (io) io.disconnect(); };
   }
 
   function share() {

@@ -3,27 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NewZeem: your news in 5 minutes</title>
+<title>NewZeem: what matters, in 5 minutes</title>
 <meta name="description" content="A free daily paper that fits your interests into five minutes. No sign-up, no ads, no endless feed.">
 <meta name="theme-color" content="#F1F3EE" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101713" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="NewZeem: your news in 5 minutes">
+<meta property="og:title" content="NewZeem: what matters, in 5 minutes">
+<meta property="og:image" content="og-en.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:description" content="Pick your topics. Read what matters in five minutes. Done. Free, no ads, no sign-up.">
 <meta property="og:type" content="website">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top" id="top">
-  <a class="brand" href="/" aria-label="NewZeem"><img src="icon.svg" alt="" width="28" height="28"><span>New<b>Zeem</b></span></a>
+  <a class="brand" href="/" aria-label="NewZeem"><img src="icon.svg" alt="" width="34" height="34"><span class="bn"><span class="bw">New<b>Zeem</b></span><small id="slogan"></small></span></a>
   <nav class="tools">
     <button class="link" id="btn-topics" type="button" hidden></button>
     <button class="link" id="btn-lang" type="button" aria-label="Language"></button>
   </nav>
-  <div class="fuse" id="fuse" hidden><div class="fuse-bar" id="fuse-bar"></div><span class="fuse-t" id="fuse-t"></span></div>
-</header>
+  </header>
 <main id="main" tabindex="-1"></main>
 <footer class="foot" id="foot"></footer>
 <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
