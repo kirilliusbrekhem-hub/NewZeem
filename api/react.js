@@ -42,6 +42,10 @@ module.exports = async (req, res) => {
   const cc = country(req);
   try {
     if (req.method === 'GET') {
+      if (new URL(req.url, 'http://x').searchParams.get('check')) { // /api/react?check=1 : can this site WRITE to the store? (a read-only token or a wrong address shows up here)
+        const [w, r] = await store.pipe([['SET', 'nz:check', '1', 'EX', '60'], ['GET', 'nz:check']]);
+        return send(200, { on: true, write: w === 'OK', read: r === '1' });
+      }
       const ids = String(new URL(req.url, 'http://x').searchParams.get('ids') || '').split(',').filter(idOk).slice(0, 12);
       return send(200, ids.length ? { on: true, cc, s: await counts(ids, cc) } : { on: true, cc });
     }
@@ -59,7 +63,7 @@ module.exports = async (req, res) => {
     return send(200, { on: true, cc, ok: allowed, s: await counts([id], cc) });
   } catch (e) {
     console.error('react error:', e && e.message);
-    return send(502, { error: 'store' });
+    return send(502, { error: 'store', why: String((e && e.message) || '').slice(0, 160) }); // the store's own message (e.g. NOPERM for a read-only token); it never contains the token
   }
 };
 module.exports._test = { fold, shape };

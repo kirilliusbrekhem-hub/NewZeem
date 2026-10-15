@@ -181,4 +181,4 @@ module.exports = async (req, res) => {
   // A copy made without the AI is cached briefly, so the real digest replaces it as soon as the AI works.
   send(200, body, r.ai ? 'public, s-maxage=21600, stale-while-revalidate=86400' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
 };
-module.exports._test = { parseFeed, pick, similar, supported, text, clip, decode };
+module.exports._test = { parseFeed, pick, similar, supported, text, clip, decode, getFeed, LANG, hash, nums };
