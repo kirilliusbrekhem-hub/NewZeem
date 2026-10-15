@@ -7,7 +7,7 @@
 
   var D = {
     ru: {
-      topics: 'Темы', quizH: 'Проверь себя', quizSub: 'Вопросы по тому, что вы только что прочитали', quizFrom: 'Из новости: {h}', quizShare: 'Поделиться результатом', more: 'Подробнее', less: 'Свернуть', detailLoad: 'Читаю статью…', detailFail: 'Не получилось пересказать. Откройте оригинал.', detailNote: 'Подробный пересказ от ИИ. Сверьтесь с оригиналом.', howLong: 'Сколько у вас времени?', listen: 'Слушать', pauseL: 'Пауза', playL: 'Продолжить', nextS: 'Следующая история', prevS: 'Предыдущая история', stopL: 'Стоп', noVoice: 'На устройстве нет голоса для этого языка',
+      topics: 'Темы', rx0: 'Тревога', rx1: 'Рад', rx2: 'Злит', rx3: 'Удивило', rx4: 'Всё равно', rxQ: 'Что вы чувствуете?', rxWith: 'Вы с {p}% читателей', rxAlone: 'Так чувствуют лишь {p}%', rxIn: 'В {c}: {p}% чувствуют так же', rxFirst: 'Вы одним из первых. Загляните позже: увидите, что думает мир.', rxN: 'Откликнулись: {n}', rxNote: 'Анонимные отклики непроверенных читателей', rxFail: 'Не удалось отправить отклик', worldH: 'Вы и мир', worldSub: 'С большинством читателей вы совпали в {a} из {b} историй', quizH: 'Проверь себя', quizSub: 'Вопросы по тому, что вы только что прочитали', quizFrom: 'Из новости: {h}', quizShare: 'Поделиться результатом', more: 'Подробнее', less: 'Свернуть', detailLoad: 'Читаю статью…', detailFail: 'Не получилось пересказать. Откройте оригинал.', detailNote: 'Подробный пересказ от ИИ. Сверьтесь с оригиналом.', howLong: 'Сколько у вас времени?', listen: 'Слушать', pauseL: 'Пауза', playL: 'Продолжить', nextS: 'Следующая история', prevS: 'Предыдущая история', stopL: 'Стоп', noVoice: 'На устройстве нет голоса для этого языка',
       heroP: 'Выберите темы, и мы соберём выпуск на пять минут: только главное, без шума. Ленты без дна здесь нет.',
       p1: 'Бесплатно', p2: 'Без рекламы', p3: 'Без регистрации', pickH: 'Что вам интересно?', pickN: 'Выбрано: {n} из {m}', build: 'Собрать выпуск', save: 'Сохранить темы',
       pickHint: 'Выбор хранится только на этом устройстве.', max: 'Можно выбрать не больше {m} тем',
@@ -19,7 +19,7 @@
       foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник.'
     },
     en: {
-      topics: 'Topics', quizH: 'Check yourself', quizSub: 'Questions about what you just read', quizFrom: 'From: {h}', quizShare: 'Share result', more: 'More', less: 'Less', detailLoad: 'Reading the article…', detailFail: 'Could not retell this one. Open the original.', detailNote: 'Retold in detail by AI. Check the original.', howLong: 'How much time do you have?', listen: 'Listen', pauseL: 'Pause', playL: 'Play', nextS: 'Next story', prevS: 'Previous story', stopL: 'Stop', noVoice: 'This device has no voice for this language',
+      topics: 'Topics', rx0: 'Worried', rx1: 'Glad', rx2: 'Angry', rx3: 'Surprised', rx4: 'Don\'t care', rxQ: 'How do you feel about it?', rxWith: 'You are with {p}% of readers', rxAlone: 'Only {p}% feel the same', rxIn: 'In {c}: {p}% feel the same', rxFirst: 'You are among the first to react. Come back later to see the world.', rxN: '{n} readers so far', rxNote: 'Anonymous reactions from unverified readers', rxFail: 'Could not send your reaction', worldH: 'You and the world', worldSub: 'You felt the same as most readers on {a} of {b} stories', quizH: 'Check yourself', quizSub: 'Questions about what you just read', quizFrom: 'From: {h}', quizShare: 'Share result', more: 'More', less: 'Less', detailLoad: 'Reading the article…', detailFail: 'Could not retell this one. Open the original.', detailNote: 'Retold in detail by AI. Check the original.', howLong: 'How much time do you have?', listen: 'Listen', pauseL: 'Pause', playL: 'Play', nextS: 'Next story', prevS: 'Previous story', stopL: 'Stop', noVoice: 'This device has no voice for this language',
       heroP: 'Pick your topics and we build a five-minute issue: what matters, no noise. There is no endless feed here.',
       p1: 'Free', p2: 'No ads', p3: 'No sign-up', pickH: 'What are you interested in?', pickN: 'Selected: {n} of {m}', build: 'Build my issue', save: 'Save topics',
       pickHint: 'Your choice is stored on this device only.', max: 'You can pick up to {m} topics',
@@ -39,7 +39,7 @@
   function guess() { var l = String(navigator.language || 'en').slice(0, 2).toLowerCase(); return TP.langs.indexOf(l) >= 0 ? l : 'en'; }
   var memStore = null;
   function load() { try { return JSON.parse(localStorage.getItem('newzeem.v1') || 'null') || memStore; } catch (e) { return memStore; } }
-  var S = Object.assign({ lang: guess(), topics: [], read: {}, last: '', streak: 0, cache: null, mins: 5, days: [] }, load() || {});
+  var S = Object.assign({ lang: guess(), topics: [], read: {}, last: '', streak: 0, cache: null, mins: 5, days: [], rx: {}, did: '' }, load() || {});
   if (TP.langs.indexOf(S.lang) < 0) S.lang = 'en';
   var MINS = [1, 3, 5, 10];
   if (MINS.indexOf(S.mins) < 0) S.mins = 5;
@@ -385,7 +385,8 @@
     var pts = (it.points || []).length ? h('ul.pts', it.points.map(function (p) { return h('li', p); })) : null;
     var hb = h('button.hbtn', { type: 'button', 'aria-expanded': 'false' }, it.headline);
     var more = h('button.more', { type: 'button' }, t('more') + ' ▾');
-    var detail = h('div.detail', { hidden: 'hidden' });
+    var detail = h('div.detail', { hidden: 'hidden' }), rxBox = h('div.rx', { hidden: 'hidden' });
+    Rx.probe.then(function () { if (Rx.on) rxInit(it.id, rxBox); });
     var open = false, state = '';
     function load() {
       state = 'busy'; clear(detail).appendChild(h('p.dload', t('detailLoad')));
@@ -403,13 +404,14 @@
       if (open) { S.read[it.id] = 1; el.classList.add('read'); save(); if (!state) load(); }
     }
     hb.addEventListener('click', toggle); more.addEventListener('click', toggle);
-    var el = h('article.item' + (lead ? '.lead' : '') + (S.read[it.id] ? '.read' : ''), { style: '--c:' + (tp.c || '#1C7ED6') },
+    var el = h('article.item' + (lead ? '.lead' : '') + (S.read[it.id] ? '.read' : ''), { style: '--c:' + (tp.c || '#1C7ED6'), 'data-id': it.id },
       showTag ? h('span.tag', (tp.e || '') + ' ' + topicName(it.topic)) : null,
       h('h3', hb),
       it.gist ? h('p.gist', it.gist) : null,
       pts,
       it.why ? h('p.why', h('b', t('why')), ' ', it.why) : null,
       detail,
+      rxBox,
       h('p.ifoot', more, a, h('span.rt', t('rt', { m: mins(it.secs) }))));
     a.addEventListener('click', function () { S.read[it.id] = 1; el.classList.add('read'); save(); });
     spoken.push({ it: it, el: el });
@@ -439,6 +441,8 @@
         h('h2', secLabel(s.id), h('span.dot', '.'), h('span.cnt', String(s.items.length))),
         s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main'); })));
     });
+    worldEl = h('section.world', { hidden: 'hidden' }); main.appendChild(worldEl);
+    Rx.probe.then(updateWorld);
     if (d.quiz && d.quiz.length >= 2) main.appendChild(quizBlock(d.quiz));
     var streak = h('span.streak'), week = weekRow(); streak.hidden = true;
     var end = h('section.end', streak, week,
@@ -447,6 +451,87 @@
     wire(end, streak, week);
     progress();
     Say.mount();
+  }
+
+  /* ---------- the world thinks: one tap of reaction under a story, then how the world and your country felt ---------- */
+  var RXI = ['😟', '🙂', '😠', '😮', '😐'];
+  var Rx = { on: false, cc: '', res: {} };
+  Rx.probe = fetch('/api/react').then(function (r) { return r.ok ? r.json() : {}; }).then(function (j) { Rx.on = !!(j && j.on); Rx.cc = (j && j.cc) || ''; }).catch(function () { Rx.on = false; });
+  var worldEl = null;
+  function did() {
+    if (!S.did) {
+      var a = new Uint8Array(12);
+      try { crypto.getRandomValues(a); } catch (e) { for (var i = 0; i < 12; i++) a[i] = Math.floor(Math.random() * 256); }
+      S.did = Array.prototype.map.call(a, function (x) { return ('0' + x.toString(16)).slice(-2); }).join(''); save();
+    }
+    return S.did;
+  }
+  function regionName(cc) { try { return new Intl.DisplayNames([S.lang], { type: 'region' }).of(cc) || cc; } catch (e) { return cc; } }
+  var rxPending = {}, rxTimer = null;
+  function rxFetch(id) { // reloads ask for the counts of every story the reader reacted to in one request
+    return new Promise(function (ok) {
+      (rxPending[id] = rxPending[id] || []).push(ok);
+      if (rxTimer) return;
+      rxTimer = setTimeout(function () {
+        var ids = Object.keys(rxPending), waits = rxPending, chunks = []; rxPending = {}; rxTimer = null;
+        for (var i = 0; i < ids.length; i += 12) chunks.push(ids.slice(i, i + 12));
+        Promise.all(chunks.map(function (c) {
+          return fetch('/api/react?ids=' + c.join(',')).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+            if (j && j.s) { Rx.cc = j.cc || Rx.cc; Object.keys(j.s).forEach(function (k) { Rx.res[k] = j.s[k]; }); }
+          }).catch(function () { /* the line below just stays in its waiting state */ });
+        })).then(function () { ids.forEach(function (k) { waits[k].forEach(function (f) { f(); }); }); });
+      }, 40);
+    });
+  }
+  function rxButtons(id, box) {
+    clear(box); box.hidden = false;
+    box.appendChild(h('p.rxq', t('rxQ')));
+    box.appendChild(h('div.rxrow', { role: 'group', 'aria-label': t('rxQ') }, RXI.map(function (e, i) {
+      var b = h('button.rxb', { type: 'button' }, h('span.rxe', e), h('span.rxl', t('rx' + i)));
+      b.addEventListener('click', function () { rxSend(id, i, box); });
+      return b;
+    })));
+  }
+  function rxSend(id, r, box) {
+    var btns = box.querySelectorAll('.rxb');
+    Array.prototype.forEach.call(btns, function (b) { b.disabled = true; });
+    fetch('/api/react', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: id, r: r, d: did() }) })
+      .then(function (x) { return x.ok ? x.json() : Promise.reject(); })
+      .then(function (j) {
+        if (!j || !j.s || !j.s[id]) throw 0;
+        S.rx[id] = r; var ks = Object.keys(S.rx); if (ks.length > 300) delete S.rx[ks[0]]; save();
+        Rx.res[id] = j.s[id]; Rx.cc = j.cc || Rx.cc; rxResults(id, box); updateWorld();
+      })
+      .catch(function () { toast(t('rxFail')); Array.prototype.forEach.call(btns, function (b) { b.disabled = false; }); });
+  }
+  function rxResults(id, box) {
+    var d = Rx.res[id], mine = S.rx[id]; clear(box); box.hidden = false;
+    if (!d || d.n < 5) { box.appendChild(h('p.rxnote', RXI[mine] + ' ' + t('rx' + mine) + ' · ' + t('rxFirst'))); return; }
+    var pct = function (i) { return Math.round(d.t[i] / d.n * 100); }, top = d.t.indexOf(Math.max.apply(null, d.t)), p = pct(mine);
+    box.appendChild(h('div.rxres', RXI.map(function (e, i) {
+      return h('div.rxr' + (i === mine ? '.me' : '') + (i === top ? '.mode' : ''), h('span.rxe', e), h('span.rxl', t('rx' + i)), h('span.rxbar', h('i', { style: 'width:' + Math.max(3, pct(i)) + '%' })), h('span.rxp', pct(i) + '%'));
+    })));
+    box.appendChild(h('p.rxsum', t(p >= 30 ? 'rxWith' : 'rxAlone', { p: p })));
+    if (d.c && d.c.n >= 5 && Rx.cc && Rx.cc !== 'XX') box.appendChild(h('p.rxin', t('rxIn', { c: regionName(Rx.cc), p: Math.round(d.c.t[mine] / d.c.n * 100) })));
+    box.appendChild(h('p.rxnote', t('rxN', { n: d.n }) + ' · ' + t('rxNote')));
+  }
+  function rxInit(id, box) {
+    if (S.rx[id] == null) return rxButtons(id, box);
+    rxResults(id, box);
+    if (!Rx.res[id]) rxFetch(id).then(function () { rxResults(id, box); updateWorld(); }); else updateWorld();
+  }
+  // "You and the world": on how many stories your reaction was the most common one.
+  function updateWorld() {
+    if (!worldEl) return;
+    var ids = Object.keys(S.rx).filter(function (id) { return Rx.res[id] && Rx.res[id].n >= 5 && spoken.some(function (x) { return x.it.id === id; }); });
+    if (ids.length < 2) { worldEl.hidden = true; return; }
+    var hits = ids.map(function (id) { var d = Rx.res[id]; return S.rx[id] === d.t.indexOf(Math.max.apply(null, d.t)); });
+    var a = hits.filter(Boolean).length;
+    clear(worldEl); worldEl.hidden = false;
+    worldEl.appendChild(h('h2', dotted(t('worldH') + '.')));
+    worldEl.appendChild(h('p.qsub', t('worldSub', { a: a, b: ids.length })));
+    worldEl.appendChild(h('div.qdots', hits.map(function (x) { return h('span.qd' + (x ? '.on' : ''), '●'); })));
+    worldEl.appendChild(h('div.qres', h('button.btn.qshare', { type: 'button', onclick: function () { shareText('newzeem. 🌍 ' + hits.map(function (x) { return x ? '●' : '○'; }).join('') + ' ' + a + '/' + ids.length + '\n' + SLOGAN); } }, t('quizShare'))));
   }
 
   /* ---------- check yourself: a few questions on what was just read, and a result you can share ---------- */
