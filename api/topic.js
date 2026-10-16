@@ -168,8 +168,8 @@ module.exports = async (req, res) => {
   if (!topic) return send(400, { error: 'topic' });
   const key = topic.id + '|' + lg;
   const hit = mem.get(key);
-  const ttl = hit && hit.ai ? 6 * 3600e3 : AI.configured() ? 20e3 : 10 * 60e3;
-  if (hit && (hit.ai || !u.searchParams.get('r')) && Date.now() - hit.at < ttl) return send(200, hit.body, hit.ai ? 'public, s-maxage=21600, stale-while-revalidate=86400' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
+  const ttl = hit && hit.ai ? 4 * 3600e3 : AI.configured() ? 20e3 : 10 * 60e3;
+  if (hit && (hit.ai || !u.searchParams.get('r')) && Date.now() - hit.at < ttl) return send(200, hit.body, hit.ai ? 'public, s-maxage=14400' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
   const r = await build(topic, lg);
   if (!r.ok) {
     if (hit) return send(200, hit.body, 'public, s-maxage=60'); // serve the last good copy rather than nothing
@@ -179,6 +179,6 @@ module.exports = async (req, res) => {
   if (!r.ai && r.why) body.why = r.why; // visible at /api/topic?t=world to see why a retelling failed
   mem.set(key, { at: Date.now(), ai: r.ai, body });
   // A copy made without the AI is cached briefly, so the real digest replaces it as soon as the AI works.
-  send(200, body, r.ai ? 'public, s-maxage=21600, stale-while-revalidate=86400' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
+  send(200, body, r.ai ? 'public, s-maxage=14400' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
 };
 module.exports._test = { parseFeed, pick, similar, supported, text, clip, decode, getFeed, LANG, hash, nums };

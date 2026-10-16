@@ -57,13 +57,13 @@ module.exports = async (req, res) => {
   if (!topic || topic.feeds.length < 3) return send(400, { error: 'topic' });
   if (!AI.configured()) return send(200, { events: [] }, 'public, s-maxage=600');
   const key = topic.id + '|' + lg, hit = mem.get(key);
-  if (hit && Date.now() - hit.at < hit.ttl) return send(200, hit.body, hit.ttl > 3600e3 ? 'public, s-maxage=21600, stale-while-revalidate=86400' : 'public, s-maxage=30');
+  if (hit && Date.now() - hit.at < hit.ttl) return send(200, hit.body, hit.ttl > 3600e3 ? 'public, s-maxage=14400' : 'public, s-maxage=30');
   try {
     const r = await build(topic, lg);
     if (!r.ok) return send(200, { events: [] }, 'public, s-maxage=60');
-    const body = { topic: topic.id, lang: lg, events: r.events }, ttl = 6 * 3600e3;
+    const body = { topic: topic.id, lang: lg, events: r.events }, ttl = 4 * 3600e3;
     mem.set(key, { at: Date.now(), ttl, body });
-    send(200, body, 'public, s-maxage=21600, stale-while-revalidate=86400');
+    send(200, body, 'public, s-maxage=14400');
   } catch (e) {
     console.error('views error:', topic.id, e && e.message);
     const body = { topic: topic.id, lang: lg, events: [] };

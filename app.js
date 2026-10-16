@@ -235,9 +235,12 @@
   }
 
   /* ---------- building the issue ---------- */
+  // Every 4 hours the address changes, so no cache in between can hand out an older issue than that.
+  function bucket() { return Math.floor(Date.now() / 14400000); }
+  var shownDay = '';
   function fetchTopic(id, retry) {
     var ac = new AbortController(), timer = setTimeout(function () { ac.abort(); }, 25000);
-    return fetch('/api/topic?t=' + encodeURIComponent(id) + '&lang=' + S.lang + (retry ? '&r=' + Date.now() : ''), { signal: ac.signal })
+    return fetch('/api/topic?t=' + encodeURIComponent(id) + '&lang=' + S.lang + '&b=' + bucket() + (retry ? '&r=' + Date.now() : ''), { signal: ac.signal })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) { return j && Array.isArray(j.items) ? { id: id, items: j.items, ai: !!j.ai, quiz: Array.isArray(j.quiz) ? j.quiz : [] } : null; })
       .catch(function () { return null; })
@@ -289,13 +292,14 @@
   }
 
   function renderDigest() {
+    shownDay = today();
     chrome();
     var main = view();
     var key = S.topics.join(',');
     var c = S.cache;
     if (c && c.v === 3 && c.day === today() && c.lang === S.lang && c.key === key && c.results) {
+      if (Date.now() - c.at > 4 * 3600e3) { build(key, false); return; } // an old issue is rebuilt, not shown
       draw(assemble(c.results, S.mins), c.failed || []);
-      if (Date.now() - c.at > 4 * 3600e3) build(key, true);
       return;
     }
     build(key, false);
@@ -319,7 +323,7 @@
     }).then(function (rs) {
       var ok = rs.filter(Boolean), failed = ids.filter(function (id, i) { return !rs[i]; });
       if (key !== S.topics.join(',')) return; // the reader changed topics meanwhile
-      if (!ok.length) { if (!quiet) drawFail(); return; }
+      if (!ok.length) { var old = S.cache; if (!quiet && old && old.results && old.key === key) draw(assemble(old.results, S.mins), old.failed || []); else if (!quiet) drawFail(); return; } // offline: an older issue is better than none
       var digest = assemble(ok, S.mins);
       S.cache = { v: 3, at: Date.now(), day: today(), lang: S.lang, key: key, results: ok, failed: failed }; save();
       if (!quiet) draw(digest, failed);
@@ -630,7 +634,7 @@
   function loadViews(el) {
     var tp = viewsTopic(); if (!tp) return;
     var k = tp + '|' + S.lang;
-    var go = viewsMemo[k] ? Promise.resolve(viewsMemo[k]) : fetch('/api/views?t=' + tp + '&lang=' + S.lang)
+    var go = viewsMemo[k] ? Promise.resolve(viewsMemo[k]) : fetch('/api/views?t=' + tp + '&lang=' + S.lang + '&b=' + bucket())
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) { if (j && Array.isArray(j.events)) viewsMemo[k] = j.events; return viewsMemo[k] || []; })
       .catch(function () { return []; });
@@ -773,5 +777,10 @@
   TP.langNames.forEach(function (l) { sel.appendChild(h('option', { value: l[0], lang: l[0] }, l[1])); });
   sel.addEventListener('change', function () { S.lang = sel.value; save(); S.topics.length ? renderDigest() : renderPick(false); });
   $('btn-topics').addEventListener('click', function () { renderPick(true); });
+  // A tab left open overnight (or a phone app brought back) shows the old day: when the reader returns on a new day, build the new issue.
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && shownDay && shownDay !== today() && S.topics.length) renderDigest();
+  });
+  window.addEventListener('pageshow', function (e) { if (e.persisted && shownDay && shownDay !== today() && S.topics.length) renderDigest(); });
   if (S.topics.length) renderDigest(); else renderPick(false);
 })();
