@@ -10,7 +10,7 @@ window.NZ_I18N = {
     fail: 'No se pudo crear tu edición. Revisa la conexión e inténtalo de nuevo.', retry: 'Reintentar', skipped: 'Estos temas no se cargaron: {t}.',
     endH: 'Eso es todo por hoy.', endP: 'Ya leíste lo importante. Lo demás puede esperar, y está bien. La próxima edición será mañana.', streak: 'Racha: {n} días', streak1: 'Primera edición leída',
     share: 'Compartir', copied: 'Enlace copiado', change: 'Cambiar temas', shareText: 'newzeem. Read less. Know more. Tus noticias en 5 minutos: gratis, sin anuncios y sin registro.',
-    foot: 'newzeem es gratis y no tiene anuncios. Tus temas se guardan solo en tu dispositivo y no te rastreamos. Los resúmenes los escribe una IA y puede equivocarse: comprueba el enlace a la fuente.',
+    foot: 'newzeem es gratis y no tiene anuncios. Tus temas se guardan solo en tu dispositivo y no te rastreamos. Los resúmenes los escribe una IA y puede equivocarse: comprueba el enlace a la fuente. Las reacciones y los votos se cuentan de forma anónima.',
     viewsH: 'Dos miradas', viewsSub: 'Un mismo hecho, contado por medios distintos. Mira cómo lo plantea cada uno.', viewsNote: 'Comparación escrita por IA a partir de los titulares de los propios medios. No dice quién tiene razón.', followH: 'Qué cambió desde ayer', followWas: 'Ayer', followNow: 'Hoy', predH: 'Pronóstico del día', predSub: 'Un toque. Mira qué piensa el mundo y vuelve por el resultado.', predYes: 'Sí', predNo: 'No', predFirst: 'Eres de los primeros. Vuelve luego para ver al mundo.', predN: '{n} votos', predWait: 'El resultado aparecerá aquí en un máximo de 3 días.', predY: 'Ocurrió', predNn: 'No ocurrió', predX: 'Cerrado: nada claro en las noticias', predRight: 'Acertaste', predWrong: 'Esta vez no', predRecord: 'Tu marca: {a} de {b}', predNote: 'Resuelto por IA a partir de titulares. Comprueba la fuente.', predEarlier: 'Pronóstico anterior'
   },
   pt: {
@@ -22,7 +22,7 @@ window.NZ_I18N = {
     fail: 'Não foi possível montar sua edição. Verifique a conexão e tente de novo.', retry: 'Tentar de novo', skipped: 'Estes temas não carregaram: {t}.',
     endH: 'Por hoje é só.', endP: 'Você leu o que importa. O resto pode esperar, e tudo bem. A próxima edição sai amanhã.', streak: 'Sequência: {n} dias', streak1: 'Primeira edição lida',
     share: 'Compartilhar', copied: 'Link copiado', change: 'Mudar temas', shareText: 'newzeem. Read less. Know more. Suas notícias em 5 minutos: grátis, sem anúncios e sem cadastro.',
-    foot: 'O newzeem é grátis e não tem anúncios. Seus temas ficam só no seu dispositivo e não rastreamos você. Os resumos são feitos por uma IA e podem errar: confira o link da fonte.',
+    foot: 'O newzeem é grátis e não tem anúncios. Seus temas ficam só no seu dispositivo e não rastreamos você. Os resumos são feitos por uma IA e podem errar: confira o link da fonte. Reações e votos são contados de forma anônima.',
     viewsH: 'Dois olhares', viewsSub: 'Um mesmo fato, contado por veículos diferentes. Veja como cada um o apresenta.', viewsNote: 'Comparação escrita por IA a partir das manchetes dos próprios veículos. Ela não diz quem tem razão.', followH: 'O que mudou desde ontem', followWas: 'Ontem', followNow: 'Hoje', predH: 'Palpite do dia', predSub: 'Um toque. Veja o que o mundo pensa e volte pelo resultado.', predYes: 'Sim', predNo: 'Não', predFirst: 'Você está entre os primeiros. Volte depois para ver o mundo.', predN: '{n} votos', predWait: 'O resultado aparecerá aqui em até 3 dias.', predY: 'Aconteceu', predNn: 'Não aconteceu', predX: 'Encerrado: nada claro nas notícias', predRight: 'Você acertou', predWrong: 'Desta vez não', predRecord: 'Seu placar: {a} de {b}', predNote: 'Resolvido por IA a partir de manchetes. Confira a fonte.', predEarlier: 'Palpite anterior'
   },
   fr: {
@@ -34,7 +34,7 @@ window.NZ_I18N = {
     fail: 'Impossible de créer votre édition. Vérifiez la connexion et réessayez.', retry: 'Réessayer', skipped: 'Ces thèmes n’ont pas chargé : {t}.',
     endH: 'C’est tout pour aujourd’hui.', endP: 'Vous avez lu l’essentiel. Le reste peut attendre, et c’est normal. La prochaine édition sera demain.', streak: 'Série : {n} jours', streak1: 'Première édition lue',
     share: 'Partager', copied: 'Lien copié', change: 'Changer de thèmes', shareText: 'newzeem. Read less. Know more. Vos actualités en 5 minutes : gratuit, sans publicité, sans inscription.',
-    foot: 'newzeem est gratuit et sans publicité. Vos thèmes restent uniquement sur votre appareil et nous ne vous suivons pas. Les résumés sont rédigés par une IA et peuvent contenir des erreurs : vérifiez le lien de la source.',
+    foot: 'newzeem est gratuit et sans publicité. Vos thèmes restent uniquement sur votre appareil et nous ne vous suivons pas. Les résumés sont rédigés par une IA et peuvent contenir des erreurs : vérifiez le lien de la source. Les réactions et les votes sont comptés de façon anonyme.',
     viewsH: 'Deux regards', viewsSub: 'Un même événement, rapporté par des médias différents. Voyez comment chacun le présente.', viewsNote: 'Comparaison rédigée par l\'IA d\'après les titres des médias eux-mêmes. Elle ne dit pas qui a raison.', followH: 'Ce qui a changé depuis hier', followWas: 'Hier', followNow: 'Aujourd\'hui', predH: 'Pronostic du jour', predSub: 'Un seul geste. Voyez ce que pense le monde, puis revenez pour le résultat.', predYes: 'Oui', predNo: 'Non', predFirst: 'Vous êtes parmi les premiers. Revenez plus tard pour voir le monde.', predN: '{n} votes', predWait: 'Le résultat apparaîtra ici sous 3 jours.', predY: 'Cela a eu lieu', predNn: 'Cela n\'a pas eu lieu', predX: 'Clos : rien de clair dans les actualités', predRight: 'Bien vu', predWrong: 'Pas cette fois', predRecord: 'Votre score : {a} sur {b}', predNote: 'Tranché par l\'IA d\'après les titres. Vérifiez la source.', predEarlier: 'Pronostic précédent'
   },
   de: {
@@ -46,7 +46,7 @@ window.NZ_I18N = {
     fail: 'Deine Ausgabe konnte nicht erstellt werden. Prüfe die Verbindung und versuche es erneut.', retry: 'Erneut versuchen', skipped: 'Diese Themen wurden nicht geladen: {t}.',
     endH: 'Das war’s für heute.', endP: 'Du hast gelesen, was wichtig ist. Der Rest kann warten, und das ist in Ordnung. Die nächste Ausgabe kommt morgen.', streak: 'Serie: {n} Tage', streak1: 'Erste Ausgabe gelesen',
     share: 'Teilen', copied: 'Link kopiert', change: 'Themen ändern', shareText: 'newzeem. Read less. Know more. Deine Nachrichten in 5 Minuten: kostenlos, ohne Werbung, ohne Anmeldung.',
-    foot: 'newzeem ist kostenlos und werbefrei. Deine Themen bleiben nur auf deinem Gerät, wir verfolgen dich nicht. Die Zusammenfassungen schreibt eine KI und sie kann sich irren: prüfe den Link zur Quelle.',
+    foot: 'newzeem ist kostenlos und werbefrei. Deine Themen bleiben nur auf deinem Gerät, wir verfolgen dich nicht. Die Zusammenfassungen schreibt eine KI und sie kann sich irren: prüfe den Link zur Quelle. Reaktionen und Stimmen werden anonym gezählt.',
     viewsH: 'Zwei Sichtweisen', viewsSub: 'Ein Ereignis, berichtet von verschiedenen Medien. Sieh, wie jedes es darstellt.', viewsNote: 'Vergleich von der KI aus den Schlagzeilen der Medien selbst verfasst. Er sagt nicht, wer recht hat.', followH: 'Was sich seit gestern geändert hat', followWas: 'Gestern', followNow: 'Heute', predH: 'Prognose des Tages', predSub: 'Ein Tipp. Sieh, was die Welt denkt, und komm fürs Ergebnis wieder.', predYes: 'Ja', predNo: 'Nein', predFirst: 'Du gehörst zu den Ersten. Schau später wieder vorbei.', predN: '{n} Stimmen', predWait: 'Das Ergebnis erscheint hier innerhalb von 3 Tagen.', predY: 'Ist eingetreten', predNn: 'Ist nicht eingetreten', predX: 'Geschlossen: nichts Eindeutiges in den Nachrichten', predRight: 'Richtig getippt', predWrong: 'Diesmal nicht', predRecord: 'Deine Bilanz: {a} von {b}', predNote: 'Von der KI anhand von Schlagzeilen entschieden. Prüfe die Quelle.', predEarlier: 'Frühere Prognose'
   },
   hi: {
@@ -58,7 +58,7 @@ window.NZ_I18N = {
     fail: 'आपका अंक नहीं बन सका। कनेक्शन जाँचें और फिर कोशिश करें।', retry: 'फिर कोशिश करें', skipped: 'ये विषय लोड नहीं हुए: {t}।',
     endH: 'आज के लिए बस इतना ही।', endP: 'आपने ज़रूरी बातें पढ़ लीं। बाकी इंतज़ार कर सकता है, और यह ठीक है। अगला अंक कल आएगा।', streak: 'लगातार: {n} दिन', streak1: 'पहला अंक पढ़ा',
     share: 'साझा करें', copied: 'लिंक कॉपी हुआ', change: 'विषय बदलें', shareText: 'newzeem. Read less. Know more. 5 मिनट में आपकी ख़बरें: मुफ़्त, बिना विज्ञापन, बिना रजिस्ट्रेशन।',
-    foot: 'newzeem मुफ़्त है और इसमें विज्ञापन नहीं हैं। आपके विषय सिर्फ़ आपके डिवाइस पर रहते हैं और हम आपको ट्रैक नहीं करते। सारांश AI लिखता है और उसमें ग़लती हो सकती है: स्रोत का लिंक देखकर जाँच लें।',
+    foot: 'newzeem मुफ़्त है और इसमें विज्ञापन नहीं हैं। आपके विषय सिर्फ़ आपके डिवाइस पर रहते हैं और हम आपको ट्रैक नहीं करते। सारांश AI लिखता है और उसमें ग़लती हो सकती है: स्रोत का लिंक देखकर जाँच लें। प्रतिक्रियाएँ और वोट गुमनाम रूप से गिने जाते हैं।',
     viewsH: 'दो नज़रिए', viewsSub: 'एक ही घटना, अलग-अलग मीडिया की नज़र से। देखें हर कोई उसे कैसे पेश करता है।', viewsNote: 'यह तुलना एआई ने मीडिया की अपनी सुर्खियों से लिखी है। यह नहीं बताती कि कौन सही है।', followH: 'कल से क्या बदला', followWas: 'कल', followNow: 'आज', predH: 'आज का अनुमान', predSub: 'एक टैप। देखें दुनिया क्या सोचती है, और नतीजे के लिए लौटें।', predYes: 'हाँ', predNo: 'नहीं', predFirst: 'आप शुरुआती लोगों में हैं। दुनिया की राय देखने बाद में लौटें।', predN: '{n} वोट', predWait: 'नतीजा 3 दिनों के भीतर यहाँ दिखेगा।', predY: 'हुआ', predNn: 'नहीं हुआ', predX: 'बंद: ख़बरों में कुछ साफ़ नहीं मिला', predRight: 'आपका अनुमान सही रहा', predWrong: 'इस बार नहीं', predRecord: 'आपका रिकॉर्ड: {b} में से {a}', predNote: 'नतीजा एआई ने सुर्खियों के आधार पर तय किया। स्रोत जाँच लें।', predEarlier: 'पिछला अनुमान'
   },
   zh: {
@@ -70,7 +70,7 @@ window.NZ_I18N = {
     fail: '无法生成你的读报。请检查网络后重试。', retry: '重试', skipped: '这些主题没有加载：{t}。',
     endH: '今天就到这里。', endP: '你已经读完了重点。其余的可以等等，这很正常。下一期明天见。', streak: '已连续 {n} 天', streak1: '读完第一期',
     share: '分享', copied: '链接已复制', change: '更改主题', shareText: 'newzeem. Read less. Know more. 5 分钟读完你的新闻：免费、无广告、无需注册。',
-    foot: 'newzeem 免费且无广告。你的主题只保存在你的设备上，我们不会追踪你。摘要由 AI 撰写，可能出错，请通过来源链接核对。',
+    foot: 'newzeem 免费且无广告。你的主题只保存在你的设备上，我们不会追踪你。摘要由 AI 撰写，可能出错，请通过来源链接核对。反应和投票以匿名方式统计。',
     viewsH: '两种视角', viewsSub: '同一件事，不同媒体怎么报。看看各家的侧重。', viewsNote: '对比由 AI 根据各媒体自己的标题写成，不判断谁对谁错。', followH: '与昨天相比的变化', followWas: '昨天', followNow: '今天', predH: '今日预测', predSub: '点一下。看看世界怎么想，之后回来看结果。', predYes: '会', predNo: '不会', predFirst: '你是最早的一批。稍后再来看看大家的想法。', predN: '{n} 票', predWait: '结果将在 3 天内显示在这里。', predY: '发生了', predNn: '没有发生', predX: '已关闭：新闻里没有明确结果', predRight: '你猜对了', predWrong: '这次没中', predRecord: '你的战绩：{b} 中 {a}', predNote: '由 AI 根据新闻标题判定，请核对来源。', predEarlier: '之前的预测'
   },
   ar: {
@@ -82,7 +82,7 @@ window.NZ_I18N = {
     fail: 'تعذّر إنشاء عددك. تحقّق من الاتصال وحاول مجددًا.', retry: 'حاول مجددًا', skipped: 'لم تُحمَّل هذه المواضيع: {t}.',
     endH: 'هذا كل شيء لليوم.', endP: 'قرأتَ أهمّ ما يلزم. الباقي يمكنه الانتظار، وهذا طبيعي. العدد القادم غدًا.', streak: 'سلسلة: {n} أيام', streak1: 'قرأتَ العدد الأول',
     share: 'مشاركة', copied: 'تم نسخ الرابط', change: 'تغيير المواضيع', shareText: 'newzeem. Read less. Know more. أخبارك في 5 دقائق: مجانًا، بلا إعلانات، بلا تسجيل.',
-    foot: 'newzeem مجاني وبلا إعلانات. تبقى مواضيعك على جهازك فقط ولا نتتبّعك. الملخّصات يكتبها ذكاء اصطناعي وقد يخطئ: تحقّق من رابط المصدر.',
+    foot: 'newzeem مجاني وبلا إعلانات. تبقى مواضيعك على جهازك فقط ولا نتتبّعك. الملخّصات يكتبها ذكاء اصطناعي وقد يخطئ: تحقّق من رابط المصدر. تُحتسب التفاعلات والأصوات دون الكشف عن الهوية.',
     viewsH: 'منظوران', viewsSub: 'حدث واحد تنقله وسائل إعلام مختلفة. شاهد كيف تعرضه كل واحدة.', viewsNote: 'المقارنة كتبها الذكاء الاصطناعي من عناوين الوسائل نفسها. وهي لا تحكم بمن هو على حق.', followH: 'ما الذي تغيّر منذ أمس', followWas: 'أمس', followNow: 'اليوم', predH: 'توقّع اليوم', predSub: 'نقرة واحدة. اعرف ما يفكر فيه العالم ثم عُد لتعرف النتيجة.', predYes: 'نعم', predNo: 'لا', predFirst: 'أنت من الأوائل. عُد لاحقًا لترى رأي العالم.', predN: '{n} صوتًا', predWait: 'ستظهر النتيجة هنا خلال 3 أيام.', predY: 'حدث', predNn: 'لم يحدث', predX: 'أُغلق: لا شيء واضح في الأخبار', predRight: 'أصبت', predWrong: 'ليس هذه المرة', predRecord: 'سجلّك: {a} من {b}', predNote: 'حسمه الذكاء الاصطناعي من عناوين الأخبار. تحقّق من المصدر.', predEarlier: 'توقّع سابق'
   }
 };
