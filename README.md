@@ -12,3 +12,11 @@ A free daily paper that fits your topics into five minutes. No sign-up, no ads, 
 ## AI
 Set ONE of `GROQ_API_KEY`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY` in the environment (Vercel project settings). `AI_PROVIDER` forces a choice.
 Optional: `GROQ_MODEL`, `NZ_AI_PER_DAY` (soft cap of AI calls per function instance per day, default 400).
+
+## Community and admin (October 2026)
+- **Authors** write explainers with at least one source. Every post goes to the moderation queue first. Authors have no e-mail or password: the device keeps a secret key (copyable in "Mine" to sign in elsewhere).
+- **Reputation**: +5 per published post, +2 per "Useful" vote, −3 per rejected post. Levels: Newcomer (0), Author (20), Expert (100), Legend (500).
+- **Admin** at `/admin`: queue with an AI hint, published posts, authors (ban), chat reports, source health. Locked until `ADMIN_TOKEN` (12+ characters) is set in Vercel.
+- **Share pages** with preview cards: `/p/<post>`, `/n/<story>`, `/c/<collection>`.
+- Saved stories, today's picks, interests and notifications live on the reader's device.
+- Storage: Upstash Redis (`UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`). Without it the community is switched off and the paper still works.

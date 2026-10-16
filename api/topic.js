@@ -61,9 +61,12 @@ function similar(a, b) {
 }
 
 // Newest first, no near-duplicate headlines, no more than 4 from one outlet.
+// Not news: live blogs, quizzes, puzzles, podcasts, galleries, shopping and deals, horoscopes, letters, sponsored posts.
+const JUNK = /(\blive\s*[:–—-]|[–—-]\s*live\s*$|\blive (updates?|blog|coverage)\b|as it happened|\bquiz\b|crossword|wordle|sudoku|\bpodcast\b|newsletter|in pictures|photos of the (day|week)|^watch[:\s]|^video[:\s]|horoscope|\bdeals?\b|% off|\bcoupon|black friday|best .{2,40} to buy|\bsponsored\b|^letters?:|\bobituary\b|^corrections? and clarifications)/i;
+const junk = (x) => JUNK.test(x.title);
 function pick(all) {
   const cutoff = Date.now() - KEEP_HOURS * 3600e3;
-  const fresh = all.filter((x) => !x.when || x.when >= cutoff).sort((a, b) => (b.when || 0) - (a.when || 0));
+  const fresh = all.filter((x) => (!x.when || x.when >= cutoff) && !junk(x)).sort((a, b) => (b.when || 0) - (a.when || 0));
   const out = [], per = {};
   for (const x of fresh) {
     if ((per[x.source] || 0) >= 4) continue;
@@ -181,4 +184,4 @@ module.exports = async (req, res) => {
   // A copy made without the AI is cached briefly, so the real digest replaces it as soon as the AI works.
   send(200, body, r.ai ? 'public, s-maxage=14400' : (AI.configured() ? 'public, s-maxage=20' : 'public, s-maxage=300, stale-while-revalidate=600'));
 };
-module.exports._test = { parseFeed, pick, similar, supported, text, clip, decode, getFeed, LANG, hash, nums };
+module.exports._test = { junk, parseFeed, pick, similar, supported, text, clip, decode, getFeed, LANG, hash, nums };

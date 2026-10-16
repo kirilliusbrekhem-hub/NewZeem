@@ -1,9 +1,41 @@
 {
-  "functions": { "api/*.js": { "maxDuration": 60, "includeFiles": "topics.js" } },
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 60,
+      "includeFiles": "topics.js"
+    }
+  },
   "headers": [
-    { "source": "/(.*)", "headers": [
-      { "key": "X-Content-Type-Options", "value": "nosniff" },
-      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-    ] }
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/p/:id",
+      "destination": "/api/page?type=p&id=:id"
+    },
+    {
+      "source": "/n/:id",
+      "destination": "/api/page?type=n&id=:id"
+    },
+    {
+      "source": "/c/:id",
+      "destination": "/api/page?type=c&id=:id"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    }
   ]
 }

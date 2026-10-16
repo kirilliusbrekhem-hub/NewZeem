@@ -59,6 +59,10 @@ module.exports = async (req, res) => {
       ['INCR', 'rl:' + day + ':' + ip], ['EXPIRE', 'rl:' + day + ':' + ip, '86400']
     ]);
     const allowed = fresh === 'OK' && perStory <= PER_IP_PER_STORY && perDay <= PER_IP_PER_DAY;
+    if (allowed && b.h && /^https?:\/\//.test(String(b.u || '')) && String(b.u).length < 400) { // remember the story for "top news today"
+      const nw = { h: String(b.h).replace(/\s+/g, ' ').slice(0, 140), g: String(b.g || '').replace(/\s+/g, ' ').slice(0, 300), u: String(b.u), s: String(b.s || '').slice(0, 40), t: String(b.t || '').slice(0, 16) };
+      await store.pipe([['SET', 'nw:' + id, JSON.stringify(nw), 'NX', 'EX', String(30 * 86400)], ['ZINCRBY', 'top:news:' + day, '1', id], ['EXPIRE', 'top:news:' + day, String(3 * 86400)]]);
+    }
     if (allowed) await store.pipe([['HINCRBY', 'rx:' + id, String(r), '1'], ['HINCRBY', 'rc:' + id, cc + ':' + r, '1'], ['EXPIRE', 'rx:' + id, String(TTL)], ['EXPIRE', 'rc:' + id, String(TTL)]]);
     return send(200, { on: true, cc, ok: allowed, s: await counts([id], cc) });
   } catch (e) {
