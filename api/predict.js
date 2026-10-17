@@ -17,7 +17,7 @@ const dayNow = () => new Date().toISOString().slice(0, 10);
 const dayOk = (s) => /^\d{4}-\d\d-\d\d$/.test(String(s));
 const ageDays = (id) => Math.floor((Date.parse(dayNow()) - Date.parse(id)) / 86400e3);
 const country = (req) => { const c = String(req.headers['x-vercel-ip-country'] || '').toUpperCase(); return /^[A-Z]{2}$/.test(c) ? c : 'XX'; };
-const ipHash = (req) => crypto.createHash('sha1').update(String(req.headers['x-forwarded-for'] || (req.socket && req.socket.remoteAddress) || '').split(',')[0].trim() + ':nz').digest('hex').slice(0, 16);
+const { ipHash } = require('./_util.js');
 const fold = (x) => { const o = {}; if (Array.isArray(x)) for (let i = 0; i + 1 < x.length; i += 2) o[x[i]] = Number(x[i + 1]) || 0; return o; };
 const shape = (tot, cty, cc) => ({ y: tot.y || 0, n: tot.n || 0, c: { y: cty[cc + ':y'] || 0, n: cty[cc + ':n'] || 0 } });
 const json = (s) => { try { return JSON.parse(s); } catch (e) { return null; } };

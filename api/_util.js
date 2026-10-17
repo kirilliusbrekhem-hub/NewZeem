@@ -14,7 +14,8 @@ async function body(req, max) {
   try { return JSON.parse(raw || '{}'); } catch (e) { return {}; }
 }
 const sha = (s) => crypto.createHash('sha256').update(String(s)).digest('hex');
-const ipHash = (req) => sha(String(req.headers['x-forwarded-for'] || (req.socket && req.socket.remoteAddress) || '').split(',')[0].trim() + ':nz').slice(0, 16);
+const SALT = () => process.env.NZ_SALT || process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN || 'nz';
+const ipHash = (req) => crypto.createHmac('sha256', SALT()).update(String(req.headers['x-forwarded-for'] || (req.socket && req.socket.remoteAddress) || '').split(',')[0].trim()).digest('hex').slice(0, 16);
 const country = (req) => { const c = String(req.headers['x-vercel-ip-country'] || '').toUpperCase(); return /^[A-Z]{2}$/.test(c) ? c : 'XX'; };
 // One line of plain text: no control characters, collapsed spaces, cut to n characters.
 const line = (s, n) => { s = String(s == null ? '' : s).replace(/[\u0000-\u001F\u007F​-‏‪-‮]/g, ' ').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n).trim() : s; };

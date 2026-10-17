@@ -13,7 +13,7 @@ const PER_IP_PER_STORY = 3;         // a family, an office or a mobile network m
 const PER_IP_PER_DAY = 400;
 const idOk = (s) => /^[a-z0-9]{1,12}$/.test(String(s));
 const country = (req) => { const c = String(req.headers['x-vercel-ip-country'] || '').toUpperCase(); return /^[A-Z]{2}$/.test(c) ? c : 'XX'; };
-const ipHash = (req) => crypto.createHash('sha1').update(String(req.headers['x-forwarded-for'] || (req.socket && req.socket.remoteAddress) || '').split(',')[0].trim() + ':nz').digest('hex').slice(0, 16);
+const { ipHash } = require('./_util.js');
 
 function fold(x) {
   if (Array.isArray(x)) { const o = {}; for (let i = 0; i + 1 < x.length; i += 2) o[x[i]] = Number(x[i + 1]) || 0; return o; }
@@ -38,8 +38,8 @@ async function body(req) {
 
 module.exports = async (req, res) => {
   const send = (code, b) => { res.statusCode = code; res.setHeader('content-type', 'application/json; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.end(JSON.stringify(b)); };
-  if (!store.configured()) return send(req.method === 'GET' ? 200 : 503, { on: false });
   const cc = country(req);
+  if (!store.configured()) return send(req.method === 'GET' ? 200 : 503, { on: false, cc });
   try {
     if (req.method === 'GET') {
       if (new URL(req.url, 'http://x').searchParams.get('check')) { // /api/react?check=1 : can this site WRITE to the store? (a read-only token or a wrong address shows up here)
@@ -61,7 +61,8 @@ module.exports = async (req, res) => {
     const allowed = fresh === 'OK' && perStory <= PER_IP_PER_STORY && perDay <= PER_IP_PER_DAY;
     if (allowed && b.h && /^https?:\/\//.test(String(b.u || '')) && String(b.u).length < 400) { // remember the story for "top news today"
       const nw = { h: String(b.h).replace(/\s+/g, ' ').slice(0, 140), g: String(b.g || '').replace(/\s+/g, ' ').slice(0, 300), u: String(b.u), s: String(b.s || '').slice(0, 40), t: String(b.t || '').slice(0, 16) };
-      await store.pipe([['SET', 'nw:' + id, JSON.stringify(nw), 'NX', 'EX', String(30 * 86400)], ['ZINCRBY', 'top:news:' + day, '1', id], ['EXPIRE', 'top:news:' + day, String(3 * 86400)]]);
+      const lg = /^[a-z]{2}$/.test(String(b.l || '')) ? b.l : 'en';
+      await store.pipe([['SET', 'nw:' + id + ':' + lg, JSON.stringify(nw), 'NX', 'EX', String(4 * 86400)], ['ZINCRBY', 'top:news:' + day, '1', id], ['EXPIRE', 'top:news:' + day, String(3 * 86400)]]);
     }
     if (allowed) await store.pipe([['HINCRBY', 'rx:' + id, String(r), '1'], ['HINCRBY', 'rc:' + id, cc + ':' + r, '1'], ['EXPIRE', 'rx:' + id, String(TTL)], ['EXPIRE', 'rc:' + id, String(TTL)]]);
     return send(200, { on: true, cc, ok: allowed, s: await counts([id], cc) });

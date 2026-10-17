@@ -18,7 +18,7 @@
       share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'newzeem. Читай меньше. Знай больше. Новости за 5 минут: бесплатно, без рекламы и регистрации.',
       foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник. Реакции и голоса считаются анонимно.',
       viewsH: 'Два взгляда', viewsSub: 'Одно событие у разных изданий. Смотрите, как каждое его подаёт.', viewsNote: 'Сравнение написал ИИ по заголовкам самих изданий. Он не решает, кто прав.', followH: 'Что изменилось с вчера', followWas: 'Вчера', followNow: 'Сегодня', predH: 'Прогноз дня', predSub: 'Один тап. Узнайте, что думает мир, и возвращайтесь за результатом.', predYes: 'Да', predNo: 'Нет', predFirst: 'Вы одним из первых. Загляните позже: увидите, что думает мир.', predN: 'Голосов: {n}', predWait: 'Результат появится здесь в течение 3 дней.', predY: 'Сбылось', predNn: 'Не сбылось', predX: 'Закрыт: в новостях нет ясного ответа', predRight: 'Вы угадали', predWrong: 'В этот раз нет', predRecord: 'Ваш счёт: {a} из {b}', predNote: 'Итог подвёл ИИ по заголовкам новостей. Сверьтесь с источником.', predEarlier: 'Прошлый прогноз',
-      docs: 'Документы', privacy: 'Политика конфиденциальности', terms: 'Условия использования', contact: 'Связь', ckH: 'Мы не следим за вами.', ckP: 'У newzeem нет рекламы и следящих cookies. На вашем устройстве хранятся только настройки: темы, язык и серия.', ckOk: 'Понятно', ckMore: 'Подробнее', photoBy: 'Фото: {s}', morningKick: 'Ваш выпуск · {m} мин', streakH: 'Ваша серия',
+      docs: 'Документы', privacy: 'Политика конфиденциальности', terms: 'Условия использования', contact: 'Связь', ckH: 'Мы не следим за вами.', ckP: 'У newzeem нет рекламы и следящих cookies. На вашем устройстве хранятся только настройки: темы, язык и серия.', ckOk: 'Понятно', ckMore: 'Подробнее', photoBy: 'Фото: {s}', morningKick: 'Ваш выпуск · {m} мин', streakH: 'Ваша серия', skip: 'К содержанию', langL: 'Язык', aiWaitH: 'Готовим перевод', aiWait: 'Новости прямо сейчас пересказываются на ваш язык. Обычно это занимает минуту.', showOrig: 'Показать оригинальные заголовки',
       other: 'Другое', pickFull: 'Подборка заполнена (20)', pickAdd: 'В мою подборку', picked: 'Добавлено в подборку', unpicked: 'Убрано из подборки', saveL: 'Сохранить', saved: 'Сохранено', unsaved: 'Убрано из сохранённого', forYou: 'Для вас', inside: 'В сегодняшнем выпуске', quick: 'Коротко', quickSub: 'Ещё {n} — по строчке', cFeed: 'Посты', cTop: 'Топ', cChat: 'Чат', write: 'Написать', authorsH: 'Авторы', authorsSub: 'Разборы от читателей. Каждый проверяет модератор.', cNew: 'Новые', cOff: 'Сообщество ещё не включено.', cEmpty: 'Постов пока нет. Будьте первым.', topNews: 'Самое обсуждаемое сегодня', topNone: 'Пока пусто.', topPosts: 'Лучшие посты', topAuthors: 'Лучшие авторы', repN: '{n} реп.', tabIssue: 'Выпуск', tabAuthors: 'Авторы', tabMe: 'Моё', missing: 'Страница недоступна.', usefulL: 'Полезно', thanks: 'Спасибо!', sources: 'Источники', postNote: 'Написал читатель, проверил модератор. Сверяйтесь с источниками.', rep: 'репутация', nPosts: 'постов', nUseful: 'сочли полезным', toNext: '{n} до уровня «{l}»', writeH: 'Написать пост', writeSub: 'Объясните что-то ясно и с источниками. Модератор читает каждый пост до публикации.', banned: 'Ваша страница автора заблокирована.', fTitle: 'Понятный заголовок', fBody: 'Объясните просто: факты, контекст, почему это важно.', fLink: 'Ссылка на источник (обязательно)', fLink2: 'Ещё источник (необязательно)', sendMod: 'Отправить на проверку', minChars: 'Минимум {n} символов', fTitleL: 'Заголовок', fTopicL: 'Тема', fBodyL: 'Текст', fLinksL: 'Источники', rule1: 'Факты с источниками, без рекламы и самопиара.', rule2: 'Без оскорблений и чужих личных данных.', rule3: 'Решает модератор, вам придёт уведомление.', eTitle: 'Заголовок слишком короткий', eLinks: 'Добавьте хотя бы одну ссылку на источник', sentMod: 'Отправлено! Модератор скоро посмотрит.', myPosts: 'Мои посты', fName: 'Псевдоним', fBio: 'Пара слов о себе (необязательно)', join: 'Стать автором', joinH: 'Выберите псевдоним', joinSub: 'Без почты и пароля: на устройстве хранится секретный ключ. Его можно скопировать в «Моё», чтобы войти с другого устройства.', fNameL: 'Псевдоним', fBioL: 'О себе', haveKey: 'У меня уже есть ключ', welcome: 'Добро пожаловать!', keyPh: 'Вставьте ключ автора', useKey: 'Войти', eKey: 'Этот ключ не подходит', chatSub: 'Авторы обсуждают свои темы. Будьте вежливы.', chatEmpty: 'Сообщений пока нет.', report: 'Пожаловаться', reported: 'Спасибо, модератор посмотрит', chatJoin: 'Писать в чат могут только авторы.', chatPh: 'Сообщение', send: 'Отправить', fromAuthors: 'От наших авторов', allPosts: 'Все посты', remove: 'Убрать', myPicks: 'Моя подборка на день', myPicksSub: 'Ваш собственный короткий выпуск. Поделитесь им ссылкой.', picksEmpty: 'Нажмите + под новостью, чтобы добавить её сюда.', sharePicks: 'Поделиться подборкой', savedH: 'Сохранённое', savedEmpty: 'Нажмите закладку под новостью, чтобы сохранить её.', myAuthor: 'Моя страница автора', becomeSub: 'Пишите разборы, получайте репутацию и читателей.', publicPage: 'Публичная страница', keyH: 'Мой ключ автора', keySub: 'Не показывайте его никому. С ним можно войти с другого устройства.', copy: 'Копировать', settings: 'Настройки', interestsNote: 'Интересы считаются только на этом устройстве: по тому, что вы сохраняете, добавляете и открываете.', cleared: 'Интересы сброшены', clearInterests: 'Сбросить интересы', nOk: 'Ваш пост опубликован', nNo: 'Пост не опубликован', nOff: 'Пост снят с публикации', nTop: 'Главная новость дня', nRec: 'Новое от {a}', notesH: 'Уведомления', notesEmpty: 'Ничего нового.', lv0: 'Новичок', lv1: 'Автор', lv2: 'Эксперт', lv3: 'Легенда', st_pending: 'На проверке', st_live: 'Опубликован', st_rejected: 'Не опубликован', eLimit: 'Можно отправить 3 поста в день', eName: 'Псевдоним: 3–24 буквы или цифры', eTaken: 'Этот псевдоним занят', eSlow: 'Чуть помедленнее'
     },
     en: {
@@ -33,7 +33,7 @@
       share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'newzeem. Read less. Know more. Your news in 5 minutes: free, no ads, no sign-up.',
       foot: 'newzeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link. Reactions and votes are counted anonymously.',
       viewsH: 'Two views', viewsSub: 'One event, reported by different outlets. See how each one frames it.', viewsNote: 'Comparison written by AI from the outlets\' own headlines. It does not say who is right.', followH: 'What changed since yesterday', followWas: 'Yesterday', followNow: 'Today', predH: 'Prediction of the day', predSub: 'One tap. See what the world thinks, then come back for the result.', predYes: 'Yes', predNo: 'No', predFirst: 'You are among the first. Come back later to see the world.', predN: '{n} votes', predWait: 'The result will appear here within 3 days.', predY: 'It happened', predNn: 'It did not happen', predX: 'Closed: nothing clear in the news', predRight: 'You called it', predWrong: 'Not this time', predRecord: 'Your record: {a} of {b}', predNote: 'Settled by AI from news headlines. Check the source.', predEarlier: 'Earlier prediction',
-      docs: 'Documents', privacy: 'Privacy policy', terms: 'Terms of use', contact: 'Contact', ckH: 'We don’t track you.', ckP: 'newzeem has no ads and no tracking cookies. Only your settings (topics, language, streak) are kept on this device.', ckOk: 'Got it', ckMore: 'Learn more', photoBy: 'Photo: {s}', morningKick: 'Your issue · {m} min', streakH: 'Your streak',
+      docs: 'Documents', privacy: 'Privacy policy', terms: 'Terms of use', contact: 'Contact', ckH: 'We don’t track you.', ckP: 'newzeem has no ads and no tracking cookies. Only your settings (topics, language, streak) are kept on this device.', ckOk: 'Got it', ckMore: 'Learn more', photoBy: 'Photo: {s}', morningKick: 'Your issue · {m} min', streakH: 'Your streak', skip: 'Skip to content', langL: 'Language', aiWaitH: 'Translating your issue', aiWait: 'The news is being retold right now. This usually takes a minute.', showOrig: 'Show original headlines',
       other: 'Other', pickFull: 'Your picks are full (20)', pickAdd: 'Add to my picks', picked: 'Added to your picks', unpicked: 'Removed from your picks', saveL: 'Save', saved: 'Saved', unsaved: 'Removed from saved', forYou: 'For you', inside: 'In today\'s issue', quick: 'Quick hits', quickSub: '{n} more in one line each', cFeed: 'Posts', cTop: 'Top', cChat: 'Chat', write: 'Write', authorsH: 'Authors', authorsSub: 'Explainers by readers, checked by a moderator before they appear.', cNew: 'New', cOff: 'The community is not switched on yet.', cEmpty: 'No posts yet. Be the first.', topNews: 'Most discussed news today', topNone: 'Nothing here yet.', topPosts: 'Top posts', topAuthors: 'Top authors', repN: '{n} rep', tabIssue: 'Issue', tabAuthors: 'Authors', tabMe: 'Mine', missing: 'This page is not available.', usefulL: 'Useful', thanks: 'Thanks!', sources: 'Sources', postNote: 'Written by a reader and checked by a moderator. Check the sources.', rep: 'reputation', nPosts: 'posts', nUseful: 'found it useful', toNext: '{n} to {l}', writeH: 'Write a post', writeSub: 'Explain something clearly and with sources. A moderator reads every post before it goes live.', banned: 'Your author page is blocked.', fTitle: 'A clear title', fBody: 'Explain it simply. Facts, context, why it matters.', fLink: 'Source link (required)', fLink2: 'Another source (optional)', sendMod: 'Send for review', minChars: 'At least {n} characters', fTitleL: 'Title', fTopicL: 'Topic', fBodyL: 'Text', fLinksL: 'Sources', rule1: 'Facts with sources, no ads or self-promotion.', rule2: 'No insults, no personal data of others.', rule3: 'A moderator decides; you get a notification.', eTitle: 'The title is too short', eLinks: 'Add at least one source link', sentMod: 'Sent! A moderator will review it soon.', myPosts: 'My posts', fName: 'Pen name', fBio: 'A line about you (optional)', join: 'Become an author', joinH: 'Pick a pen name', joinSub: 'No e-mail, no password: this device keeps a secret key. You can copy it in Mine to sign in elsewhere.', fNameL: 'Pen name', fBioL: 'About you', haveKey: 'I already have a key', welcome: 'Welcome!', keyPh: 'Paste your author key', useKey: 'Sign in', eKey: 'This key does not work', chatSub: 'Authors talk shop. Be kind, stay on topic.', chatEmpty: 'No messages yet.', report: 'Report', reported: 'Thanks, a moderator will look', chatJoin: 'Only authors can write in the chat.', chatPh: 'Message', send: 'Send', fromAuthors: 'From our authors', allPosts: 'All posts', remove: 'Remove', myPicks: 'My picks for today', myPicksSub: 'Your own short issue. Share it as a link.', picksEmpty: 'Tap + under any story to add it here.', sharePicks: 'Share my picks', savedH: 'Saved', savedEmpty: 'Tap the bookmark under a story to keep it.', myAuthor: 'My author page', becomeSub: 'Write explainers, earn reputation and reach readers.', publicPage: 'Public page', keyH: 'My author key', keySub: 'Keep it private. With it you can sign in on another device.', copy: 'Copy', settings: 'Settings', interestsNote: 'Your interests are learned on this device only, from what you save, pick and open.', cleared: 'Interests cleared', clearInterests: 'Clear my interests', nOk: 'Your post is live', nNo: 'Your post was not published', nOff: 'Your post was taken down', nTop: 'The big story today', nRec: 'New from {a}', notesH: 'Notifications', notesEmpty: 'Nothing new.', lv0: 'Newcomer', lv1: 'Author', lv2: 'Expert', lv3: 'Legend', st_pending: 'In review', st_live: 'Published', st_rejected: 'Not published', eLimit: 'You can send 3 posts a day', eName: 'Pen name: 3–24 letters or digits', eTaken: 'This pen name is taken', eSlow: 'Slow down a little'
     }
   };
@@ -42,7 +42,19 @@
   var LANGS = TP.langs;
 
   /* ---------- small helpers ---------- */
-  function guess() { var l = String(navigator.language || 'en').slice(0, 2).toLowerCase(); return TP.langs.indexOf(l) >= 0 ? l : 'en'; }
+  // The language follows the reader's country (English by default) until the reader picks one; the pick is remembered.
+  var CL = {};
+  [['ru', 'RU BY KZ KG'], ['es', 'ES MX AR CO CL PE VE EC GT CU BO DO HN PY SV NI CR PA UY PR GQ'], ['pt', 'BR PT AO MZ CV GW ST TL'],
+    ['fr', 'FR MC SN CI CM CD ML BF NE TD GN BJ TG CG GA MG HT'], ['de', 'DE AT LI'], ['zh', 'CN TW HK MO'],
+    ['ar', 'SA AE EG IQ JO KW LB LY MA OM QA SY TN YE BH DZ SD PS MR']].forEach(function (x) { x[1].split(' ').forEach(function (c) { CL[c] = x[0]; }); });
+  var MIXED = { CH: ['de', 'fr'], BE: ['fr'], LU: ['fr', 'de'], CA: ['fr'], IN: ['hi'] }; // several languages: follow the browser if it speaks one of them
+  function langFor(cc) {
+    var nav = String(navigator.language || '').slice(0, 2).toLowerCase();
+    if (CL[cc]) return CL[cc];
+    if (MIXED[cc] && MIXED[cc].indexOf(nav) >= 0) return nav;
+    return 'en';
+  }
+  function guess() { return 'en'; }
   var memStore = null;
   function load() { try { return JSON.parse(localStorage.getItem('newzeem.v1') || 'null') || memStore; } catch (e) { return memStore; } }
   var S = Object.assign({ lang: guess(), topics: [], read: {}, last: '', streak: 0, cache: null, mins: 5, days: [], rx: {}, did: '', pr: {}, hist: {},
@@ -58,7 +70,7 @@
       if (post && /^[a-z0-9]{1,14}$/.test(post)) { history.replaceState(null, '', location.pathname + '#/post/' + post); return; }
       if (!tl.length) return;
       S.topics = tl.slice(0, MAX_TOPICS); S.cache = null;
-      if (TP.langs.indexOf(q.get('l')) >= 0) S.lang = q.get('l');
+      if (TP.langs.indexOf(q.get('l')) >= 0) { S.lang = q.get('l'); S.langPicked = true; }
       if (MINS.indexOf(+q.get('m')) >= 0) S.mins = +q.get('m');
       memStore = S; save();
       history.replaceState(null, '', location.pathname);
@@ -155,6 +167,8 @@
     $('slogan').textContent = SLOGAN;
     $('udate').textContent = dateLabel();
     $('bellL').textContent = t('notesH');
+    $('lang').setAttribute('aria-label', t('langL')); $('tabs').setAttribute('aria-label', t('sections')); $('tabbar').setAttribute('aria-label', t('sections'));
+    var sk = document.querySelector('.skip'); if (sk) sk.textContent = t('skip');
     var cur = tabOf(route || 'issue');
     [$('tabs'), $('tabbar')].forEach(function (box) {
       clear(box);
@@ -461,6 +475,8 @@
       var ok = rs.filter(Boolean), failed = ids.filter(function (id, i) { return !rs[i]; });
       if (key !== S.topics.join(',') || route().name !== 'issue') return; // the reader moved on meanwhile
       if (!ok.length) { var old = S.cache; if (!quiet && old && old.results && old.key === key) draw(assemble(old.results, S.mins), old.failed || []); else if (!quiet) drawFail(); return; } // offline: an older issue is better than none
+      // In another language, an issue made only of untranslated source headlines is not shown as if it were translated.
+      if (S.lang !== 'en' && !showOrig && ok.every(function (r) { return !r.ai; })) { if (!quiet) drawWait(ok, failed); return; }
       S.cache = { v: 3, at: Date.now(), day: today(), lang: S.lang, key: key, results: ok, failed: failed }; save();
       if (!quiet) draw(assemble(ok, S.mins), failed);
     });
@@ -495,6 +511,13 @@
     });
   }
   function dateLabel() { var s = new Date().toLocaleDateString({ en: 'en-US', zh: 'zh-CN', pt: 'pt-BR' }[S.lang] || S.lang, { weekday: 'long', day: 'numeric', month: 'long' }); return s.charAt(0).toUpperCase() + s.slice(1); }
+  var showOrig = false;
+  function drawWait(ok, failed) {
+    var main = clear($('main'));
+    main.appendChild(h('div.err.card', h('h2', { style: 'font: 800 26px/1.2 var(--sans); margin-bottom: 10px' }, t('aiWaitH')), h('p', t('aiWait')),
+      h('div.row2', h('button.btn.dark', { type: 'button', onclick: renderDigest }, t('retry')),
+        h('button.btn', { type: 'button', onclick: function () { showOrig = true; draw(assemble(ok, S.mins), failed); } }, t('showOrig')))));
+  }
   function drawFail() {
     var main = clear($('main'));
     main.appendChild(h('div.err.card', h('p', t('fail')), h('button.btn.dark', { type: 'button', onclick: renderDigest }, t('retry'))));
@@ -680,7 +703,7 @@
   function rxButtons(it, box) {
     clear(box); box.hidden = false;
     box.appendChild(h('div.rxrow', { role: 'group', 'aria-label': t('rxQ') }, RXI.map(function (e, i) {
-      var b = h('button.rxb', { type: 'button', title: t('rx' + i) }, h('span.rxe', e), h('span.rxl', t('rx' + i)));
+      var b = h('button.rxb', { type: 'button', title: t('rx' + i), 'aria-label': t('rx' + i) }, h('span.rxe', { 'aria-hidden': 'true' }, e), h('span.rxl', t('rx' + i)));
       b.addEventListener('click', function () { rxSend(it, i, box); });
       return b;
     })));
@@ -688,7 +711,7 @@
   function rxSend(it, r, box) {
     var id = it.id, btns = box.querySelectorAll('.rxb');
     Array.prototype.forEach.call(btns, function (b) { b.disabled = true; });
-    fetch('/api/react', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: id, r: r, d: did(), h: it.headline, g: it.gist || '', u: it.url, s: it.source, t: it.topic }) })
+    fetch('/api/react', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: id, r: r, d: did(), h: it.headline, g: it.gist || '', u: it.url, s: it.source, t: it.topic, l: S.lang }) })
       .then(function (x) { return x.ok ? x.json() : Promise.reject(); })
       .then(function (j) {
         if (!j || !j.s || !j.s[id]) throw 0;
@@ -850,7 +873,7 @@
   }
   function predDraw(el, id) {
     var e = S.pr[id]; clear(el); el.hidden = false;
-    el.appendChild(h('h2', dotted(t('predH') + '.')));
+    el.appendChild(h('h2', t('predH')));
     Object.keys(S.pr).filter(function (k) { return k !== id && S.pr[k].o && !S.pr[k].seen; }).forEach(function (k) {
       var p = S.pr[k], res = p.o === 'y' ? t('predY') : p.o === 'n' ? t('predNn') : t('predX');
       el.appendChild(h('div.qcard.pold', h('p.qsub', t('predEarlier')), h('p.qq', p.q),
@@ -984,7 +1007,7 @@
     api('/api/c?a=feed&n=40' + q).then(function (j) {
       clear(list);
       if (j.on === false) { list.appendChild(emptyNote(t('cOff'))); return; }
-      var ps = j.posts || [];
+      var ps = (j.posts || []).filter(function (p) { return p.lang === S.lang; }); // only posts in the reader's language
       if (m === 'foryou') ps = ps.map(function (p) { return Object.assign(p, { sc: Pref.score(p.topic, p.title + ' ' + (p.ex || '')) + (S.topics.indexOf(p.topic) >= 0 ? 2 : 0) + Math.log(1 + (p.useful || 0)) }); }).sort(function (a, b) { return b.sc - a.sc || b.at - a.at; });
       if (!ps.length) { list.appendChild(emptyNote(t('cEmpty'), h('a.btn.dark', { href: '#/write' }, t('write')))); return; }
       if (ps[0]) S.feedSeen = Math.max(S.feedSeen || 0, ps.reduce(function (m2, p) { return Math.max(m2, p.at); }, 0)); save();
@@ -998,10 +1021,10 @@
     main.appendChild(subnav('top'));
     var box = h('div', h('div.skel'));
     main.appendChild(box);
-    api('/api/c?a=top').then(function (j) {
+    api('/api/c?a=top&lang=' + S.lang).then(function (j) {
       clear(box);
       if (j.on === false) { box.appendChild(emptyNote(t('cOff'))); return; }
-      var news = j.news || [], posts = j.posts || [], aus = j.authors || [];
+      var news = j.news || [], posts = (j.posts || []).filter(function (p) { return p.lang === S.lang; }), aus = j.authors || [];
       box.appendChild(h('section.card.topbox', h('h2', t('topNews')), news.length ? h('ol.rank', news.map(function (n) {
         return h('li', h('a', { href: safeUrl(n.u), target: '_blank', rel: 'noopener noreferrer' }, h('b', n.h), h('span', ' ' + (n.s || '') + ' ↗')), h('span.rn', t('rxN', { n: n.n })));
       })) : h('p.qsub', t('topNone'))));
@@ -1181,14 +1204,15 @@
   // "From our authors" at the end of the issue: two posts that fit the reader's interests.
   function authorsPick(el) {
     api('/api/c?a=feed&n=30').then(function (j) {
-      if (!el.isConnected || !j.posts || !j.posts.length) return;
-      var ps = j.posts.map(function (p) { return Object.assign(p, { sc: Pref.score(p.topic, p.title + ' ' + (p.ex || '')) + (S.topics.indexOf(p.topic) >= 0 ? 2 : 0) + Math.log(1 + (p.useful || 0)) }); })
+      var mine = (j.posts || []).filter(function (p) { return p.lang === S.lang; });
+      if (!el.isConnected || !mine.length) return;
+      var ps = mine.map(function (p) { return Object.assign(p, { sc: Pref.score(p.topic, p.title + ' ' + (p.ex || '')) + (S.topics.indexOf(p.topic) >= 0 ? 2 : 0) + Math.log(1 + (p.useful || 0)) }); })
         .sort(function (a, b) { return b.sc - a.sc || b.at - a.at; }).slice(0, 2);
       el.hidden = false;
       el.appendChild(h('h2', dotted(t('fromAuthors') + '.')));
       ps.forEach(function (p) { el.appendChild(postCard(p)); });
       el.appendChild(h('a.more2', { href: '#/feed' }, t('allPosts') + ' →'));
-      Bell.posts(j.posts);
+      Bell.posts(mine);
     });
   }
 
@@ -1316,7 +1340,7 @@
 
   var sel = $('lang');
   TP.langNames.forEach(function (l) { sel.appendChild(h('option', { value: l[0], lang: l[0] }, l[1])); });
-  sel.addEventListener('change', function () { S.lang = sel.value; save(); render(); });
+  sel.addEventListener('change', function () { S.lang = sel.value; S.langPicked = true; save(); render(); });
   $('bellb').addEventListener('click', function () { location.hash = '#/bell'; });
   // A tab left open overnight (or a phone app brought back) shows the old day: when the reader returns on a new day, build the new issue.
   document.addEventListener('visibilitychange', function () {
@@ -1325,7 +1349,13 @@
   window.addEventListener('pageshow', function (e) { if (e.persisted && shownDay && shownDay !== today() && S.topics.length && route().name === 'issue') renderDigest(); });
   function hit(ev) { try { fetch('/api/c?a=hit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ d: did(), ev: ev, lang: S.lang }), keepalive: true }).catch(function () {}); } catch (e) { /* counting is optional */ } }
   Pref.tidy();
-  render();
-  hit('open');
+  // First visit without a chosen language: ask the server which country we are in (it answers from the request, nothing is stored), then render.
+  function boot() { render(); hit('open'); }
+  if (S.langPicked) boot();
+  else {
+    var booted = false, go = function (lang) { if (booted) return; booted = true; if (lang && TP.langs.indexOf(lang) >= 0 && !S.langPicked) { S.lang = lang; save(); } boot(); };
+    setTimeout(function () { go(null); }, 1200);
+    fetch('/api/react').then(function (r) { return r.json(); }).then(function (j) { go(j && j.cc ? langFor(j.cc) : null); }).catch(function () { go(null); });
+  }
   loadMe();
 })();

@@ -97,13 +97,13 @@ const GET = {
     const [ids] = await P([['ZREVRANGE', 'po:au:' + id, '0', '49']]);
     return { author: au, posts: (await posts(ids || [], false)).filter((p) => p.status === 'live') };
   },
-  async top() {
-    const d = U.day();
-    const [tp, ta, tn] = await P([['ZREVRANGE', 'top:posts', '0', '9', 'WITHSCORES'], ['ZREVRANGE', 'top:au', '0', '9', 'WITHSCORES'], ['ZREVRANGE', 'top:news:' + d, '0', '9', 'WITHSCORES']]);
+  async top(q) {
+    const d = U.day(), lg = TOPICS.langs.includes(q.get('lang')) ? q.get('lang') : 'en';
+    const [tp, ta, tn] = await P([['ZREVRANGE', 'top:posts', '0', '9', 'WITHSCORES'], ['ZREVRANGE', 'top:au', '0', '9', 'WITHSCORES'], ['ZREVRANGE', 'top:news:' + d, '0', '29', 'WITHSCORES']]);
     const pl = (await posts(zids(tp), false)).filter((p) => p.status === 'live');
     const au = await authors(zids(ta));
-    const nids = zids(tn), nr = nids.length ? await P(nids.map((id) => ['GET', 'nw:' + id])) : [];
-    const news = nids.map((id, i) => { const n = U.json(nr[i]); return n ? Object.assign({ id, n: Number(tn[i * 2 + 1]) || 0 }, n) : null; }).filter(Boolean);
+    const nids = zids(tn), nr = nids.length ? await P(nids.map((id) => ['GET', 'nw:' + id + ':' + lg])) : []; // headlines in the reader's language only
+    const news = nids.map((id, i) => { const n = U.json(nr[i]); return n ? Object.assign({ id, n: Number(tn[i * 2 + 1]) || 0 }, n) : null; }).filter(Boolean).slice(0, 10);
     return { posts: pl, authors: zids(ta).map((a) => au[a]).filter((a) => a && !a.ban), news };
   },
   async chat() {
@@ -119,10 +119,12 @@ const GET = {
 };
 
 const POST = {
-  async join(b, ctx) {
+  async join(b, ctx, req) {
     if (!ctx.aid) return [400, { error: 'key' }];
     const have = (await authors([ctx.aid]))[ctx.aid]; if (have) return { author: have };
     const name = U.line(b.name, 24); if (!nameOk(name)) return [400, { error: 'name' }];
+    const jk = 'joinr:' + U.day() + ':' + U.ipHash(req);
+    const [jn] = await P([['INCR', jk], ['EXPIRE', jk, '90000']]); if (jn > 5) return [429, { error: 'limit' }];
     const [ok] = await P([['SET', 'aun:' + name.toLowerCase(), ctx.aid, 'NX']]);
     if (ok !== 'OK') return [409, { error: 'taken' }];
     const au = { id: ctx.aid, name, bio: U.line(b.bio, 160), at: Date.now() };
@@ -146,7 +148,9 @@ const POST = {
     if (n > 3) return [429, { error: 'limit' }];
     const id = U.rid(6);
     const p = { id, aid: ctx.aid, name: au.name, title, body, topic, links, lang, at: Date.now(), status: 'pending' };
-    p.ai = await precheck(p);
+    const ak = 'aichk:' + U.day();
+    const [an] = await P([['INCR', ak], ['EXPIRE', ak, '90000']]);
+    p.ai = an <= 300 ? await precheck(p) : null; // the AI hint is a help for the moderator, capped per day to protect the free AI quota
     await P([['SET', 'po:' + id, JSON.stringify(p)], ['ZADD', 'q:pending', String(p.at), id], ['ZADD', 'po:au:' + ctx.aid, String(p.at), id]]);
     return { post: (await posts([id], true))[0] };
   },
@@ -188,8 +192,10 @@ const POST = {
     await P([['SET', 'col:' + id, JSON.stringify(col), 'EX', String(30 * 86400)]]);
     return { id };
   },
-  async share(b) {
+  async share(b, ctx, req) {
     const id = String(b.id || ''); if (!idOk(id) || !U.urlOk(b.u)) return [400, { error: 'input' }];
+    const sk = 'shr:' + U.day() + ':' + U.ipHash(req);
+    const [sn] = await P([['INCR', sk], ['EXPIRE', sk, '90000']]); if (sn > 100) return [429, { error: 'limit' }];
     const n = { h: U.line(b.h, 140), g: U.line(b.g, 300), u: String(b.u), s: U.line(b.s, 40), t: U.line(b.t, 16) };
     if (!n.h) return [400, { error: 'input' }];
     await P([['SET', 'nw:' + id, JSON.stringify(n), 'NX', 'EX', String(30 * 86400)]]);
