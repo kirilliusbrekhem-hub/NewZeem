@@ -195,6 +195,23 @@ const POST = {
     await P([['SET', 'nw:' + id, JSON.stringify(n), 'NX', 'EX', String(30 * 86400)]]);
     return { id };
   },
+  // Anonymous visit counter: each device counts once a day per event. Only a hash of the random device id is kept, no IP, no names.
+  async hit(b, ctx, req) {
+    const d = String(b.d || ''), ev = String(b.ev || ''); if (!/^[\w-]{8,40}$/.test(d) || !['open', 'issue', 'done'].includes(ev)) return [400, { error: 'input' }];
+    const lang = TOPICS.langs.includes(b.lang) ? b.lang : 'xx', cc = U.country(req), dh = U.sha('nz-visit:' + d).slice(0, 16);
+    const td = U.day(), yd = new Date(Date.now() - 864e5).toISOString().slice(0, 10), keep = String(400 * 86400);
+    const [fresh] = await P([['SET', 'hd:' + td + ':' + ev + ':' + dh, '1', 'NX', 'EX', String(3 * 86400)]]);
+    if (fresh !== 'OK') return { ok: true };
+    const cmds = [['HINCRBY', 'st:' + td, ev, '1'], ['EXPIRE', 'st:' + td, keep]];
+    if (ev === 'open') {
+      const [isNew, back] = await P([['SET', 'dv:' + dh, '1', 'NX', 'EX', String(120 * 86400)], ['EXISTS', 'hd:' + yd + ':open:' + dh], ['EXPIRE', 'dv:' + dh, String(120 * 86400)]]);
+      if (isNew === 'OK') cmds.push(['HINCRBY', 'st:' + td, 'new', '1']);
+      if (Number(back) === 1) cmds.push(['HINCRBY', 'st:' + td, 'back', '1']);
+      cmds.push(['HINCRBY', 'st:' + td + ':l', lang, '1'], ['EXPIRE', 'st:' + td + ':l', keep], ['HINCRBY', 'st:' + td + ':c', cc, '1'], ['EXPIRE', 'st:' + td + ':c', keep]);
+    }
+    await P(cmds);
+    return { ok: true };
+  },
   async seen(b, ctx) { if (!ctx.aid) return [400, { error: 'key' }]; await P([['SET', 'nts:' + ctx.aid, String(Date.now())]]); return { ok: true }; }
 };
 

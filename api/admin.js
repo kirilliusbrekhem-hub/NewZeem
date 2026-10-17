@@ -31,6 +31,12 @@ const GET = {
     const v = fold(pv);
     return { pending: pend || 0, live: live || 0, authors: au || 0, chat: chat || 0, reported: rep || 0, votesToday: (v.y || 0) + (v.n || 0), newsReactedToday: tn || 0, ai: !!(process.env.GROQ_API_KEY || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY || process.env.ANTHROPIC_API_KEY) };
   },
+  async visits() {
+    const days = []; for (let i = 13; i >= 0; i--) days.push(new Date(Date.now() - i * 864e5).toISOString().slice(0, 10));
+    const r = await P(days.map((d) => ['HGETALL', 'st:' + d]).concat(days.slice(-7).map((d) => ['HGETALL', 'st:' + d + ':l'])).concat(days.slice(-7).map((d) => ['HGETALL', 'st:' + d + ':c'])));
+    const sum = (list) => { const o = {}; list.forEach((x) => { const f = fold(x); Object.keys(f).forEach((k) => { o[k] = (o[k] || 0) + f[k]; }); }); return o; };
+    return { days: days.map((d, i) => Object.assign({ day: d }, fold(r[i]))), langs: sum(r.slice(14, 21)), countries: sum(r.slice(21, 28)) };
+  },
   async queue() { const [ids] = await P([['ZRANGE', 'q:pending', '0', '49']]); const ps = await full(ids || []); const au = await authors([...new Set(ps.map((p) => p.aid))]); return { posts: ps, authors: au }; },
   async posts() { const [ids] = await P([['ZREVRANGE', 'po:live', '0', '99']]); return { posts: await full(ids || []) }; },
   async authors() { const [ids] = await P([['ZREVRANGE', 'top:au', '0', '199']]); return { authors: await authors(ids || []) }; },

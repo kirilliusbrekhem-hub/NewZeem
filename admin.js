@@ -52,7 +52,7 @@
     $('out').hidden = false; $('nav').hidden = false;
     api('stats').then(function (s) { if (s._s === 401) return login('Сессия устарела, войдите снова.'); counts = s; nav(); show(); });
   }
-  var TABS = [['overview', 'Обзор'], ['queue', 'Очередь'], ['posts', 'Опубликованные'], ['authors', 'Авторы'], ['chat', 'Чат'], ['feeds', 'Источники']];
+  var TABS = [['overview', 'Обзор'], ['visits', 'Посетители'], ['queue', 'Очередь'], ['posts', 'Опубликованные'], ['authors', 'Авторы'], ['chat', 'Чат'], ['feeds', 'Источники']];
   function nav() {
     clear($('nav'));
     TABS.forEach(function (x) {
@@ -63,7 +63,7 @@
   function refresh() { api('stats').then(function (s) { if (s._s === 200) { counts = s; nav(); } }); show(); }
   function show() {
     var m = clear($('main'));
-    ({ overview: overview, queue: queue, posts: posts, authors: authors, chat: chat, feeds: feeds })[tab](m);
+    ({ overview: overview, visits: visits, queue: queue, posts: posts, authors: authors, chat: chat, feeds: feeds })[tab](m);
   }
 
   function overview(m) {
@@ -83,6 +83,42 @@
       h('p.muted', 'Три жалобы читателей скрывают сообщение в чате до вашего решения. Бан закрывает автору чат, публикации и страницу.')));
   }
 
+  var LANGN = { en: 'English', es: 'Español', pt: 'Português', fr: 'Français', de: 'Deutsch', ru: 'Русский', hi: 'हिन्दी', zh: '中文', ar: 'العربية', xx: '—' };
+  function country(cc) { if (cc === 'XX') return 'Неизвестно'; try { return new Intl.DisplayNames(['ru'], { type: 'region' }).of(cc) || cc; } catch (e) { return cc; } }
+  function pct(a, b) { return b ? Math.round(a / b * 100) + '%' : '—'; }
+  function visits(m) {
+    m.appendChild(h('h1', 'Посетители'));
+    m.appendChild(h('p.muted', 'Анонимно: каждое устройство считается один раз в день. Без имён, IP и cookies.'));
+    var box = h('div', h('p.muted', 'Загружаю…')); m.appendChild(box);
+    api('visits').then(function (j) {
+      clear(box);
+      if (!j.days) { box.appendChild(h('p.empty', 'Не удалось загрузить.')); return; }
+      var d = j.days, td = d[d.length - 1], w = d.slice(-7), s = function (k, list) { return (list || w).reduce(function (n, x) { return n + (x[k] || 0); }, 0); };
+      box.appendChild(h('div.grid',
+        h('div.tile.hot', h('b', String(td.open || 0)), h('span', 'посетителей сегодня')),
+        h('div.tile', h('b', String(s('open'))), h('span', 'визитов за 7 дней (по дням)')),
+        h('div.tile', h('b', String(td.new || 0)), h('span', 'новых сегодня')),
+        h('div.tile', h('b', pct(s('back'), s('open'))), h('span', 'вернулись на следующий день (7 дн.)')),
+        h('div.tile', h('b', pct(s('issue'), s('open'))), h('span', 'собрали выпуск (7 дн.)')),
+        h('div.tile', h('b', pct(s('done'), s('issue'))), h('span', 'дочитали до конца (7 дн.)'))));
+      var max = Math.max.apply(null, d.map(function (x) { return x.open || 0; }).concat(1));
+      var chart = h('div', { style: 'display:flex;align-items:flex-end;gap:6px;height:180px;margin-top:14px' }, d.map(function (x) {
+        var o = x.open || 0, dn = x.done || 0;
+        return h('div', { style: 'flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end', title: x.day + ': ' + o + ' посетителей, ' + dn + ' дочитали' },
+          h('b', { style: 'font-size:11px' }, o ? String(o) : ''),
+          h('div', { style: 'width:100%;max-width:34px;border:2px solid var(--ink);border-radius:6px 6px 0 0;background:var(--mark);position:relative;height:' + Math.max(2, Math.round(o / max * 140)) + 'px' },
+            h('div', { style: 'position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:' + (o ? Math.round(dn / o * 100) : 0) + '%' })),
+          h('span', { style: 'font-size:10px;color:var(--muted)' }, x.day.slice(8) + '.' + x.day.slice(5, 7)));
+      }));
+      box.appendChild(h('div.card', h('h2', '14 дней'), h('p.muted', 'Жёлтое — посетители, красное — дочитали выпуск до конца.'), chart));
+      function top(obj, name) {
+        var ks = Object.keys(obj).sort(function (a, b) { return obj[b] - obj[a]; }).slice(0, 10), tot = ks.reduce(function (n, k) { return n + obj[k]; }, 0);
+        return h('div.card', h('h2', name), ks.length ? h('table', h('tbody', ks.map(function (k) { return h('tr', h('td', k.length === 2 && k === k.toUpperCase() ? country(k) : (LANGN[k] || k)), h('td', String(obj[k])), h('td', pct(obj[k], tot))); }))) : h('p.empty', 'Пока нет данных.'));
+      }
+      box.appendChild(top(j.countries || {}, 'Страны (7 дней)'));
+      box.appendChild(top(j.langs || {}, 'Языки (7 дней)'));
+    });
+  }
   function aiBox(ai) {
     if (!ai) return h('div.ai', 'Подсказки ИИ нет (ИИ был недоступен).');
     return h('div.ai', h('b', 'ИИ: ' + '★'.repeat(ai.score) + '☆'.repeat(5 - ai.score) + ' '), (ai.flags || []).map(function (f) { return h('span.pill.warn', f); }), ' ', ai.note || '');

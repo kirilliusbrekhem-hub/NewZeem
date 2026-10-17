@@ -597,6 +597,7 @@
     main.appendChild(end);
     wire(end, streak, week);
     progress();
+    hit('issue');
     Say.mount();
     if (lead && lead.weight >= 3) Bell.important(lead);
   }
@@ -866,6 +867,7 @@
     function show() { streak.hidden = false; streak.textContent = curStreak() > 1 ? t('streak', { n: curStreak() }) : t('streak1'); week.replaceWith(week = weekRow()); flame(); }
     function complete() {
       var td = today();
+      hit('done');
       if (S.last !== td) { S.streak = S.last === ymd(new Date(Date.now() - 864e5)) ? (S.streak || 0) + 1 : 1; S.last = td; S.days = (S.days || []).concat(td).slice(-30); save(); }
       show();
       if (io) io.disconnect();
@@ -1276,7 +1278,9 @@
     if (document.visibilityState === 'visible' && shownDay && shownDay !== today() && S.topics.length && route().name === 'issue') renderDigest();
   });
   window.addEventListener('pageshow', function (e) { if (e.persisted && shownDay && shownDay !== today() && S.topics.length && route().name === 'issue') renderDigest(); });
+  function hit(ev) { try { fetch('/api/c?a=hit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ d: did(), ev: ev, lang: S.lang }), keepalive: true }).catch(function () {}); } catch (e) { /* counting is optional */ } }
   Pref.tidy();
   render();
+  hit('open');
   loadMe();
 })();
