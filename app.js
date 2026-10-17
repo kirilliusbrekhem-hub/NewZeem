@@ -18,6 +18,7 @@
       share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'newzeem. Читай меньше. Знай больше. Новости за 5 минут: бесплатно, без рекламы и регистрации.',
       foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник. Реакции и голоса считаются анонимно.',
       viewsH: 'Два взгляда', viewsSub: 'Одно событие у разных изданий. Смотрите, как каждое его подаёт.', viewsNote: 'Сравнение написал ИИ по заголовкам самих изданий. Он не решает, кто прав.', followH: 'Что изменилось с вчера', followWas: 'Вчера', followNow: 'Сегодня', predH: 'Прогноз дня', predSub: 'Один тап. Узнайте, что думает мир, и возвращайтесь за результатом.', predYes: 'Да', predNo: 'Нет', predFirst: 'Вы одним из первых. Загляните позже: увидите, что думает мир.', predN: 'Голосов: {n}', predWait: 'Результат появится здесь в течение 3 дней.', predY: 'Сбылось', predNn: 'Не сбылось', predX: 'Закрыт: в новостях нет ясного ответа', predRight: 'Вы угадали', predWrong: 'В этот раз нет', predRecord: 'Ваш счёт: {a} из {b}', predNote: 'Итог подвёл ИИ по заголовкам новостей. Сверьтесь с источником.', predEarlier: 'Прошлый прогноз',
+      docs: 'Документы', privacy: 'Политика конфиденциальности', terms: 'Условия использования', contact: 'Связь', ckH: 'Мы не следим за вами.', ckP: 'У newzeem нет рекламы и следящих cookies. На вашем устройстве хранятся только настройки: темы, язык и серия.', ckOk: 'Понятно', ckMore: 'Подробнее', photoBy: 'Фото: {s}', morningKick: 'Ваш выпуск · {m} мин', streakH: 'Ваша серия',
       other: 'Другое', pickFull: 'Подборка заполнена (20)', pickAdd: 'В мою подборку', picked: 'Добавлено в подборку', unpicked: 'Убрано из подборки', saveL: 'Сохранить', saved: 'Сохранено', unsaved: 'Убрано из сохранённого', forYou: 'Для вас', inside: 'В сегодняшнем выпуске', quick: 'Коротко', quickSub: 'Ещё {n} — по строчке', cFeed: 'Посты', cTop: 'Топ', cChat: 'Чат', write: 'Написать', authorsH: 'Авторы', authorsSub: 'Разборы от читателей. Каждый проверяет модератор.', cNew: 'Новые', cOff: 'Сообщество ещё не включено.', cEmpty: 'Постов пока нет. Будьте первым.', topNews: 'Самое обсуждаемое сегодня', topNone: 'Пока пусто.', topPosts: 'Лучшие посты', topAuthors: 'Лучшие авторы', repN: '{n} реп.', tabIssue: 'Выпуск', tabAuthors: 'Авторы', tabMe: 'Моё', missing: 'Страница недоступна.', usefulL: 'Полезно', thanks: 'Спасибо!', sources: 'Источники', postNote: 'Написал читатель, проверил модератор. Сверяйтесь с источниками.', rep: 'репутация', nPosts: 'постов', nUseful: 'сочли полезным', toNext: '{n} до уровня «{l}»', writeH: 'Написать пост', writeSub: 'Объясните что-то ясно и с источниками. Модератор читает каждый пост до публикации.', banned: 'Ваша страница автора заблокирована.', fTitle: 'Понятный заголовок', fBody: 'Объясните просто: факты, контекст, почему это важно.', fLink: 'Ссылка на источник (обязательно)', fLink2: 'Ещё источник (необязательно)', sendMod: 'Отправить на проверку', minChars: 'Минимум {n} символов', fTitleL: 'Заголовок', fTopicL: 'Тема', fBodyL: 'Текст', fLinksL: 'Источники', rule1: 'Факты с источниками, без рекламы и самопиара.', rule2: 'Без оскорблений и чужих личных данных.', rule3: 'Решает модератор, вам придёт уведомление.', eTitle: 'Заголовок слишком короткий', eLinks: 'Добавьте хотя бы одну ссылку на источник', sentMod: 'Отправлено! Модератор скоро посмотрит.', myPosts: 'Мои посты', fName: 'Псевдоним', fBio: 'Пара слов о себе (необязательно)', join: 'Стать автором', joinH: 'Выберите псевдоним', joinSub: 'Без почты и пароля: на устройстве хранится секретный ключ. Его можно скопировать в «Моё», чтобы войти с другого устройства.', fNameL: 'Псевдоним', fBioL: 'О себе', haveKey: 'У меня уже есть ключ', welcome: 'Добро пожаловать!', keyPh: 'Вставьте ключ автора', useKey: 'Войти', eKey: 'Этот ключ не подходит', chatSub: 'Авторы обсуждают свои темы. Будьте вежливы.', chatEmpty: 'Сообщений пока нет.', report: 'Пожаловаться', reported: 'Спасибо, модератор посмотрит', chatJoin: 'Писать в чат могут только авторы.', chatPh: 'Сообщение', send: 'Отправить', fromAuthors: 'От наших авторов', allPosts: 'Все посты', remove: 'Убрать', myPicks: 'Моя подборка на день', myPicksSub: 'Ваш собственный короткий выпуск. Поделитесь им ссылкой.', picksEmpty: 'Нажмите + под новостью, чтобы добавить её сюда.', sharePicks: 'Поделиться подборкой', savedH: 'Сохранённое', savedEmpty: 'Нажмите закладку под новостью, чтобы сохранить её.', myAuthor: 'Моя страница автора', becomeSub: 'Пишите разборы, получайте репутацию и читателей.', publicPage: 'Публичная страница', keyH: 'Мой ключ автора', keySub: 'Не показывайте его никому. С ним можно войти с другого устройства.', copy: 'Копировать', settings: 'Настройки', interestsNote: 'Интересы считаются только на этом устройстве: по тому, что вы сохраняете, добавляете и открываете.', cleared: 'Интересы сброшены', clearInterests: 'Сбросить интересы', nOk: 'Ваш пост опубликован', nNo: 'Пост не опубликован', nOff: 'Пост снят с публикации', nTop: 'Главная новость дня', nRec: 'Новое от {a}', notesH: 'Уведомления', notesEmpty: 'Ничего нового.', lv0: 'Новичок', lv1: 'Автор', lv2: 'Эксперт', lv3: 'Легенда', st_pending: 'На проверке', st_live: 'Опубликован', st_rejected: 'Не опубликован', eLimit: 'Можно отправить 3 поста в день', eName: 'Псевдоним: 3–24 буквы или цифры', eTaken: 'Этот псевдоним занят', eSlow: 'Чуть помедленнее'
     },
     en: {
@@ -32,6 +33,7 @@
       share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'newzeem. Read less. Know more. Your news in 5 minutes: free, no ads, no sign-up.',
       foot: 'newzeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link. Reactions and votes are counted anonymously.',
       viewsH: 'Two views', viewsSub: 'One event, reported by different outlets. See how each one frames it.', viewsNote: 'Comparison written by AI from the outlets\' own headlines. It does not say who is right.', followH: 'What changed since yesterday', followWas: 'Yesterday', followNow: 'Today', predH: 'Prediction of the day', predSub: 'One tap. See what the world thinks, then come back for the result.', predYes: 'Yes', predNo: 'No', predFirst: 'You are among the first. Come back later to see the world.', predN: '{n} votes', predWait: 'The result will appear here within 3 days.', predY: 'It happened', predNn: 'It did not happen', predX: 'Closed: nothing clear in the news', predRight: 'You called it', predWrong: 'Not this time', predRecord: 'Your record: {a} of {b}', predNote: 'Settled by AI from news headlines. Check the source.', predEarlier: 'Earlier prediction',
+      docs: 'Documents', privacy: 'Privacy policy', terms: 'Terms of use', contact: 'Contact', ckH: 'We don’t track you.', ckP: 'newzeem has no ads and no tracking cookies. Only your settings (topics, language, streak) are kept on this device.', ckOk: 'Got it', ckMore: 'Learn more', photoBy: 'Photo: {s}', morningKick: 'Your issue · {m} min', streakH: 'Your streak',
       other: 'Other', pickFull: 'Your picks are full (20)', pickAdd: 'Add to my picks', picked: 'Added to your picks', unpicked: 'Removed from your picks', saveL: 'Save', saved: 'Saved', unsaved: 'Removed from saved', forYou: 'For you', inside: 'In today\'s issue', quick: 'Quick hits', quickSub: '{n} more in one line each', cFeed: 'Posts', cTop: 'Top', cChat: 'Chat', write: 'Write', authorsH: 'Authors', authorsSub: 'Explainers by readers, checked by a moderator before they appear.', cNew: 'New', cOff: 'The community is not switched on yet.', cEmpty: 'No posts yet. Be the first.', topNews: 'Most discussed news today', topNone: 'Nothing here yet.', topPosts: 'Top posts', topAuthors: 'Top authors', repN: '{n} rep', tabIssue: 'Issue', tabAuthors: 'Authors', tabMe: 'Mine', missing: 'This page is not available.', usefulL: 'Useful', thanks: 'Thanks!', sources: 'Sources', postNote: 'Written by a reader and checked by a moderator. Check the sources.', rep: 'reputation', nPosts: 'posts', nUseful: 'found it useful', toNext: '{n} to {l}', writeH: 'Write a post', writeSub: 'Explain something clearly and with sources. A moderator reads every post before it goes live.', banned: 'Your author page is blocked.', fTitle: 'A clear title', fBody: 'Explain it simply. Facts, context, why it matters.', fLink: 'Source link (required)', fLink2: 'Another source (optional)', sendMod: 'Send for review', minChars: 'At least {n} characters', fTitleL: 'Title', fTopicL: 'Topic', fBodyL: 'Text', fLinksL: 'Sources', rule1: 'Facts with sources, no ads or self-promotion.', rule2: 'No insults, no personal data of others.', rule3: 'A moderator decides; you get a notification.', eTitle: 'The title is too short', eLinks: 'Add at least one source link', sentMod: 'Sent! A moderator will review it soon.', myPosts: 'My posts', fName: 'Pen name', fBio: 'A line about you (optional)', join: 'Become an author', joinH: 'Pick a pen name', joinSub: 'No e-mail, no password: this device keeps a secret key. You can copy it in Mine to sign in elsewhere.', fNameL: 'Pen name', fBioL: 'About you', haveKey: 'I already have a key', welcome: 'Welcome!', keyPh: 'Paste your author key', useKey: 'Sign in', eKey: 'This key does not work', chatSub: 'Authors talk shop. Be kind, stay on topic.', chatEmpty: 'No messages yet.', report: 'Report', reported: 'Thanks, a moderator will look', chatJoin: 'Only authors can write in the chat.', chatPh: 'Message', send: 'Send', fromAuthors: 'From our authors', allPosts: 'All posts', remove: 'Remove', myPicks: 'My picks for today', myPicksSub: 'Your own short issue. Share it as a link.', picksEmpty: 'Tap + under any story to add it here.', sharePicks: 'Share my picks', savedH: 'Saved', savedEmpty: 'Tap the bookmark under a story to keep it.', myAuthor: 'My author page', becomeSub: 'Write explainers, earn reputation and reach readers.', publicPage: 'Public page', keyH: 'My author key', keySub: 'Keep it private. With it you can sign in on another device.', copy: 'Copy', settings: 'Settings', interestsNote: 'Your interests are learned on this device only, from what you save, pick and open.', cleared: 'Interests cleared', clearInterests: 'Clear my interests', nOk: 'Your post is live', nNo: 'Your post was not published', nOff: 'Your post was taken down', nTop: 'The big story today', nRec: 'New from {a}', notesH: 'Notifications', notesEmpty: 'Nothing new.', lv0: 'Newcomer', lv1: 'Author', lv2: 'Expert', lv3: 'Legend', st_pending: 'In review', st_live: 'Published', st_rejected: 'Not published', eLimit: 'You can send 3 posts a day', eName: 'Pen name: 3–24 letters or digits', eTaken: 'This pen name is taken', eSlow: 'Slow down a little'
     }
   };
@@ -151,6 +153,8 @@
     document.title = TITLE;
     $('lang').value = S.lang;
     $('slogan').textContent = SLOGAN;
+    $('udate').textContent = dateLabel();
+    $('bellL').textContent = t('notesH');
     var cur = tabOf(route || 'issue');
     [$('tabs'), $('tabbar')].forEach(function (box) {
       clear(box);
@@ -159,7 +163,22 @@
       });
     });
     flame(); Bell.badge();
-    clear($('foot')).appendChild(document.createTextNode(t('foot')));
+    var f = clear($('foot'));
+    f.appendChild(h('div.fin',
+      h('div', h('a.flogo', { href: '/' }, 'newzeem', h('span.dot', '.')), h('p', t('foot'))),
+      h('div', h('h5', t('docs')), h('a', { href: '/privacy' }, t('privacy')), h('a', { href: '/terms' }, t('terms'))),
+      h('div', h('h5', t('contact')), h('a', { href: 'mailto:joneskir4@gmail.com' }, 'joneskir4@gmail.com'), h('a', { href: '#/write' }, t('join')))));
+    cookieNote();
+  }
+  // A one-time notice: there are no tracking cookies, only settings kept on the device.
+  function cookieNote() {
+    var seen = false; try { seen = localStorage.getItem('nz-ck') === '1'; } catch (e) { seen = true; }
+    var old = $('ck'); if (old) old.remove();
+    if (seen) return;
+    var box = h('div.ck', { id: 'ck', role: 'region', 'aria-label': t('ckH') }, h('div.ckin',
+      h('div', h('b', t('ckH')), h('p', t('ckP'))),
+      h('div.ckb', h('a.lnk', { href: '/privacy' }, t('ckMore')), h('button.btn.dark', { type: 'button', onclick: function () { try { localStorage.setItem('nz-ck', '1'); } catch (e) { /* fine */ } box.remove(); } }, t('ckOk')))));
+    document.body.appendChild(box);
   }
 
   /* ---------- personal interests: kept on this device only; they reorder the issue and pick posts for you ---------- */
@@ -322,7 +341,7 @@
     function refresh() { counter.textContent = t('pickN', { n: sel.length, m: MAX_TOPICS }); go.disabled = !sel.length; }
     var tiles = h('div.tiles', { role: 'group', 'aria-label': t('pickH') }, TP.list.map(function (tp) {
       var b = h('button.tile', { type: 'button', style: '--c:' + tp.c, 'aria-pressed': sel.indexOf(tp.id) >= 0 ? 'true' : 'false' },
-        h('span.te', tp.e), h('span.tn', topicName(tp.id)), h('span.tk', { 'aria-hidden': 'true' }, '✓'));
+        h('span.te'), h('span.tn', topicName(tp.id)), h('span.tk', { 'aria-hidden': 'true' }, '✓'));
       b.addEventListener('click', function () {
         var i = sel.indexOf(tp.id);
         if (i >= 0) sel.splice(i, 1); else { if (sel.length >= MAX_TOPICS) return toast(t('max', { m: MAX_TOPICS })); sel.push(tp.id); }
@@ -507,6 +526,25 @@
     return b;
   }
 
+  // The story's key number ("30 стран", "7 лет", "85%") is shown big beside it, Morning Brew style. Years are not key numbers.
+  var SMALL = { from: 1, to: 1, in: 1, of: 1, on: 1, at: 1, and: 1, the: 1, a: 1, an: 1, by: 1, for: 1, with: 1, as: 1, into: 1, в: 1, на: 1, из: 1, и: 1, с: 1, по: 1, до: 1, за: 1, к: 1, от: 1, о: 1, у: 1, de: 1, del: 1, la: 1, el: 1, en: 1, et: 1, le: 1, les: 1, des: 1, der: 1, die: 1, das: 1, und: 1, im: 1, e: 1, do: 1, da: 1, em: 1 };
+  function keyNum(it) {
+    var txt = it.headline + '. ' + (it.gist || '');
+    var re = /(^|[^\p{L}\p{N}_./])((?:\d{1,3}(?:[ \u00a0.,]\d{3})+|\d+(?:[.,]\d+)?)\s?(?:%|‰)?)(?![\p{L}\p{N}_])/gu, m;
+    while ((m = re.exec(txt))) {
+      var n = m[2].trim(), v = parseFloat(n.replace(/[  ]/g, '').replace(',', '.'));
+      var pct = /[%‰]$/.test(n);
+      if (/^(19|20)\d\d$/.test(n) || v === 0 || (!pct && v < 2)) continue;
+      var rest = txt.slice(m.index + m[0].length).replace(/^[\s]+/, '');
+      var w = rest.split(/\s+/), first = (w[0] || '').replace(/[^\p{L}]/gu, '');
+      var unit = !pct && /^\p{L}+[.,;:!?]?$/u.test(w[0] || '') && first.length <= 8 && !SMALL[first.toLowerCase()] ? first : '';
+      var cap = w.slice(unit ? 1 : 0, (unit ? 1 : 0) + 5).join(' ').replace(/[.!?;:].*$/, '').replace(/[,—–-]+$/, '').trim();
+      if (unit && /[.!?;:]$/.test(w[0])) cap = '';
+      if (!unit && !pct && !cap) continue;
+      return { n: n + (unit ? ' ' + unit : ''), cap: cap };
+    }
+    return null;
+  }
   function item(it, lead, showTag) {
     var a = h('a.src', { href: safeUrl(it.url), target: '_blank', rel: 'noopener noreferrer' }, it.source + ' ↗');
     var pts = (it.points || []).length ? h('ul.pts', it.points.map(function (p) { return h('li', p); })) : null;
@@ -531,18 +569,26 @@
       if (open) { S.read[it.id] = 1; el.classList.add('read'); Pref.like(it.topic, it.headline + ' ' + (it.gist || ''), 2); if (!state) load(); }
     }
     hb.addEventListener('click', toggle); more.addEventListener('click', toggle);
-    var el = h('article.item' + (lead ? '.lead' : '') + (S.read[it.id] ? '.read' : ''), { style: '--c:' + topicColor(it.topic), 'data-id': it.id },
-      showTag ? h('span.tag', topicEmoji(it.topic) + ' ' + topicName(it.topic)) : null,
+    var kn = keyNum(it), fig = null;
+    if (lead && it.img) {
+      var im = h('img', { src: it.img, alt: '', loading: 'lazy', referrerpolicy: 'no-referrer', decoding: 'async' });
+      fig = h('figure.photo', im, h('figcaption', t('photoBy', { s: it.source })));
+      im.addEventListener('error', function () { if (kn) fig.replaceWith(h('div.leadnum', h('b', kn.n), h('span', kn.cap))); else fig.remove(); });
+    } else if (lead && kn) fig = h('div.leadnum', h('b', kn.n), h('span', kn.cap));
+    var body = h('div.itx',
+      showTag ? h('span.tag', topicName(it.topic)) : null,
       h('h3', hb),
       it.gist ? h('p.gist', it.gist) : null,
       pts,
       it.why ? h('p.why', h('b', t('why')), ' ', it.why) : null,
       detail,
       rxBox,
-      h('div.ifoot', more, a, h('span.grow'),
+      h('div.ifoot', a, more, h('span.grow'),
         actBtn('plus', t('pickAdd'), isPicked(it.id), function () { var on = togglePick(it); toast(on ? t('picked') : t('unpicked')); return on; }),
         actBtn('save', t('saveL'), isSaved(it.id), function () { var on = toggleSave(it); toast(on ? t('saved') : t('unsaved')); return on; }),
         actBtn('share', t('share'), null, function () { shareNews(it); })));
+    var side = !lead && kn ? h('aside.num', h('b', kn.n), h('span', kn.cap)) : null;
+    var el = h('article.item' + (lead ? '.lead' : '') + (side ? '.hasnum' : '') + (S.read[it.id] ? '.read' : ''), { style: '--c:' + topicColor(it.topic), 'data-id': it.id }, fig, body, side);
     a.addEventListener('click', function () { S.read[it.id] = 1; el.classList.add('read'); Pref.like(it.topic, it.headline, 2); });
     spoken.push({ it: it, el: el });
     return el;
@@ -555,47 +601,46 @@
     var main = view();
     spoken = [];
     var lead = d.sections[0] && d.sections[0].items[0];
-    main.appendChild(h('header.mast.card',
-      h('div.date', dateLabel()),
-      h('h1', dotted(greeting() + '.')),
-      h('p.lede', t('issueLead', { m: S.mins })),
-      h('div.acts', canSpeak() ? h('button.listen', { type: 'button', onclick: function () { Say.start(0); } }, ico('play'), t('listen')) : null,
+    var col = h('div.col'), rail = h('aside.rail'), railIn = h('div.railin');
+    rail.appendChild(railIn);
+    main.appendChild(h('div.page', col, rail));
+    col.appendChild(h('section.hello',
+      h('div', h('div.kick', t('morningKick', { m: S.mins })), h('h1', dotted(greeting() + '.')), h('p.lede', t('issueLead', { m: S.mins }))),
+      h('div.controls', canSpeak() ? h('button.listen', { type: 'button', onclick: function () { Say.start(0); } }, ico('play'), t('listen')) : null,
         dial(function () { var c = S.cache; if (c && c.results) draw(assemble(c.results, S.mins), c.failed || []); else renderDigest(); }))));
-    // In today's issue: the shelves and their first headline
-    var toc = h('nav.toc.card', { 'aria-label': t('sections') }, h('h2', t('inside')),
-      h('ul', d.sections.map(function (s) {
-        return h('li', h('button', { type: 'button', style: '--c:' + topicColor(s.id), onclick: function () { var el = document.getElementById('sec-' + s.id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } },
-          h('span.te', secEmoji(s.id)), h('span.tt', h('b', secLabel(s.id)), h('span', s.items[0].headline))));
-      }).concat(d.quick.length ? [h('li', h('button', { type: 'button', onclick: function () { var el = document.getElementById('sec-quick'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }, h('span.te', '☕'), h('span.tt', h('b', t('quick')), h('span', t('quickSub', { n: d.quick.length })))))] : [])));
-    main.appendChild(toc);
-    if (failed && failed.length) main.appendChild(h('p.notice', t('skipped', { t: failed.map(topicName).join(', ') })));
-    var fu = followBlock(d); if (fu) main.appendChild(fu);
-    var viewsEl = h('section.views.card', { hidden: 'hidden' }), predEl = h('section.pred.card', { hidden: 'hidden' });
+    if (failed && failed.length) col.appendChild(h('p.notice', t('skipped', { t: failed.map(topicName).join(', ') })));
+    var fu = followBlock(d); if (fu) col.appendChild(fu);
+    var viewsEl = h('section.views.block', { hidden: 'hidden' }), predEl = h('section.pred.rbox', { hidden: 'hidden' });
+    var jump = function (id) { return function () { var el = document.getElementById('sec-' + id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }; };
     d.sections.forEach(function (s, si) {
-      main.appendChild(h('section.sec', { id: 'sec-' + s.id, style: '--c:' + (TP.byId[s.id] ? topicColor(s.id) : s.id === 'foryou' ? '#7048E8' : '#C8321B') },
-        h('h2', h('span.se', secEmoji(s.id)), h('span', secLabel(s.id)), h('span.dot', '.')),
+            col.appendChild(h('section.sec', { id: 'sec-' + s.id, style: '--c:' + (TP.byId[s.id] ? topicColor(s.id) : s.id === 'foryou' ? '#7048E8' : '#C8321B') },
+        h('h2.kicker', h('i'), h('span', secLabel(s.id))),
         s.items.map(function (it, i) { return item(it, s.id === 'main' && i === 0, s.id === 'main' || s.id === 'foryou'); })));
-      if (si === 0) main.appendChild(viewsEl);
+      if (si === 0) col.appendChild(viewsEl);
     });
-    if (!d.sections.length) main.appendChild(viewsEl);
+    if (!d.sections.length) col.appendChild(viewsEl);
     loadViews(viewsEl);
     if (d.quick.length) {
-      main.appendChild(h('section.quick.card', { id: 'sec-quick' }, h('h2', '☕ ', t('quick'), h('span.dot', '.')),
-        h('ul', d.quick.map(function (it) {
-          return h('li', { style: '--c:' + topicColor(it.topic) }, h('span.qt', topicEmoji(it.topic)),
-            h('span', h('b', it.headline), it.gist ? ' ' + it.gist + ' ' : ' ', h('a.src', { href: safeUrl(it.url), target: '_blank', rel: 'noopener noreferrer', onclick: function () { Pref.like(it.topic, it.headline, 2); } }, it.source + ' ↗')));
-        }))));
+      col.appendChild(h('section.sec', { id: 'sec-quick' }, h('h2.kicker', h('i'), h('span', t('quick'))),
+        h('div.quick', h('h3', t('quickSub', { n: d.quick.length })),
+          h('ul', d.quick.map(function (it) {
+            return h('li', h('b', topicName(it.topic) + '. '), it.headline + (it.gist ? '. ' + it.gist : '') + ' ', h('a.src', { href: safeUrl(it.url), target: '_blank', rel: 'noopener noreferrer', onclick: function () { Pref.like(it.topic, it.headline, 2); } }, it.source + ' ↗'));
+          })))));
     }
-    worldEl = h('section.world.card', { hidden: 'hidden' }); main.appendChild(worldEl);
+    worldEl = h('section.world.block', { hidden: 'hidden' }); col.appendChild(worldEl);
     Rx.probe.then(updateWorld);
-    main.appendChild(predEl); loadPred(predEl);
-    if (d.quiz && d.quiz.length >= 2) main.appendChild(quizBlock(d.quiz));
-    var fromAuthors = h('section.fromau', { hidden: 'hidden' }); main.appendChild(fromAuthors); authorsPick(fromAuthors);
-    var streak = h('span.streak'), week = weekRow(); streak.hidden = true;
-    var end = h('section.end', streak, week,
-      h('div.row', h('button.btn', { type: 'button', onclick: share }, t('share')), h('button.btn', { type: 'button', onclick: function () { renderPick(true); } }, t('change'))));
-    main.appendChild(end);
-    wire(end, streak, week);
+    if (d.quiz && d.quiz.length >= 2) col.appendChild(quizBlock(d.quiz));
+    var fromAuthors = h('section.fromau', { hidden: 'hidden' }); col.appendChild(fromAuthors); authorsPick(fromAuthors);
+    // the right rail: what is inside, the prediction, the streak
+    railIn.appendChild(h('div.rbox.rtoc', h('h4', t('inside')), h('ol.toc', d.sections.map(function (s) {
+      return h('li', h('button', { type: 'button', onclick: jump(s.id) }, h('b', secLabel(s.id)), h('span', s.items[0].headline)));
+    }).concat(d.quick.length ? [h('li', h('button', { type: 'button', onclick: jump('quick') }, h('b', t('quick')), h('span', t('quickSub', { n: d.quick.length }))))] : []))));
+    railIn.appendChild(predEl); loadPred(predEl);
+    var streak = h('p.streak'), week = weekRow(); streak.hidden = true;
+    railIn.appendChild(h('div.rbox', h('h4', t('streakH')), week, streak));
+    var end = h('section.end', h('div.row', h('button.btn.dark', { type: 'button', onclick: share }, ico('share'), t('share')), h('button.btn', { type: 'button', onclick: function () { renderPick(true); } }, t('change'))));
+    rail.parentNode.appendChild(end); // after the rail on phones, under the column on wide screens
+    wire(end, streak, week, rail);
     progress();
     hit('issue');
     Say.mount();
@@ -677,7 +722,7 @@
     var hits = ids.map(function (id) { var d = Rx.res[id]; return S.rx[id] === d.t.indexOf(Math.max.apply(null, d.t)); });
     var a = hits.filter(Boolean).length;
     clear(worldEl); worldEl.hidden = false;
-    worldEl.appendChild(h('h2', '🌍 ', dotted(t('worldH') + '.')));
+    worldEl.appendChild(h('h2', dotted(t('worldH') + '.')));
     worldEl.appendChild(h('p.qsub', t('worldSub', { a: a, b: ids.length })));
     worldEl.appendChild(h('div.qdots', hits.map(function (x) { return h('span.qd' + (x ? '.on' : ''), '●'); })));
     worldEl.appendChild(h('div.qres', h('button.btn.dark.qshare', { type: 'button', onclick: function () { shareText('newzeem. 🌍 ' + hits.map(function (x) { return x ? '●' : '○'; }).join('') + ' ' + a + '/' + ids.length + '\n' + SLOGAN); } }, t('quizShare'))));
@@ -687,7 +732,7 @@
   function quizBlock(qs) {
     var key = qs.map(function (q) { return q.id; }).join(','), saved = S.qz && S.qz.day === today() && S.qz.key === key ? S.qz.pick : [];
     var picks = qs.map(function (q, i) { return saved[i] != null ? saved[i] : -1; });
-    var res = h('div.qres'), box = h('section.quiz.card', h('h2', '🧠 ', dotted(t('quizH') + '.')), h('p.qsub', t('quizSub')));
+    var res = h('div.qres'), box = h('section.quiz.block', h('h2', dotted(t('quizH') + '.')), h('p.qsub', t('quizSub')));
     function dots() { return picks.map(function (p, i) { return p === qs[i].a ? '●' : '○'; }).join(''); }
     function score() { return picks.filter(function (p, i) { return p === qs[i].a; }).length; }
     function finish() {
@@ -738,7 +783,7 @@
     Object.keys(S.hist).sort().slice(0, -4).forEach(function (k) { delete S.hist[k]; });
     save();
     if (!found.length) return null;
-    return h('section.follow.card', h('h2', '🔁 ', dotted(t('followH') + '.')),
+    return h('section.follow.block', h('h2', dotted(t('followH') + '.')),
       found.map(function (f) {
         return h('button.fu', { type: 'button', onclick: function () {
           var el = document.querySelector('[data-id="' + f.now.id + '"]'); if (!el) return;
@@ -764,7 +809,7 @@
     go.then(function (evs) {
       if (!el.isConnected || !evs.length) return;
       el.hidden = false; clear(el);
-      el.appendChild(h('h2', '👀 ', dotted(t('viewsH') + '.')));
+      el.appendChild(h('h2', dotted(t('viewsH') + '.')));
       el.appendChild(h('p.qsub', t('viewsSub')));
       evs.forEach(function (e) {
         el.appendChild(h('div.vev', h('h3', e.title),
@@ -805,7 +850,7 @@
   }
   function predDraw(el, id) {
     var e = S.pr[id]; clear(el); el.hidden = false;
-    el.appendChild(h('h2', '🔮 ', dotted(t('predH') + '.')));
+    el.appendChild(h('h2', dotted(t('predH') + '.')));
     Object.keys(S.pr).filter(function (k) { return k !== id && S.pr[k].o && !S.pr[k].seen; }).forEach(function (k) {
       var p = S.pr[k], res = p.o === 'y' ? t('predY') : p.o === 'n' ? t('predNn') : t('predX');
       el.appendChild(h('div.qcard.pold', h('p.qsub', t('predEarlier')), h('p.qq', p.q),
@@ -862,7 +907,7 @@
   }
 
   // The streak is counted when the reader reaches the end of the issue.
-  function wire(end, streak, week) {
+  function wire(end, streak, week, rail) {
     var io = null;
     function show() { streak.hidden = false; streak.textContent = curStreak() > 1 ? t('streak', { n: curStreak() }) : t('streak1'); week.replaceWith(week = weekRow()); flame(); }
     function complete() {
@@ -889,7 +934,7 @@
      Authors: posts written by readers, checked by a moderator before anyone sees them
      ==================================================================================== */
   var LV = ['lv0', 'lv1', 'lv2', 'lv3'], LVE = ['🌱', '✍️', '🎓', '🏆'];
-  function badge(lv) { lv = lv || 0; return h('span.lv.lv' + lv, { title: t(LV[lv]) }, LVE[lv] + ' ' + t(LV[lv])); }
+  function badge(lv) { lv = lv || 0; return h('span.lv.lv' + lv, { title: t(LV[lv]) }, t(LV[lv])); }
   function authorKey() {
     if (!S.ak) {
       var a = new Uint8Array(24);
@@ -912,7 +957,7 @@
   function readMins(text) { return Math.max(1, Math.round(String(text).split(/\s+/).length / 200)); }
   function postCard(p) {
     var el = h('a.pcard.card', { href: '#/post/' + p.id, style: '--c:' + topicColor(p.topic) },
-      h('span.tag', topicEmoji(p.topic) + ' ' + topicName(p.topic)),
+      h('span.tag', topicName(p.topic)),
       h('h3', p.title),
       p.ex ? h('p', p.ex) : null,
       h('div.pmeta', h('b', p.name), badge(p.lv), h('span.grow'), h('span.useful', ico('useful'), String(p.useful || 0)), h('span', ago(p.at))));
@@ -929,7 +974,7 @@
     chrome('feed'); var main = view();
     main.appendChild(h('header.phead', h('h1', dotted(t('authorsH') + '.')), h('p.lede', t('authorsSub'))));
     main.appendChild(subnav('feed'));
-    var tabs = h('div.chips', [['foryou', t('forYou')], ['new', t('cNew')]].concat(TP.list.map(function (tp) { return [tp.id, tp.e + ' ' + topicName(tp.id)]; })).map(function (x) {
+    var tabs = h('div.chips', [['foryou', t('forYou')], ['new', t('cNew')]].concat(TP.list.map(function (tp) { return [tp.id, topicName(tp.id)]; })).map(function (x) {
       return h('button.chip', { type: 'button', 'aria-pressed': String((mode || 'foryou') === x[0]), onclick: function () { renderFeed(x[0]); } }, x[1]);
     }));
     main.appendChild(tabs);
@@ -957,13 +1002,13 @@
       clear(box);
       if (j.on === false) { box.appendChild(emptyNote(t('cOff'))); return; }
       var news = j.news || [], posts = j.posts || [], aus = j.authors || [];
-      box.appendChild(h('section.card.topbox', h('h2', '🔥 ', t('topNews')), news.length ? h('ol.rank', news.map(function (n) {
+      box.appendChild(h('section.card.topbox', h('h2', t('topNews')), news.length ? h('ol.rank', news.map(function (n) {
         return h('li', h('a', { href: safeUrl(n.u), target: '_blank', rel: 'noopener noreferrer' }, h('b', n.h), h('span', ' ' + (n.s || '') + ' ↗')), h('span.rn', t('rxN', { n: n.n })));
       })) : h('p.qsub', t('topNone'))));
-      box.appendChild(h('section.card.topbox', h('h2', '⭐ ', t('topPosts')), posts.length ? h('ol.rank', posts.map(function (p) {
+      box.appendChild(h('section.card.topbox', h('h2', t('topPosts')), posts.length ? h('ol.rank', posts.map(function (p) {
         return h('li', h('a', { href: '#/post/' + p.id }, h('b', p.title), h('span', ' · ' + p.name)), h('span.rn', h('span.useful', ico('useful'), String(p.useful || 0))));
       })) : h('p.qsub', t('topNone'))));
-      box.appendChild(h('section.card.topbox', h('h2', '🏆 ', t('topAuthors')), aus.length ? h('ol.rank', aus.map(function (a) {
+      box.appendChild(h('section.card.topbox', h('h2', t('topAuthors')), aus.length ? h('ol.rank', aus.map(function (a) {
         return h('li', h('a', { href: '#/author/' + a.id }, h('b', a.name), ' ', badge(a.lv)), h('span.rn', t('repN', { n: a.rep })));
       })) : h('p.qsub', t('topNone'))));
     });
@@ -990,7 +1035,7 @@
         });
       });
       var art = h('article.post.card', { style: '--c:' + topicColor(p.topic) },
-        h('span.tag', topicEmoji(p.topic) + ' ' + topicName(p.topic)),
+        h('span.tag', topicName(p.topic)),
         p.status !== 'live' ? h('p.status.st-' + p.status, t('st_' + p.status) + (p.reason ? ': ' + p.reason : '')) : null,
         h('h1', p.title),
         h('div.pmeta', h('a', { href: '#/author/' + p.aid }, h('b', p.name)), badge(a.lv), h('span', ' · ' + ago(p.at) + ' · ' + t('rt', { m: readMins(p.body) }))),
@@ -1032,7 +1077,7 @@
       if (me && me.author.ban) { box.appendChild(emptyNote(t('banned'))); return; }
       if (!me) return joinForm(box, renderWrite);
       var title = h('input.in', { type: 'text', maxlength: '120', placeholder: t('fTitle') });
-      var topic = h('select.in', TP.list.map(function (tp) { return h('option', { value: tp.id }, tp.e + ' ' + topicName(tp.id)); }).concat(h('option', { value: 'other' }, '💡 ' + t('other'))));
+      var topic = h('select.in', TP.list.map(function (tp) { return h('option', { value: tp.id }, topicName(tp.id)); }).concat(h('option', { value: 'other' }, t('other'))));
       if (S.topics[0]) topic.value = S.topics[0];
       var body = h('textarea.in.ta', { rows: '12', maxlength: '6000', placeholder: t('fBody') });
       var count = h('small.cnt2');
@@ -1140,7 +1185,7 @@
       var ps = j.posts.map(function (p) { return Object.assign(p, { sc: Pref.score(p.topic, p.title + ' ' + (p.ex || '')) + (S.topics.indexOf(p.topic) >= 0 ? 2 : 0) + Math.log(1 + (p.useful || 0)) }); })
         .sort(function (a, b) { return b.sc - a.sc || b.at - a.at; }).slice(0, 2);
       el.hidden = false;
-      el.appendChild(h('h2', '✍️ ', dotted(t('fromAuthors') + '.')));
+      el.appendChild(h('h2', dotted(t('fromAuthors') + '.')));
       ps.forEach(function (p) { el.appendChild(postCard(p)); });
       el.appendChild(h('a.more2', { href: '#/feed' }, t('allPosts') + ' →'));
       Bell.posts(j.posts);
@@ -1151,7 +1196,7 @@
      Mine: today's picks, saved stories, my author page, notifications, settings
      ==================================================================================== */
   function miniItem(x, onRemove) {
-    return h('li.mini', { style: '--c:' + topicColor(x.t) }, h('span.qt', topicEmoji(x.t)),
+    return h('li.mini', { style: '--c:' + topicColor(x.t) }, h('i.qt'),
       h('div', h('a', { href: safeUrl(x.u), target: '_blank', rel: 'noopener noreferrer' }, h('b', x.h)), x.g ? h('p', x.g) : null, h('small', x.s || '')),
       onRemove ? h('button.x', { type: 'button', 'aria-label': t('remove'), onclick: onRemove }, ico('close')) : null);
   }
@@ -1160,7 +1205,7 @@
     main.appendChild(h('header.phead', h('h1', dotted(t('tabMe') + '.'))));
     // today's picks
     var pk = picks();
-    var pbox = h('section.card.mybox', h('h2', '📌 ', t('myPicks')), h('p.qsub', t('myPicksSub')));
+    var pbox = h('section.card.mybox', h('h2', t('myPicks')), h('p.qsub', t('myPicksSub')));
     if (!pk.length) pbox.appendChild(h('p.empty2', t('picksEmpty')));
     else {
       pbox.appendChild(h('ul.minis', pk.map(function (x) { return miniItem(x, function () { togglePick({ id: x.id }); renderMe(); }); })));
@@ -1168,7 +1213,7 @@
         var b = e.currentTarget; b.disabled = true;
         api('/api/c?a=col', { body: { title: t('myPicks') + ' · ' + dateLabel(), items: pk } }).then(function (j) {
           b.disabled = false;
-          if (j.id) shareLink(location.origin + '/c/' + j.id, '📌 ' + t('myPicks') + ' · newzeem.'); else toast(t('rxFail'));
+          if (j.id) shareLink(location.origin + '/c/' + j.id, t('myPicks') + ' · newzeem.'); else toast(t('rxFail'));
         });
       } }, ico('share'), t('sharePicks')));
     }
@@ -1177,12 +1222,12 @@
     main.appendChild(Bell.box());
     // saved
     var sv = Object.keys(S.saved).map(function (k) { return S.saved[k]; }).sort(function (a, b) { return b.at - a.at; });
-    var sbox = h('section.card.mybox', h('h2', '🔖 ', t('savedH')));
+    var sbox = h('section.card.mybox', h('h2', t('savedH')));
     if (!sv.length) sbox.appendChild(h('p.empty2', t('savedEmpty')));
     else sbox.appendChild(h('ul.minis', sv.map(function (x) { return miniItem(x, function () { delete S.saved[x.id]; save(); renderMe(); }); })));
     main.appendChild(sbox);
     // author page
-    var abox = h('section.card.mybox', h('h2', '✍️ ', t('myAuthor')), h('div.skel'));
+    var abox = h('section.card.mybox', h('h2', t('myAuthor')), h('div.skel'));
     main.appendChild(abox);
     loadMe().then(function (me) {
       abox.removeChild(abox.lastChild);
@@ -1198,7 +1243,7 @@
       abox.appendChild(kbox);
     });
     // settings
-    main.appendChild(h('section.card.mybox', h('h2', '⚙️ ', t('settings')),
+    main.appendChild(h('section.card.mybox', h('h2', t('settings')),
       h('p.qsub', S.topics.map(topicName).join(', ')),
       h('div.row2', h('button.btn.dark', { type: 'button', onclick: function () { renderPick(true); } }, t('change'))),
       h('p.qsub', t('howLong')), dial(),
@@ -1233,14 +1278,14 @@
       if (n.k === 'ok') return [t('nOk'), n.title, '#/post/' + n.id];
       if (n.k === 'no') return [t('nNo'), n.title + (n.reason ? ' — ' + n.reason : ''), '#/me'];
       if (n.k === 'off') return [t('nOff'), n.title + (n.reason ? ' — ' + n.reason : ''), '#/me'];
-      if (n.k === 'top') return ['⚡ ' + t('nTop'), n.title, '#/'];
-      if (n.k === 'rec') return ['✨ ' + t('nRec', { a: n.name }), n.title, '#/post/' + n.pid];
-      if (n.k === 'pred') return ['🔮 ' + (n.o === 'x' ? t('predX') : n.ok ? t('predRight') : t('predWrong')), n.q, '#/'];
+      if (n.k === 'top') return [t('nTop'), n.title, '#/'];
+      if (n.k === 'rec') return [t('nRec', { a: n.name }), n.title, '#/post/' + n.pid];
+      if (n.k === 'pred') return [(n.o === 'x' ? t('predX') : n.ok ? t('predRight') : t('predWrong')), n.q, '#/'];
       return ['', n.title || '', '#/'];
     },
     box: function () {
       var all = Bell.all(), seen = S.bellSeen || 0;
-      var box = h('section.card.mybox', { id: 'bell' }, h('h2', '🔔 ', t('notesH')));
+      var box = h('section.card.mybox', { id: 'bell' }, h('h2', t('notesH')));
       if (!all.length) box.appendChild(h('p.empty2', t('notesEmpty')));
       else box.appendChild(h('ul.notes', all.map(function (n) { var x = Bell.text(n); return h('li' + (n.at > seen ? '.new' : ''), h('a', { href: x[2] }, h('b', x[0]), h('span', x[1]), h('small', ago(n.at)))); })));
       S.bellSeen = Date.now(); save(); setTimeout(Bell.badge, 0);

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности · newzeem.</title>
+<meta name="description" content="Какие данные собирает newzeem, зачем и как их удалить.">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<style>
+.docp { max-width: 1180px; margin: 0 auto; padding: 44px 28px 70px; display: grid; grid-template-columns: 230px minmax(0, 720px); gap: 70px; }
+.docp nav { position: sticky; top: 24px; align-self: start; }
+.docp nav h5 { margin: 0 0 10px; font: 800 12px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.docp nav a { display: block; padding: 6px 0; font: 600 14.5px/1.35 var(--sans); color: var(--ink2); text-decoration: none; }
+.docp nav a.on { color: var(--accent); }
+.docp nav .grp + .grp { margin-top: 26px; }
+.lbl { font: 800 12px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.docp h1 { font: 800 clamp(36px, 5vw, 52px)/1.04 var(--sans); letter-spacing: -.04em; margin-top: 14px; }
+.upd { margin-top: 14px; font: 400 14px/1.4 var(--sans); color: var(--muted); }
+.docp .lede { font: 400 21px/1.6 var(--serif); margin-top: 20px; }
+.tldr { margin-top: 28px; padding: 22px 26px; background: var(--wash); border-radius: 4px; }
+.tldr h3 { font: 800 12.5px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+.tldr ul { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 8px; font: 400 17px/1.55 var(--serif); }
+.tldr li::marker { color: var(--accent); }
+.docp h2 { font: 800 25px/1.2 var(--sans); letter-spacing: -.02em; margin-top: 42px; scroll-margin-top: 20px; }
+.docp p, .docp li { font: 400 17.5px/1.7 var(--serif); color: var(--ink2); }
+.docp p { margin-top: 12px; }
+.docp ul.l { margin: 12px 0 0; padding-left: 22px; }
+.docp a { color: var(--ink); }
+.tbl { width: 100%; border-collapse: collapse; margin-top: 16px; font: 400 15px/1.5 var(--sans); }
+.tbl th { text-align: start; font: 800 11.5px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; padding: 0 12px 12px 0; border-bottom: 1px solid var(--ink); }
+.tbl td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.langs { display: flex; gap: 14px; margin: 0 0 22px; font: 700 13px/1 var(--sans); }
+.langs a { color: var(--muted); text-decoration: none; } .langs a.on { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 3px; }
+.doc-en { display: none; }
+body.en .doc-ru { display: none; } body.en .doc-en { display: block; }
+@media (max-width: 860px) { .docp { grid-template-columns: 1fr; gap: 0; padding: 26px 16px 50px; } .docp nav { display: none; } .tbl { font-size: 13.5px; } }
+</style>
+</head>
+<body>
+<header class="top" style="padding-bottom:22px;border-bottom:1px solid var(--rule2);max-width:none"><a class="brand" href="/">newzeem<span class="dot">.</span></a><small>Read less. Know more.</small></header>
+<div class="docp">
+<nav><div class="grp"><h5>Документы · Documents</h5><a href="/privacy" class="on">Политика конфиденциальности</a><a href="/terms" class="">Условия использования</a></div>
+<div class="grp"><h5>Разделы</h5><a href="#data">Какие данные</a><a href="#cookies">Cookies</a><a href="#who">Кому передаём</a><a href="#time">Сколько храним</a><a href="#rights">Ваши права</a><a href="#contact">Контакты</a></div><div class="grp"><a href="/">← На главную · Home</a></div></nav>
+<article>
+<div class="langs"><a href="#ru" data-l="ru">Русский</a><a href="#en" data-l="en">English</a></div>
+<div class="doc-ru"><div class="lbl">Документы</div><h1>Политика конфиденциальности<span class="dot">.</span></h1>
+<div class="upd">Редакция 1.0 · действует с 17 октября 2026</div>
+<p class="lede">Мы собираем как можно меньше данных. Здесь — какие именно, зачем, кто их видит и как их удалить.</p>
+<div class="tldr"><h3>Коротко</h3><ul><li>Нет рекламы, рекламных и следящих cookies, мы не продаём данные.</li><li>Темы, язык, сохранённое, подборка и интересы хранятся только на вашем устройстве.</li><li>Регистрации нет. Авторы пишут под псевдонимом, без почты и телефона.</li></ul></div>
+<h2 id="data">Какие данные мы обрабатываем</h2>
+<table class="tbl"><tr><th>Данные</th><th>Где хранятся</th><th>Зачем</th></tr>
+<tr><td>Темы, язык, длина выпуска, сохранённые новости, подборка, интересы, серия</td><td>Только на вашем устройстве (локальное хранилище браузера)</td><td>Собрать выпуск под вас</td></tr>
+<tr><td>Случайный номер устройства. На сервер попадает только его хэш</td><td>Наша база</td><td>Учесть реакцию, голос и визит один раз</td></tr>
+<tr><td>Страна, определённая по сетевому запросу. IP-адрес не сохраняется</td><td>Наша база, в обобщённом виде</td><td>Показать, как отреагировала ваша страна; общая статистика</td></tr>
+<tr><td>Хэш IP-адреса на 1–3 дня</td><td>Наша база</td><td>Защита от накруток и спама</td></tr>
+<tr><td>Псевдоним, «о себе», посты, сообщения в чате авторов</td><td>Наша база</td><td>Публикация, модерация, рейтинг авторов</td></tr>
+<tr><td>Ссылки, которыми вы поделились (подборка, новость)</td><td>Наша база, 30 дней</td><td>Открыть ссылку у того, кому вы её отправили</td></tr></table>
+<h2 id="cookies">Cookies и хранилище на устройстве</h2>
+<p>Мы не используем рекламные и аналитические cookies и сторонние трекеры. Сайт хранит настройки в локальном хранилище вашего браузера: без них он не сможет помнить ваши темы и язык. Очистить их можно в разделе «Моё» или в настройках браузера.</p>
+<h2 id="who">Кому мы передаём данные</h2>
+<p>Только сервисам, без которых сайт не работает:</p>
+<ul class="l"><li>Vercel (США) — хостинг сайта;</li><li>Upstash (США) — база данных для реакций, голосов, постов и статистики;</li><li>ИИ-провайдер (например, Groq или Google) — получает тексты новостей из открытых лент и тексты постов авторов для пересказа, перевода и подсказки модератору. Ваши личные данные туда не передаются.</li></ul>
+<p>Мы не продаём данные и не передаём их рекламодателям. Данные могут храниться на серверах за пределами вашей страны, в том числе в США.</p>
+<h2 id="time">Сколько мы храним данные</h2>
+<ul class="l"><li>Реакции на новости — 4 дня; голоса в прогнозе дня — 12 дней.</li><li>Статистика посещений — до 400 дней, только в обобщённом виде.</li><li>Ссылки на подборки и новости — 30 дней.</li><li>Чат авторов — последние 300 сообщений.</li><li>Посты и страница автора — пока автор или модератор их не удалит.</li></ul>
+<h2 id="ai">ИИ и проверка фактов</h2>
+<p>Пересказы новостей пишет ИИ по открытым RSS-лентам изданий. ИИ может ошибаться. У каждой новости есть ссылка на оригинал — сверяйтесь с ним.</p>
+<h2 id="rights">Ваши права</h2>
+<p>Вы можете запросить копию своих данных, исправить или удалить их, отозвать согласие. Данные на устройстве удаляются в разделе «Моё» или очисткой данных сайта в браузере. Чтобы удалить пост, страницу автора или сообщения, напишите нам.</p>
+<h2 id="contact">Контакты</h2>
+<p>По любым вопросам о данных: <a href="mailto:joneskir4@gmail.com">joneskir4@gmail.com</a>. Мы отвечаем в течение 10 рабочих дней.</p>
+<h2 id="changes">Изменения</h2>
+<p>Если мы изменим политику, обновим дату вверху страницы, а о важных изменениях сообщим на сайте.</p></div><div class="doc-en"><div class="lbl">Documents</div><h1>Privacy policy<span class="dot">.</span></h1>
+<div class="upd">Version 1.0 · effective October 17, 2026</div>
+<p class="lede">We collect as little as possible. Here is what we keep, why, who can see it and how to delete it.</p>
+<div class="tldr"><h3>In short</h3><ul><li>No ads, no advertising or tracking cookies, no selling of data.</li><li>Your topics, language, saved stories, picks and interests stay on your device.</li><li>No sign-up. Authors write under a pen name, without e-mail or phone.</li></ul></div>
+<h2>What we process</h2>
+<table class="tbl"><tr><th>Data</th><th>Where</th><th>Why</th></tr>
+<tr><td>Topics, language, issue length, saved stories, picks, interests, streak</td><td>Only on your device (browser storage)</td><td>Build your issue</td></tr>
+<tr><td>A random device number; only its hash reaches our server</td><td>Our database</td><td>Count a reaction, vote or visit once</td></tr>
+<tr><td>Country from the network request; the IP address is not stored</td><td>Our database, aggregated</td><td>Show how your country reacted; overall statistics</td></tr>
+<tr><td>A hash of the IP address for 1–3 days</td><td>Our database</td><td>Protection against spam and vote stuffing</td></tr>
+<tr><td>Pen name, bio, posts, authors' chat messages</td><td>Our database</td><td>Publishing, moderation, author ratings</td></tr>
+<tr><td>Links you share (picks, a story)</td><td>Our database, 30 days</td><td>Open the link for the person you sent it to</td></tr></table>
+<h2>Cookies and device storage</h2>
+<p>We use no advertising or analytics cookies and no third-party trackers. The site keeps your settings in your browser's local storage so it can remember your topics and language. You can clear them in "Mine" or in your browser settings.</p>
+<h2>Who we share data with</h2>
+<p>Only services the site needs to work: Vercel (USA) for hosting; Upstash (USA) for the database; an AI provider (such as Groq or Google) that receives news texts from public feeds and authors' posts for summaries, translation and moderation hints. Your personal data is not sent to it. We do not sell data or share it with advertisers. Data may be stored outside your country, including in the USA.</p>
+<h2>How long we keep data</h2>
+<ul class="l"><li>Reactions: 4 days; daily prediction votes: 12 days.</li><li>Visit statistics: up to 400 days, aggregated only.</li><li>Shared links: 30 days.</li><li>Authors' chat: the last 300 messages.</li><li>Posts and author pages: until the author or a moderator removes them.</li></ul>
+<h2>AI and fact-checking</h2>
+<p>News summaries are written by AI from public RSS feeds. AI can make mistakes. Every story links to the original; please check it.</p>
+<h2>Your rights</h2>
+<p>You can ask for a copy of your data, correct or delete it, or withdraw consent. Data on your device is cleared in "Mine" or by clearing site data in your browser. To remove a post, an author page or messages, write to us.</p>
+<h2>Contact</h2>
+<p>Any questions about your data: <a href="mailto:joneskir4@gmail.com">joneskir4@gmail.com</a>. We reply within 10 working days.</p></div></article></div>
+<footer class="foot"><div class="fin"><div><a class="flogo" href="/">newzeem<span class="dot">.</span></a><p>Бесплатная газета, у которой есть конец. Без рекламы и слежки.</p></div>
+<div><h5>Документы</h5><a href="/privacy">Политика конфиденциальности</a><a href="/terms">Условия использования</a></div>
+<div><h5>Связь</h5><a href="mailto:joneskir4@gmail.com">joneskir4@gmail.com</a></div></div></footer>
+<script>
+(function () {
+  var want = location.hash === '#en' || location.hash === '#ru' ? location.hash.slice(1) : null;
+  if (!want) { try { var s = JSON.parse(localStorage.getItem('newzeem.v1') || '{}'); want = s.lang === 'ru' ? 'ru' : (s.lang ? 'en' : null); } catch (e) {} }
+  if (!want) want = String(navigator.language || '').slice(0, 2) === 'ru' ? 'ru' : 'en';
+  function set(l) { document.body.className = l === 'en' ? 'en' : ''; document.documentElement.lang = l; [].forEach.call(document.querySelectorAll('.langs a'), function (a) { a.className = a.getAttribute('data-l') === l ? 'on' : ''; }); }
+  [].forEach.call(document.querySelectorAll('.langs a'), function (a) { a.addEventListener('click', function (e) { e.preventDefault(); set(a.getAttribute('data-l')); history.replaceState(null, '', '#' + a.getAttribute('data-l')); }); });
+  set(want);
+})();
+</script>
+</body>
+</html>

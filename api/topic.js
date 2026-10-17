@@ -35,7 +35,10 @@ function parseFeed(xml, source) {
     if (!/^https?:\/\//i.test(link)) { const g = text(tag(b, 'guid')); link = /^https?:\/\//i.test(g) ? g : ''; }
     const desc = text(tag(b, 'description') || tag(b, 'summary') || tag(b, 'content:encoded') || tag(b, 'content'));
     const when = Date.parse(text(tag(b, 'pubDate') || tag(b, 'published') || tag(b, 'updated') || tag(b, 'dc:date'))) || 0;
-    if (title && link) out.push({ title, link, desc: clip(desc, 420), when, source });
+    // the outlet's own picture for the story, if the feed gives one (media:content, media:thumbnail, an image enclosure or an <img> in the text)
+    const im = /<media:(?:content|thumbnail)[^>]*url=["']([^"']+)["']/i.exec(b) || /<enclosure[^>]*url=["']([^"']+)["'][^>]*type=["']image/i.exec(b) || /<enclosure[^>]*type=["']image[^"']*["'][^>]*url=["']([^"']+)["']/i.exec(b) || /<img[^>]*src=["']([^"']+)["']/i.exec(decode(b));
+    const img = im && /^https:\/\//i.test(decode(im[1])) && !/\.(gif|svg)(\?|$)/i.test(im[1]) ? decode(im[1]).slice(0, 500) : '';
+    if (title && link) out.push({ title, link, desc: clip(desc, 420), when, source, img });
   }
   return out;
 }
@@ -106,7 +109,7 @@ const tally = (it) => secsFor(it.headline, it.gist, (it.points || []).join(' '),
 
 function raw(list) {
   return list.slice(0, STORIES).map((x, i) => {
-    const it = { id: hash(x.link), headline: clip(x.title, 120), gist: clip(x.desc, 200), points: [], why: '', source: x.source, url: x.link, weight: i < 2 ? 2 : 1, raw: true };
+    const it = { id: hash(x.link), headline: clip(x.title, 120), gist: clip(x.desc, 200), points: [], why: '', source: x.source, url: x.link, img: x.img || '', weight: i < 2 ? 2 : 1, raw: true };
     it.secs = tally(it); return it;
   });
 }
@@ -136,7 +139,7 @@ async function build(topic, lg) {
       const points = (Array.isArray(s.points) ? s.points : []).map((p) => clip(p, 130)).filter((p) => p && supported(p, srcText) && !similar(p, gist)).slice(0, 2);
       let why = clip(s.why, 130); if (why && !supported(why, srcText)) why = '';
       kept[n] = { id: hash(src.link), text: srcText };
-      const it = { id: hash(src.link), headline, gist, points, why, source: src.source, url: src.link, weight: Math.min(3, Math.max(1, Math.round(Number(s.weight)) || 1)) };
+      const it = { id: hash(src.link), headline, gist, points, why, source: src.source, url: src.link, img: src.img || '', weight: Math.min(3, Math.max(1, Math.round(Number(s.weight)) || 1)) };
       it.secs = tally(it); items.push(it);
     });
     if (items.length < 2) throw new Error('too few stories');
