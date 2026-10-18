@@ -2,7 +2,7 @@
    it stays in this browser tab only (sessionStorage) and goes to the server in a header. */
 (function () {
   'use strict';
-  var TOPIC = { world: '🌍 Мир', tech: '💻 Технологии', ai: '🤖 ИИ', business: '📈 Бизнес', science: '🔬 Наука', health: '🩺 Здоровье', climate: '🌱 Климат', sport: '⚽ Спорт', culture: '🎬 Культура', games: '🎮 Игры', other: '💡 Другое' };
+  var TOPIC = { world: '🌍 Мир', tech: '💻 Технологии', ai: '🤖 ИИ', business: '📈 Бизнес', science: '🔬 Наука', health: '🩺 Здоровье', climate: '🌱 Климат', sport: '⚽ Спорт', culture: '🎬 Культура', games: '🎮 Игры', edu: '🎓 Образование', other: '💡 Другое' };
   var LV = ['🌱 Новичок', '✍️ Автор', '🎓 Эксперт', '🏆 Легенда'];
   var REASONS = ['Нет источников или они не подтверждают текст', 'Реклама или самопиар', 'Слишком коротко, мало пользы', 'Оскорбления или травля', 'Личные данные людей', 'Недостоверная информация', 'Не по теме сайта'];
   var pass = '';

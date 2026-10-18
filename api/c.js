@@ -17,7 +17,7 @@ const TOPICS = require('../topics.js');
 const AI = require('./_ai.js');
 const U = require('./_util.js');
 
-const TOPIC_IDS = TOPICS.list.map((t) => t.id).concat('other');
+const TOPIC_IDS = TOPICS.list.map((t) => t.id).concat('edu', 'other');
 const LEVELS = [0, 20, 100, 500];
 const level = (rep) => LEVELS.filter((x) => rep >= x).length - 1;
 const keyOf = (req) => { const k = String(req.headers['x-nz-key'] || ''); return /^[a-f0-9]{32,64}$/.test(k) ? k : ''; };

@@ -421,3 +421,23 @@ body.listening { padding-bottom: 90px; }
 :lang(zh) body, :lang(hi) body { line-height: 1.75; }
 :lang(zh) .gist, :lang(zh) .pbody, :lang(hi) .gist, :lang(ar) .gist { font-family: var(--sans); }
 body.listening .ck { display: none; }
+
+/* learn, the authors' limit, the honest end of the feed */
+.budget { font: 700 12px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 8px 12px; border: 1px solid var(--rule); border-radius: 99px; white-space: nowrap; }
+.feedend { display: grid; gap: 6px; margin-top: 34px; padding: 26px 0; border-top: 1px solid var(--rule2); text-align: center; }
+.feedend b { font: 800 22px/1.2 var(--sans); letter-spacing: -.02em; }
+.feedend span { font: 400 17px/1.5 var(--serif); color: var(--ink2); }
+.feedend .more2 { justify-self: center; }
+.wall { max-width: 640px; margin: 40px auto 0; text-align: center; padding: 40px 0; border-top: 1px solid var(--rule2); border-bottom: 1px solid var(--rule2); }
+.wall h1 { font: 800 clamp(32px, 5vw, 46px)/1.08 var(--sans); letter-spacing: -.035em; margin-top: 10px; }
+.wall .lede { margin: 14px auto 0; }
+.wall .row2 { justify-content: center; margin-top: 22px; }
+.lesson h3 { font: 800 clamp(28px, 4vw, 40px)/1.1 var(--sans); letter-spacing: -.03em; }
+.lesson .gist { font-size: 20px; }
+.lsrc { margin-top: 18px; font: 500 13.5px/1.5 var(--sans); color: var(--muted); }
+.otdl { list-style: none; margin: 0; padding: 0; }
+.otdl li { display: grid; grid-template-columns: 70px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.otdl b { font: 800 22px/1.2 var(--sans); color: var(--accent); }
+.otdl span { font: 400 17px/1.55 var(--serif); color: var(--ink2); }
+.potd .photo img { aspect-ratio: auto; max-height: 520px; object-fit: contain; background: var(--wash); }
+main > section.lesson, main > section.otd { max-width: 760px; }

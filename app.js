@@ -18,7 +18,7 @@
       share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'newzeem. Читай меньше. Знай больше. Новости за 5 минут: бесплатно, без рекламы и регистрации.',
       foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник. Реакции и голоса считаются анонимно.',
       viewsH: 'Два взгляда', viewsSub: 'Одно событие у разных изданий. Смотрите, как каждое его подаёт.', viewsNote: 'Сравнение написал ИИ по заголовкам самих изданий. Он не решает, кто прав.', followH: 'Что изменилось с вчера', followWas: 'Вчера', followNow: 'Сегодня', predH: 'Прогноз дня', predSub: 'Один тап. Узнайте, что думает мир, и возвращайтесь за результатом.', predYes: 'Да', predNo: 'Нет', predFirst: 'Вы одним из первых. Загляните позже: увидите, что думает мир.', predN: 'Голосов: {n}', predWait: 'Результат появится здесь в течение 3 дней.', predY: 'Сбылось', predNn: 'Не сбылось', predX: 'Закрыт: в новостях нет ясного ответа', predRight: 'Вы угадали', predWrong: 'В этот раз нет', predRecord: 'Ваш счёт: {a} из {b}', predNote: 'Итог подвёл ИИ по заголовкам новостей. Сверьтесь с источником.', predEarlier: 'Прошлый прогноз',
-      docs: 'Документы', privacy: 'Политика конфиденциальности', terms: 'Условия использования', contact: 'Связь', ckH: 'Мы не следим за вами.', ckP: 'У newzeem нет рекламы и следящих cookies. На вашем устройстве хранятся только настройки: темы, язык и серия.', ckOk: 'Понятно', ckMore: 'Подробнее', photoBy: 'Фото: {s}', morningKick: 'Ваш выпуск · {m} мин', streakH: 'Ваша серия', skip: 'К содержанию', langL: 'Язык', aiWaitH: 'Готовим перевод', aiWait: 'Новости прямо сейчас пересказываются на ваш язык. Обычно это занимает минуту.', showOrig: 'Показать оригинальные заголовки',
+      docs: 'Документы', privacy: 'Политика конфиденциальности', terms: 'Условия использования', contact: 'Связь', ckH: 'Мы не следим за вами.', ckP: 'У newzeem нет рекламы и следящих cookies. На вашем устройстве хранятся только настройки: темы, язык и серия.', ckOk: 'Понятно', ckMore: 'Подробнее', photoBy: 'Фото: {s}', morningKick: 'Ваш выпуск · {m} мин', streakH: 'Ваша серия', skip: 'К содержанию', langL: 'Язык', aiWaitH: 'Готовим перевод', aiWait: 'Новости прямо сейчас пересказываются на ваш язык. Обычно это занимает минуту.', showOrig: 'Показать оригинальные заголовки', tabLearn: 'Учиться', eduTopic: 'Образование', budgetLeft: 'Сегодня осталось {m} мин', budgetH: 'Ваши 10 минут на сегодня закончились', budgetP: 'Посты здесь, чтобы стать умнее, а не чтобы бесконечно листать. Раздел снова откроется завтра. А пока вас ждёт урок дня.', feedEnd: 'Это все посты на сегодня', feedEndP: 'Никакой бесконечной ленты: 10 лучших для вас — и всё.', goLearn: 'Урок дня', learnH: 'Узнать новое сегодня', learnSub: 'Один короткий урок, пара фактов из истории и фото дня. Пять минут — и готово.', learnFail: 'Не удалось загрузить урок. Попробуйте через минуту.', lessonH: 'Урок дня', lessonSrc: 'По материалам статьи дня Википедии (CC BY-SA):', lessonQuiz: 'Три вопроса по уроку', otdH: 'В этот день', potdH: 'Фото дня', learnDone: 'На сегодня с учёбой всё', learnDoneP: 'Новый урок появится завтра.', eduPosts: 'Разборы наших авторов',
       other: 'Другое', pickFull: 'Подборка заполнена (20)', pickAdd: 'В мою подборку', picked: 'Добавлено в подборку', unpicked: 'Убрано из подборки', saveL: 'Сохранить', saved: 'Сохранено', unsaved: 'Убрано из сохранённого', forYou: 'Для вас', inside: 'В сегодняшнем выпуске', quick: 'Коротко', quickSub: 'Ещё {n} — по строчке', cFeed: 'Посты', cTop: 'Топ', cChat: 'Чат', write: 'Написать', authorsH: 'Авторы', authorsSub: 'Разборы от читателей. Каждый проверяет модератор.', cNew: 'Новые', cOff: 'Сообщество ещё не включено.', cEmpty: 'Постов пока нет. Будьте первым.', topNews: 'Самое обсуждаемое сегодня', topNone: 'Пока пусто.', topPosts: 'Лучшие посты', topAuthors: 'Лучшие авторы', repN: '{n} реп.', tabIssue: 'Выпуск', tabAuthors: 'Авторы', tabMe: 'Моё', missing: 'Страница недоступна.', usefulL: 'Полезно', thanks: 'Спасибо!', sources: 'Источники', postNote: 'Написал читатель, проверил модератор. Сверяйтесь с источниками.', rep: 'репутация', nPosts: 'постов', nUseful: 'сочли полезным', toNext: '{n} до уровня «{l}»', writeH: 'Написать пост', writeSub: 'Объясните что-то ясно и с источниками. Модератор читает каждый пост до публикации.', banned: 'Ваша страница автора заблокирована.', fTitle: 'Понятный заголовок', fBody: 'Объясните просто: факты, контекст, почему это важно.', fLink: 'Ссылка на источник (обязательно)', fLink2: 'Ещё источник (необязательно)', sendMod: 'Отправить на проверку', minChars: 'Минимум {n} символов', fTitleL: 'Заголовок', fTopicL: 'Тема', fBodyL: 'Текст', fLinksL: 'Источники', rule1: 'Факты с источниками, без рекламы и самопиара.', rule2: 'Без оскорблений и чужих личных данных.', rule3: 'Решает модератор, вам придёт уведомление.', eTitle: 'Заголовок слишком короткий', eLinks: 'Добавьте хотя бы одну ссылку на источник', sentMod: 'Отправлено! Модератор скоро посмотрит.', myPosts: 'Мои посты', fName: 'Псевдоним', fBio: 'Пара слов о себе (необязательно)', join: 'Стать автором', joinH: 'Выберите псевдоним', joinSub: 'Без почты и пароля: на устройстве хранится секретный ключ. Его можно скопировать в «Моё», чтобы войти с другого устройства.', fNameL: 'Псевдоним', fBioL: 'О себе', haveKey: 'У меня уже есть ключ', welcome: 'Добро пожаловать!', keyPh: 'Вставьте ключ автора', useKey: 'Войти', eKey: 'Этот ключ не подходит', chatSub: 'Авторы обсуждают свои темы. Будьте вежливы.', chatEmpty: 'Сообщений пока нет.', report: 'Пожаловаться', reported: 'Спасибо, модератор посмотрит', chatJoin: 'Писать в чат могут только авторы.', chatPh: 'Сообщение', send: 'Отправить', fromAuthors: 'От наших авторов', allPosts: 'Все посты', remove: 'Убрать', myPicks: 'Моя подборка на день', myPicksSub: 'Ваш собственный короткий выпуск. Поделитесь им ссылкой.', picksEmpty: 'Нажмите + под новостью, чтобы добавить её сюда.', sharePicks: 'Поделиться подборкой', savedH: 'Сохранённое', savedEmpty: 'Нажмите закладку под новостью, чтобы сохранить её.', myAuthor: 'Моя страница автора', becomeSub: 'Пишите разборы, получайте репутацию и читателей.', publicPage: 'Публичная страница', keyH: 'Мой ключ автора', keySub: 'Не показывайте его никому. С ним можно войти с другого устройства.', copy: 'Копировать', settings: 'Настройки', interestsNote: 'Интересы считаются только на этом устройстве: по тому, что вы сохраняете, добавляете и открываете.', cleared: 'Интересы сброшены', clearInterests: 'Сбросить интересы', nOk: 'Ваш пост опубликован', nNo: 'Пост не опубликован', nOff: 'Пост снят с публикации', nTop: 'Главная новость дня', nRec: 'Новое от {a}', notesH: 'Уведомления', notesEmpty: 'Ничего нового.', lv0: 'Новичок', lv1: 'Автор', lv2: 'Эксперт', lv3: 'Легенда', st_pending: 'На проверке', st_live: 'Опубликован', st_rejected: 'Не опубликован', eLimit: 'Можно отправить 3 поста в день', eName: 'Псевдоним: 3–24 буквы или цифры', eTaken: 'Этот псевдоним занят', eSlow: 'Чуть помедленнее'
     },
     en: {
@@ -33,7 +33,7 @@
       share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'newzeem. Read less. Know more. Your news in 5 minutes: free, no ads, no sign-up.',
       foot: 'newzeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link. Reactions and votes are counted anonymously.',
       viewsH: 'Two views', viewsSub: 'One event, reported by different outlets. See how each one frames it.', viewsNote: 'Comparison written by AI from the outlets\' own headlines. It does not say who is right.', followH: 'What changed since yesterday', followWas: 'Yesterday', followNow: 'Today', predH: 'Prediction of the day', predSub: 'One tap. See what the world thinks, then come back for the result.', predYes: 'Yes', predNo: 'No', predFirst: 'You are among the first. Come back later to see the world.', predN: '{n} votes', predWait: 'The result will appear here within 3 days.', predY: 'It happened', predNn: 'It did not happen', predX: 'Closed: nothing clear in the news', predRight: 'You called it', predWrong: 'Not this time', predRecord: 'Your record: {a} of {b}', predNote: 'Settled by AI from news headlines. Check the source.', predEarlier: 'Earlier prediction',
-      docs: 'Documents', privacy: 'Privacy policy', terms: 'Terms of use', contact: 'Contact', ckH: 'We don’t track you.', ckP: 'newzeem has no ads and no tracking cookies. Only your settings (topics, language, streak) are kept on this device.', ckOk: 'Got it', ckMore: 'Learn more', photoBy: 'Photo: {s}', morningKick: 'Your issue · {m} min', streakH: 'Your streak', skip: 'Skip to content', langL: 'Language', aiWaitH: 'Translating your issue', aiWait: 'The news is being retold right now. This usually takes a minute.', showOrig: 'Show original headlines',
+      docs: 'Documents', privacy: 'Privacy policy', terms: 'Terms of use', contact: 'Contact', ckH: 'We don’t track you.', ckP: 'newzeem has no ads and no tracking cookies. Only your settings (topics, language, streak) are kept on this device.', ckOk: 'Got it', ckMore: 'Learn more', photoBy: 'Photo: {s}', morningKick: 'Your issue · {m} min', streakH: 'Your streak', skip: 'Skip to content', langL: 'Language', aiWaitH: 'Translating your issue', aiWait: 'The news is being retold right now. This usually takes a minute.', showOrig: 'Show original headlines', tabLearn: 'Learn', eduTopic: 'Education', budgetLeft: '{m} min left today', budgetH: 'That’s your 10 minutes for today', budgetP: 'Posts are here to make you smarter, not to keep you scrolling. The section opens again tomorrow. Meanwhile, today’s lesson is waiting.', feedEnd: 'That’s all posts for today', feedEndP: 'No endless feed: the best 10 for you, and that’s it.', goLearn: 'Today’s lesson', learnH: 'Learn something today', learnSub: 'One short lesson, a few facts from history and the picture of the day. Done in five minutes.', learnFail: 'Today’s lesson could not be loaded. Try again in a minute.', lessonH: 'Lesson of the day', lessonSrc: 'Based on Wikipedia’s article of the day (CC BY-SA):', lessonQuiz: 'Three questions on the lesson', otdH: 'On this day', potdH: 'Picture of the day', learnDone: 'That’s today’s learning', learnDoneP: 'A new lesson arrives tomorrow.', eduPosts: 'Explainers by our authors',
       other: 'Other', pickFull: 'Your picks are full (20)', pickAdd: 'Add to my picks', picked: 'Added to your picks', unpicked: 'Removed from your picks', saveL: 'Save', saved: 'Saved', unsaved: 'Removed from saved', forYou: 'For you', inside: 'In today\'s issue', quick: 'Quick hits', quickSub: '{n} more in one line each', cFeed: 'Posts', cTop: 'Top', cChat: 'Chat', write: 'Write', authorsH: 'Authors', authorsSub: 'Explainers by readers, checked by a moderator before they appear.', cNew: 'New', cOff: 'The community is not switched on yet.', cEmpty: 'No posts yet. Be the first.', topNews: 'Most discussed news today', topNone: 'Nothing here yet.', topPosts: 'Top posts', topAuthors: 'Top authors', repN: '{n} rep', tabIssue: 'Issue', tabAuthors: 'Authors', tabMe: 'Mine', missing: 'This page is not available.', usefulL: 'Useful', thanks: 'Thanks!', sources: 'Sources', postNote: 'Written by a reader and checked by a moderator. Check the sources.', rep: 'reputation', nPosts: 'posts', nUseful: 'found it useful', toNext: '{n} to {l}', writeH: 'Write a post', writeSub: 'Explain something clearly and with sources. A moderator reads every post before it goes live.', banned: 'Your author page is blocked.', fTitle: 'A clear title', fBody: 'Explain it simply. Facts, context, why it matters.', fLink: 'Source link (required)', fLink2: 'Another source (optional)', sendMod: 'Send for review', minChars: 'At least {n} characters', fTitleL: 'Title', fTopicL: 'Topic', fBodyL: 'Text', fLinksL: 'Sources', rule1: 'Facts with sources, no ads or self-promotion.', rule2: 'No insults, no personal data of others.', rule3: 'A moderator decides; you get a notification.', eTitle: 'The title is too short', eLinks: 'Add at least one source link', sentMod: 'Sent! A moderator will review it soon.', myPosts: 'My posts', fName: 'Pen name', fBio: 'A line about you (optional)', join: 'Become an author', joinH: 'Pick a pen name', joinSub: 'No e-mail, no password: this device keeps a secret key. You can copy it in Mine to sign in elsewhere.', fNameL: 'Pen name', fBioL: 'About you', haveKey: 'I already have a key', welcome: 'Welcome!', keyPh: 'Paste your author key', useKey: 'Sign in', eKey: 'This key does not work', chatSub: 'Authors talk shop. Be kind, stay on topic.', chatEmpty: 'No messages yet.', report: 'Report', reported: 'Thanks, a moderator will look', chatJoin: 'Only authors can write in the chat.', chatPh: 'Message', send: 'Send', fromAuthors: 'From our authors', allPosts: 'All posts', remove: 'Remove', myPicks: 'My picks for today', myPicksSub: 'Your own short issue. Share it as a link.', picksEmpty: 'Tap + under any story to add it here.', sharePicks: 'Share my picks', savedH: 'Saved', savedEmpty: 'Tap the bookmark under a story to keep it.', myAuthor: 'My author page', becomeSub: 'Write explainers, earn reputation and reach readers.', publicPage: 'Public page', keyH: 'My author key', keySub: 'Keep it private. With it you can sign in on another device.', copy: 'Copy', settings: 'Settings', interestsNote: 'Your interests are learned on this device only, from what you save, pick and open.', cleared: 'Interests cleared', clearInterests: 'Clear my interests', nOk: 'Your post is live', nNo: 'Your post was not published', nOff: 'Your post was taken down', nTop: 'The big story today', nRec: 'New from {a}', notesH: 'Notifications', notesEmpty: 'Nothing new.', lv0: 'Newcomer', lv1: 'Author', lv2: 'Expert', lv3: 'Legend', st_pending: 'In review', st_live: 'Published', st_rejected: 'Not published', eLimit: 'You can send 3 posts a day', eName: 'Pen name: 3–24 letters or digits', eTaken: 'This pen name is taken', eSlow: 'Slow down a little'
     }
   };
@@ -97,7 +97,7 @@
   function ymd(d) { var p = function (n) { return (n < 10 ? '0' : '') + n; }; return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()); }
   function today() { return ymd(new Date()); }
   function toast(msg) { var box = $('toasts'), el = h('div.toast', msg); box.appendChild(el); setTimeout(function () { el.remove(); }, 2600); }
-  function topicName(id) { var x = TP.byId[id]; return x ? x[S.lang] || x.en : t('other'); }
+  function topicName(id) { var x = TP.byId[id]; return x ? x[S.lang] || x.en : id === 'edu' ? t('eduTopic') : t('other'); }
   function topicEmoji(id) { var x = TP.byId[id]; return x ? x.e : '💡'; }
   function topicColor(id) { var x = TP.byId[id]; return x ? x.c : '#C8321B'; }
   // Every full stop in a headline is vermilion: the brand's way of saying "this ends here".
@@ -157,8 +157,8 @@
   }
 
   /* ---------- the frame: header tabs, bottom bar, bell, footer ---------- */
-  var TABS = [['issue', 'paper', 'tabIssue'], ['feed', 'people', 'tabAuthors'], ['me', 'user', 'tabMe']];
-  function tabOf(r) { return r === 'feed' || r === 'top' || r === 'chat' || r === 'write' || r === 'post' || r === 'author' ? 'feed' : r === 'me' || r === 'bell' ? 'me' : 'issue'; }
+  var TABS = [['issue', 'paper', 'tabIssue'], ['learn', 'paper', 'tabLearn'], ['feed', 'people', 'tabAuthors'], ['me', 'user', 'tabMe']];
+  function tabOf(r) { return r === 'learn' ? 'learn' : r === 'feed' || r === 'top' || r === 'chat' || r === 'write' || r === 'post' || r === 'author' ? 'feed' : r === 'me' || r === 'bell' ? 'me' : 'issue'; }
   function chrome(route) {
     document.documentElement.lang = S.lang;
     document.documentElement.dir = TP.rtl.indexOf(S.lang) >= 0 ? 'rtl' : 'ltr';
@@ -989,7 +989,7 @@
   function subnav(cur) {
     var items = [['feed', t('cFeed')], ['top', t('cTop')], ['chat', t('cChat')]];
     return h('div.subnav', h('nav.seg', items.map(function (x) { return h('a', { href: '#/' + x[0], 'aria-current': cur === x[0] ? 'page' : null }, x[1]); })),
-      h('a.btn.dark.write', { href: '#/write' }, ico('pen'), t('write')));
+      Budget.chip(), h('a.btn.dark.write', { href: '#/write' }, ico('pen'), t('write')));
   }
   function emptyNote(text, cta) { return h('div.empty.card', h('p', text), cta || null); }
 
@@ -997,13 +997,13 @@
     chrome('feed'); var main = view();
     main.appendChild(h('header.phead', h('h1', dotted(t('authorsH') + '.')), h('p.lede', t('authorsSub'))));
     main.appendChild(subnav('feed'));
-    var tabs = h('div.chips', [['foryou', t('forYou')], ['new', t('cNew')]].concat(TP.list.map(function (tp) { return [tp.id, topicName(tp.id)]; })).map(function (x) {
+    var tabs = h('div.chips', [['foryou', t('forYou')], ['new', t('cNew')], ['edu', t('eduTopic')]].concat(TP.list.map(function (tp) { return [tp.id, topicName(tp.id)]; })).map(function (x) {
       return h('button.chip', { type: 'button', 'aria-pressed': String((mode || 'foryou') === x[0]), onclick: function () { renderFeed(x[0]); } }, x[1]);
     }));
     main.appendChild(tabs);
     var list = h('div.plist', h('div.skel'), h('div.skel'));
     main.appendChild(list);
-    var m = mode || 'foryou', q = TP.byId[m] ? '&topic=' + m : '';
+    var m = mode || 'foryou', q = TP.byId[m] || m === 'edu' ? '&topic=' + m : '';
     api('/api/c?a=feed&n=40' + q).then(function (j) {
       clear(list);
       if (j.on === false) { list.appendChild(emptyNote(t('cOff'))); return; }
@@ -1011,7 +1011,8 @@
       if (m === 'foryou') ps = ps.map(function (p) { return Object.assign(p, { sc: Pref.score(p.topic, p.title + ' ' + (p.ex || '')) + (S.topics.indexOf(p.topic) >= 0 ? 2 : 0) + Math.log(1 + (p.useful || 0)) }); }).sort(function (a, b) { return b.sc - a.sc || b.at - a.at; });
       if (!ps.length) { list.appendChild(emptyNote(t('cEmpty'), h('a.btn.dark', { href: '#/write' }, t('write')))); return; }
       if (ps[0]) S.feedSeen = Math.max(S.feedSeen || 0, ps.reduce(function (m2, p) { return Math.max(m2, p.at); }, 0)); save();
-      ps.forEach(function (p) { list.appendChild(postCard(p)); });
+      ps.slice(0, FEED_MAX).forEach(function (p) { list.appendChild(postCard(p)); });
+      list.appendChild(h('div.feedend', h('b', t('feedEnd')), h('span', t('feedEndP')), h('a.more2', { href: '#/learn' }, t('goLearn') + ' →')));
     });
   }
 
@@ -1100,7 +1101,7 @@
       if (me && me.author.ban) { box.appendChild(emptyNote(t('banned'))); return; }
       if (!me) return joinForm(box, renderWrite);
       var title = h('input.in', { type: 'text', maxlength: '120', placeholder: t('fTitle') });
-      var topic = h('select.in', TP.list.map(function (tp) { return h('option', { value: tp.id }, topicName(tp.id)); }).concat(h('option', { value: 'other' }, t('other'))));
+      var topic = h('select.in', TP.list.map(function (tp) { return h('option', { value: tp.id }, topicName(tp.id)); }).concat(h('option', { value: 'edu' }, t('eduTopic')), h('option', { value: 'other' }, t('other'))));
       if (S.topics[0]) topic.value = S.topics[0];
       var body = h('textarea.in.ta', { rows: '12', maxlength: '6000', placeholder: t('fBody') });
       var count = h('small.cnt2');
@@ -1318,6 +1319,103 @@
     }
   };
 
+
+  /* ---------- a daily limit for the authors' section: 10 minutes of reading, then it closes until tomorrow ---------- */
+  var FEED_MAX = 10, BUDGET_SEC = 600;
+  var Budget = {
+    timer: null,
+    left: function () { if (!S.bud || S.bud.day !== today()) S.bud = { day: today(), sec: 0 }; return Math.max(0, BUDGET_SEC - S.bud.sec); },
+    over: function () { return Budget.left() <= 0; },
+    chip: function () { var m = Math.ceil(Budget.left() / 60); return h('span.budget', { id: 'budget', title: t('budgetLeft', { m: m }) }, t('budgetLeft', { m: m })); },
+    reading: function () { var n = route().name; return n === 'feed' || n === 'top' || n === 'chat' || n === 'post' || n === 'author'; },
+    tick: function () {
+      if (document.visibilityState !== 'visible' || !Budget.reading()) return;
+      Budget.left(); S.bud.sec += 5; save();
+      var c = $('budget'); if (c) c.textContent = t('budgetLeft', { m: Math.ceil(Budget.left() / 60) });
+      if (Budget.over()) Budget.wall(route().name);
+    },
+    start: function () { if (!Budget.timer) Budget.timer = setInterval(Budget.tick, 5000); },
+    wall: function (name) {
+      chrome(name || 'feed'); var main = view();
+      main.appendChild(h('section.wall', h('div.kick', t('tabAuthors')), h('h1', dotted(t('budgetH') + '.')), h('p.lede', t('budgetP')),
+        h('div.row2', h('a.btn.dark', { href: '#/learn' }, t('goLearn')), h('a.btn', { href: '#/' }, t('tabIssue')), h('a.btn', { href: '#/write' }, ico('pen'), t('write')))));
+    }
+  };
+
+  /* ---------- learn: one lesson a day from Wikipedia's featured article, on this day, the picture of the day ---------- */
+  var learnMemo = {};
+  function renderLearn() {
+    chrome('learn'); var main = view();
+    main.appendChild(h('header.phead', h('div.kick', dateLabel()), h('h1', dotted(t('learnH') + '.')), h('p.lede', t('learnSub'))));
+    var box = h('div', h('div.skel'), h('div.skel')); main.appendChild(box);
+    var k = S.lang + '|' + today();
+    var go = learnMemo[k] ? Promise.resolve(learnMemo[k]) : fetch('/api/learn?lang=' + S.lang + '&d=' + today()).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    go.then(function (j) {
+      if (!box.isConnected) return;
+      clear(box);
+      var L = j && j.lesson;
+      // a lesson that could not be written in the reader's language is not shown in another one
+      if (L && L.ai === false && j.from !== S.lang) L = null;
+      if (j && (L || (j.onthisday || []).length)) learnMemo[k] = j;
+      if (!j || (!L && !(j.onthisday || []).length && !j.image)) { box.appendChild(h('div.empty', h('p', t('learnFail')), h('button.btn.dark', { type: 'button', onclick: renderLearn }, t('retry')))); return; }
+      if (L) {
+        var art = h('article.lesson', { 'data-id': 'lesson' },
+          h('h2.kicker', h('i'), h('span', t('lessonH'))),
+          L.img ? h('figure.photo', h('img', { src: L.img, alt: '', loading: 'lazy', referrerpolicy: 'no-referrer' })) : null,
+          h('h3', L.title),
+          h('p.gist', L.intro),
+          (L.points || []).length ? h('ul.pts', L.points.map(function (x) { return h('li', x); })) : null,
+          L.why ? h('p.why', h('b', t('why')), ' ', L.why) : null,
+          h('p.lsrc', t('lessonSrc'), ' ', h('a.src', { href: safeUrl(L.url), target: '_blank', rel: 'noopener noreferrer' }, L.src + ' ↗')));
+        box.appendChild(art);
+        if ((L.quiz || []).length >= 2) box.appendChild(learnQuiz(L.quiz, k));
+        Pref.like('science', L.title, 1);
+      }
+      if ((j.onthisday || []).length) {
+        box.appendChild(h('section.otd', h('h2.kicker', h('i'), h('span', t('otdH'))),
+          h('ol.otdl', j.onthisday.map(function (e) {
+            return h('li', h('b', String(e.year)), h('span', e.text, e.url ? ' ' : null, e.url ? h('a.src', { href: safeUrl(e.url), target: '_blank', rel: 'noopener noreferrer' }, '↗') : null));
+          }))));
+      }
+      if (j.image) {
+        box.appendChild(h('section.potd', h('h2.kicker', h('i'), h('span', t('potdH'))),
+          h('figure.photo', h('img', { src: j.image.src, alt: j.image.caption || '', loading: 'lazy', referrerpolicy: 'no-referrer' }),
+            h('figcaption', j.image.caption ? j.image.caption + ' ' : '', j.image.credit ? '© ' + j.image.credit + (j.image.license ? ', ' + j.image.license : '') : '', j.image.url ? h('a.src', { href: safeUrl(j.image.url), target: '_blank', rel: 'noopener noreferrer' }, ' Wikimedia Commons ↗') : null))));
+      }
+      box.appendChild(h('section.feedend', h('b', t('learnDone')), h('span', t('learnDoneP')), h('a.more2', { href: '#/feed' }, t('eduPosts') + ' →')));
+    });
+  }
+  function learnQuiz(qs, key) {
+    var saved = S.lq && S.lq.key === key ? S.lq.pick : [];
+    var picks = qs.map(function (q, i) { return saved[i] != null ? saved[i] : -1; });
+    var res = h('div.qres'), box = h('section.quiz.block', h('h2', t('quizH')), h('p.qsub', t('lessonQuiz')));
+    function finish() {
+      if (picks.some(function (p) { return p < 0; })) return;
+      var sc = picks.filter(function (p, i) { return p === qs[i].a; }).length;
+      clear(res);
+      res.appendChild(h('div.qdots', picks.map(function (p, i) { return h('span.qd' + (p === qs[i].a ? '.on' : ''), '●'); })));
+      res.appendChild(h('p.qscore', sc + ' / ' + qs.length));
+    }
+    qs.forEach(function (q, i) {
+      var opts = h('div.qopts', q.o.map(function (txt, k) {
+        var b = h('button.qopt', { type: 'button' }, h('span.qm', { 'aria-hidden': 'true' }), h('span', txt));
+        b.addEventListener('click', function () { if (picks[i] >= 0) return; picks[i] = k; mark(); S.lq = { key: key, pick: picks.slice() }; save(); finish(); });
+        return b;
+      }));
+      function mark() {
+        if (picks[i] < 0) return;
+        Array.prototype.forEach.call(opts.children, function (b, k) {
+          b.disabled = true; b.classList.toggle('right', k === q.a); b.classList.toggle('wrong', k === picks[i] && k !== q.a);
+          b.querySelector('.qm').textContent = k === q.a ? '✓' : k === picks[i] ? '✗' : '';
+        });
+      }
+      box.appendChild(h('div.qcard', h('p.qq', h('b', (i + 1) + '. '), q.q), opts));
+      mark();
+    });
+    box.appendChild(res); finish();
+    return box;
+  }
+
   /* ---------- routes ---------- */
   function route() {
     var p = (location.hash || '').replace(/^#\/?/, '').split('/');
@@ -1326,6 +1424,8 @@
   function render() {
     var r = route();
     if (r.name === 'issue') { if (S.topics.length) renderDigest(); else renderPick(false); }
+    else if (r.name === 'learn') renderLearn();
+    else if ((r.name === 'feed' || r.name === 'top' || r.name === 'chat' || r.name === 'post' || r.name === 'author') && Budget.over()) Budget.wall(r.name);
     else if (r.name === 'feed') renderFeed();
     else if (r.name === 'top') renderTop();
     else if (r.name === 'chat') renderChat();
@@ -1349,6 +1449,7 @@
   window.addEventListener('pageshow', function (e) { if (e.persisted && shownDay && shownDay !== today() && S.topics.length && route().name === 'issue') renderDigest(); });
   function hit(ev) { try { fetch('/api/c?a=hit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ d: did(), ev: ev, lang: S.lang }), keepalive: true }).catch(function () {}); } catch (e) { /* counting is optional */ } }
   Pref.tidy();
+  Budget.start();
   // First visit without a chosen language: ask the server which country we are in (it answers from the request, nothing is stored), then render.
   function boot() { render(); hit('open'); }
   if (S.langPicked) boot();
