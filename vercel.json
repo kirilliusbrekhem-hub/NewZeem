@@ -2,7 +2,7 @@
   "functions": {
     "api/*.js": {
       "maxDuration": 60,
-      "includeFiles": "topics.js"
+      "includeFiles": "{topics.js,courses.js}"
     }
   },
   "headers": [

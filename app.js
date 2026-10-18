@@ -18,7 +18,7 @@
       share: 'Поделиться', copied: 'Ссылка скопирована', change: 'Изменить темы', shareText: 'newzeem. Читай меньше. Знай больше. Новости за 5 минут: бесплатно, без рекламы и регистрации.',
       foot: 'newzeem бесплатный и без рекламы. Темы хранятся только на вашем устройстве, мы не следим за вами. Пересказы делает ИИ и он может ошибаться: проверяйте по ссылке на источник. Реакции и голоса считаются анонимно.',
       viewsH: 'Два взгляда', viewsSub: 'Одно событие у разных изданий. Смотрите, как каждое его подаёт.', viewsNote: 'Сравнение написал ИИ по заголовкам самих изданий. Он не решает, кто прав.', followH: 'Что изменилось с вчера', followWas: 'Вчера', followNow: 'Сегодня', predH: 'Прогноз дня', predSub: 'Один тап. Узнайте, что думает мир, и возвращайтесь за результатом.', predYes: 'Да', predNo: 'Нет', predFirst: 'Вы одним из первых. Загляните позже: увидите, что думает мир.', predN: 'Голосов: {n}', predWait: 'Результат появится здесь в течение 3 дней.', predY: 'Сбылось', predNn: 'Не сбылось', predX: 'Закрыт: в новостях нет ясного ответа', predRight: 'Вы угадали', predWrong: 'В этот раз нет', predRecord: 'Ваш счёт: {a} из {b}', predNote: 'Итог подвёл ИИ по заголовкам новостей. Сверьтесь с источником.', predEarlier: 'Прошлый прогноз',
-      docs: 'Документы', privacy: 'Политика конфиденциальности', terms: 'Условия использования', contact: 'Связь', ckH: 'Мы не следим за вами.', ckP: 'У newzeem нет рекламы и следящих cookies. На вашем устройстве хранятся только настройки: темы, язык и серия.', ckOk: 'Понятно', ckMore: 'Подробнее', photoBy: 'Фото: {s}', morningKick: 'Ваш выпуск · {m} мин', streakH: 'Ваша серия', skip: 'К содержанию', langL: 'Язык', aiWaitH: 'Готовим перевод', aiWait: 'Новости прямо сейчас пересказываются на ваш язык. Обычно это занимает минуту.', showOrig: 'Показать оригинальные заголовки', tabLearn: 'Учиться', eduTopic: 'Образование', budgetLeft: 'Сегодня осталось {m} мин', budgetH: 'Ваши 10 минут на сегодня закончились', budgetP: 'Посты здесь, чтобы стать умнее, а не чтобы бесконечно листать. Раздел снова откроется завтра. А пока вас ждёт урок дня.', feedEnd: 'Это все посты на сегодня', feedEndP: 'Никакой бесконечной ленты: 10 лучших для вас — и всё.', goLearn: 'Урок дня', learnH: 'Узнать новое сегодня', learnSub: 'Один короткий урок, пара фактов из истории и фото дня. Пять минут — и готово.', learnFail: 'Не удалось загрузить урок. Попробуйте через минуту.', lessonH: 'Урок дня', lessonSrc: 'По материалам статьи дня Википедии (CC BY-SA):', lessonQuiz: 'Три вопроса по уроку', otdH: 'В этот день', potdH: 'Фото дня', learnDone: 'На сегодня с учёбой всё', learnDoneP: 'Новый урок появится завтра.', eduPosts: 'Разборы наших авторов',
+      docs: 'Документы', privacy: 'Политика конфиденциальности', terms: 'Условия использования', contact: 'Связь', ckH: 'Мы не следим за вами.', ckP: 'У newzeem нет рекламы и следящих cookies. На вашем устройстве хранятся только настройки: темы, язык и серия.', ckOk: 'Понятно', ckMore: 'Подробнее', photoBy: 'Фото: {s}', morningKick: 'Ваш выпуск · {m} мин', streakH: 'Ваша серия', skip: 'К содержанию', langL: 'Язык', aiWaitH: 'Готовим перевод', aiWait: 'Новости прямо сейчас пересказываются на ваш язык. Обычно это занимает минуту.', showOrig: 'Показать оригинальные заголовки', tabLearn: 'Учиться', eduTopic: 'Образование', budgetLeft: 'Сегодня осталось {m} мин', budgetH: 'Ваши 10 минут на сегодня закончились', budgetP: 'Посты здесь, чтобы стать умнее, а не чтобы бесконечно листать. Раздел снова откроется завтра. А пока вас ждёт урок дня.', feedEnd: 'Это все посты на сегодня', feedEndP: 'Никакой бесконечной ленты: 10 лучших для вас — и всё.', goLearn: 'Урок дня', learnH: 'Узнать новое сегодня', learnSub: 'Один короткий урок, пара фактов из истории и фото дня. Пять минут — и готово.', learnFail: 'Не удалось загрузить урок. Попробуйте через минуту.', lessonH: 'Урок дня', lessonSrc: 'По материалам статьи дня Википедии (CC BY-SA):', lessonQuiz: 'Три вопроса по уроку', otdH: 'В этот день', potdH: 'Фото дня', learnDone: 'На сегодня с учёбой всё', learnDoneP: 'Новый урок появится завтра.', eduPosts: 'Разборы наших авторов', ctxBtn: 'Контекст', ctxLoad: 'Ищем предысторию в Википедии…', ctxFail: 'Для этой новости предыстория не нашлась.', ctxStake: 'Что на кону:', ctxSrc: 'По материалам Википедии:', termWiki: 'Википедия', coursesH: 'Курсы на 7 дней', coursesSub: 'Один урок в день, по пять минут.', courseDay: 'День {n} из {d}', courseStart: 'Начать', courseGo: 'Урок {n}', courseTomorrow: 'Следующий урок — завтра', courseDone: 'Курс пройден', courseMark: 'Урок пройден', courseMarked: 'Отлично. Следующий урок откроется завтра.', courseFail: 'Урок не загрузился. Попробуйте ещё раз.', courseAll: 'Все курсы', classicsH: '10 минут классики', classicsSub: 'Короткие книги из общественного достояния. Одна часть в день.', bookPart: 'Часть {n} из {k} · {m} мин', bookRead: 'Читать', bookNext: 'Продолжение — завтра', bookDoneBtn: 'Дочитал', bookEnd: 'Конец. Возьмите следующую книгу.', bookFrom: 'Текст: Викитека, общественное достояние.', bookOther: 'На вашем языке книг пока нет. Вот оригиналы на английском.', bookFail: 'Книги не загрузились.', bookFinished: 'Прочитано', courseLesson: 'Урок {n} из {d}',
       other: 'Другое', pickFull: 'Подборка заполнена (20)', pickAdd: 'В мою подборку', picked: 'Добавлено в подборку', unpicked: 'Убрано из подборки', saveL: 'Сохранить', saved: 'Сохранено', unsaved: 'Убрано из сохранённого', forYou: 'Для вас', inside: 'В сегодняшнем выпуске', quick: 'Коротко', quickSub: 'Ещё {n} — по строчке', cFeed: 'Посты', cTop: 'Топ', cChat: 'Чат', write: 'Написать', authorsH: 'Авторы', authorsSub: 'Разборы от читателей. Каждый проверяет модератор.', cNew: 'Новые', cOff: 'Сообщество ещё не включено.', cEmpty: 'Постов пока нет. Будьте первым.', topNews: 'Самое обсуждаемое сегодня', topNone: 'Пока пусто.', topPosts: 'Лучшие посты', topAuthors: 'Лучшие авторы', repN: '{n} реп.', tabIssue: 'Выпуск', tabAuthors: 'Авторы', tabMe: 'Моё', missing: 'Страница недоступна.', usefulL: 'Полезно', thanks: 'Спасибо!', sources: 'Источники', postNote: 'Написал читатель, проверил модератор. Сверяйтесь с источниками.', rep: 'репутация', nPosts: 'постов', nUseful: 'сочли полезным', toNext: '{n} до уровня «{l}»', writeH: 'Написать пост', writeSub: 'Объясните что-то ясно и с источниками. Модератор читает каждый пост до публикации.', banned: 'Ваша страница автора заблокирована.', fTitle: 'Понятный заголовок', fBody: 'Объясните просто: факты, контекст, почему это важно.', fLink: 'Ссылка на источник (обязательно)', fLink2: 'Ещё источник (необязательно)', sendMod: 'Отправить на проверку', minChars: 'Минимум {n} символов', fTitleL: 'Заголовок', fTopicL: 'Тема', fBodyL: 'Текст', fLinksL: 'Источники', rule1: 'Факты с источниками, без рекламы и самопиара.', rule2: 'Без оскорблений и чужих личных данных.', rule3: 'Решает модератор, вам придёт уведомление.', eTitle: 'Заголовок слишком короткий', eLinks: 'Добавьте хотя бы одну ссылку на источник', sentMod: 'Отправлено! Модератор скоро посмотрит.', myPosts: 'Мои посты', fName: 'Псевдоним', fBio: 'Пара слов о себе (необязательно)', join: 'Стать автором', joinH: 'Выберите псевдоним', joinSub: 'Без почты и пароля: на устройстве хранится секретный ключ. Его можно скопировать в «Моё», чтобы войти с другого устройства.', fNameL: 'Псевдоним', fBioL: 'О себе', haveKey: 'У меня уже есть ключ', welcome: 'Добро пожаловать!', keyPh: 'Вставьте ключ автора', useKey: 'Войти', eKey: 'Этот ключ не подходит', chatSub: 'Авторы обсуждают свои темы. Будьте вежливы.', chatEmpty: 'Сообщений пока нет.', report: 'Пожаловаться', reported: 'Спасибо, модератор посмотрит', chatJoin: 'Писать в чат могут только авторы.', chatPh: 'Сообщение', send: 'Отправить', fromAuthors: 'От наших авторов', allPosts: 'Все посты', remove: 'Убрать', myPicks: 'Моя подборка на день', myPicksSub: 'Ваш собственный короткий выпуск. Поделитесь им ссылкой.', picksEmpty: 'Нажмите + под новостью, чтобы добавить её сюда.', sharePicks: 'Поделиться подборкой', savedH: 'Сохранённое', savedEmpty: 'Нажмите закладку под новостью, чтобы сохранить её.', myAuthor: 'Моя страница автора', becomeSub: 'Пишите разборы, получайте репутацию и читателей.', publicPage: 'Публичная страница', keyH: 'Мой ключ автора', keySub: 'Не показывайте его никому. С ним можно войти с другого устройства.', copy: 'Копировать', settings: 'Настройки', interestsNote: 'Интересы считаются только на этом устройстве: по тому, что вы сохраняете, добавляете и открываете.', cleared: 'Интересы сброшены', clearInterests: 'Сбросить интересы', nOk: 'Ваш пост опубликован', nNo: 'Пост не опубликован', nOff: 'Пост снят с публикации', nTop: 'Главная новость дня', nRec: 'Новое от {a}', notesH: 'Уведомления', notesEmpty: 'Ничего нового.', lv0: 'Новичок', lv1: 'Автор', lv2: 'Эксперт', lv3: 'Легенда', st_pending: 'На проверке', st_live: 'Опубликован', st_rejected: 'Не опубликован', eLimit: 'Можно отправить 3 поста в день', eName: 'Псевдоним: 3–24 буквы или цифры', eTaken: 'Этот псевдоним занят', eSlow: 'Чуть помедленнее'
     },
     en: {
@@ -33,7 +33,7 @@
       share: 'Share', copied: 'Link copied', change: 'Change topics', shareText: 'newzeem. Read less. Know more. Your news in 5 minutes: free, no ads, no sign-up.',
       foot: 'newzeem is free and has no ads. Your topics are stored on your device only, and we do not track you. Summaries are written by an AI and can be wrong: check the source link. Reactions and votes are counted anonymously.',
       viewsH: 'Two views', viewsSub: 'One event, reported by different outlets. See how each one frames it.', viewsNote: 'Comparison written by AI from the outlets\' own headlines. It does not say who is right.', followH: 'What changed since yesterday', followWas: 'Yesterday', followNow: 'Today', predH: 'Prediction of the day', predSub: 'One tap. See what the world thinks, then come back for the result.', predYes: 'Yes', predNo: 'No', predFirst: 'You are among the first. Come back later to see the world.', predN: '{n} votes', predWait: 'The result will appear here within 3 days.', predY: 'It happened', predNn: 'It did not happen', predX: 'Closed: nothing clear in the news', predRight: 'You called it', predWrong: 'Not this time', predRecord: 'Your record: {a} of {b}', predNote: 'Settled by AI from news headlines. Check the source.', predEarlier: 'Earlier prediction',
-      docs: 'Documents', privacy: 'Privacy policy', terms: 'Terms of use', contact: 'Contact', ckH: 'We don’t track you.', ckP: 'newzeem has no ads and no tracking cookies. Only your settings (topics, language, streak) are kept on this device.', ckOk: 'Got it', ckMore: 'Learn more', photoBy: 'Photo: {s}', morningKick: 'Your issue · {m} min', streakH: 'Your streak', skip: 'Skip to content', langL: 'Language', aiWaitH: 'Translating your issue', aiWait: 'The news is being retold right now. This usually takes a minute.', showOrig: 'Show original headlines', tabLearn: 'Learn', eduTopic: 'Education', budgetLeft: '{m} min left today', budgetH: 'That’s your 10 minutes for today', budgetP: 'Posts are here to make you smarter, not to keep you scrolling. The section opens again tomorrow. Meanwhile, today’s lesson is waiting.', feedEnd: 'That’s all posts for today', feedEndP: 'No endless feed: the best 10 for you, and that’s it.', goLearn: 'Today’s lesson', learnH: 'Learn something today', learnSub: 'One short lesson, a few facts from history and the picture of the day. Done in five minutes.', learnFail: 'Today’s lesson could not be loaded. Try again in a minute.', lessonH: 'Lesson of the day', lessonSrc: 'Based on Wikipedia’s article of the day (CC BY-SA):', lessonQuiz: 'Three questions on the lesson', otdH: 'On this day', potdH: 'Picture of the day', learnDone: 'That’s today’s learning', learnDoneP: 'A new lesson arrives tomorrow.', eduPosts: 'Explainers by our authors',
+      docs: 'Documents', privacy: 'Privacy policy', terms: 'Terms of use', contact: 'Contact', ckH: 'We don’t track you.', ckP: 'newzeem has no ads and no tracking cookies. Only your settings (topics, language, streak) are kept on this device.', ckOk: 'Got it', ckMore: 'Learn more', photoBy: 'Photo: {s}', morningKick: 'Your issue · {m} min', streakH: 'Your streak', skip: 'Skip to content', langL: 'Language', aiWaitH: 'Translating your issue', aiWait: 'The news is being retold right now. This usually takes a minute.', showOrig: 'Show original headlines', tabLearn: 'Learn', eduTopic: 'Education', budgetLeft: '{m} min left today', budgetH: 'That’s your 10 minutes for today', budgetP: 'Posts are here to make you smarter, not to keep you scrolling. The section opens again tomorrow. Meanwhile, today’s lesson is waiting.', feedEnd: 'That’s all posts for today', feedEndP: 'No endless feed: the best 10 for you, and that’s it.', goLearn: 'Today’s lesson', learnH: 'Learn something today', learnSub: 'One short lesson, a few facts from history and the picture of the day. Done in five minutes.', learnFail: 'Today’s lesson could not be loaded. Try again in a minute.', lessonH: 'Lesson of the day', lessonSrc: 'Based on Wikipedia’s article of the day (CC BY-SA):', lessonQuiz: 'Three questions on the lesson', otdH: 'On this day', potdH: 'Picture of the day', learnDone: 'That’s today’s learning', learnDoneP: 'A new lesson arrives tomorrow.', eduPosts: 'Explainers by our authors', ctxBtn: 'Context', ctxLoad: 'Looking up the background on Wikipedia…', ctxFail: 'No background found for this story.', ctxStake: 'At stake:', ctxSrc: 'Based on Wikipedia:', termWiki: 'Wikipedia', coursesH: 'Seven-day courses', coursesSub: 'One lesson a day, five minutes each.', courseDay: 'Day {n} of {d}', courseStart: 'Start', courseGo: 'Lesson {n}', courseTomorrow: 'Next lesson tomorrow', courseDone: 'Course complete', courseMark: 'Mark as done', courseMarked: 'Nice. The next lesson opens tomorrow.', courseFail: 'The lesson could not be loaded. Try again.', courseAll: 'All courses', classicsH: '10 minutes of classics', classicsSub: 'Short public-domain books, one part a day.', bookPart: 'Part {n} of {k} · {m} min', bookRead: 'Read', bookNext: 'Continues tomorrow', bookDoneBtn: 'I’ve read it', bookEnd: 'The end. Pick the next book.', bookFrom: 'Text: Wikisource, public domain.', bookOther: 'No books in your language yet. Here are English originals.', bookFail: 'The books could not be loaded.', bookFinished: 'Read', courseLesson: 'Lesson {n} of {d}',
       other: 'Other', pickFull: 'Your picks are full (20)', pickAdd: 'Add to my picks', picked: 'Added to your picks', unpicked: 'Removed from your picks', saveL: 'Save', saved: 'Saved', unsaved: 'Removed from saved', forYou: 'For you', inside: 'In today\'s issue', quick: 'Quick hits', quickSub: '{n} more in one line each', cFeed: 'Posts', cTop: 'Top', cChat: 'Chat', write: 'Write', authorsH: 'Authors', authorsSub: 'Explainers by readers, checked by a moderator before they appear.', cNew: 'New', cOff: 'The community is not switched on yet.', cEmpty: 'No posts yet. Be the first.', topNews: 'Most discussed news today', topNone: 'Nothing here yet.', topPosts: 'Top posts', topAuthors: 'Top authors', repN: '{n} rep', tabIssue: 'Issue', tabAuthors: 'Authors', tabMe: 'Mine', missing: 'This page is not available.', usefulL: 'Useful', thanks: 'Thanks!', sources: 'Sources', postNote: 'Written by a reader and checked by a moderator. Check the sources.', rep: 'reputation', nPosts: 'posts', nUseful: 'found it useful', toNext: '{n} to {l}', writeH: 'Write a post', writeSub: 'Explain something clearly and with sources. A moderator reads every post before it goes live.', banned: 'Your author page is blocked.', fTitle: 'A clear title', fBody: 'Explain it simply. Facts, context, why it matters.', fLink: 'Source link (required)', fLink2: 'Another source (optional)', sendMod: 'Send for review', minChars: 'At least {n} characters', fTitleL: 'Title', fTopicL: 'Topic', fBodyL: 'Text', fLinksL: 'Sources', rule1: 'Facts with sources, no ads or self-promotion.', rule2: 'No insults, no personal data of others.', rule3: 'A moderator decides; you get a notification.', eTitle: 'The title is too short', eLinks: 'Add at least one source link', sentMod: 'Sent! A moderator will review it soon.', myPosts: 'My posts', fName: 'Pen name', fBio: 'A line about you (optional)', join: 'Become an author', joinH: 'Pick a pen name', joinSub: 'No e-mail, no password: this device keeps a secret key. You can copy it in Mine to sign in elsewhere.', fNameL: 'Pen name', fBioL: 'About you', haveKey: 'I already have a key', welcome: 'Welcome!', keyPh: 'Paste your author key', useKey: 'Sign in', eKey: 'This key does not work', chatSub: 'Authors talk shop. Be kind, stay on topic.', chatEmpty: 'No messages yet.', report: 'Report', reported: 'Thanks, a moderator will look', chatJoin: 'Only authors can write in the chat.', chatPh: 'Message', send: 'Send', fromAuthors: 'From our authors', allPosts: 'All posts', remove: 'Remove', myPicks: 'My picks for today', myPicksSub: 'Your own short issue. Share it as a link.', picksEmpty: 'Tap + under any story to add it here.', sharePicks: 'Share my picks', savedH: 'Saved', savedEmpty: 'Tap the bookmark under a story to keep it.', myAuthor: 'My author page', becomeSub: 'Write explainers, earn reputation and reach readers.', publicPage: 'Public page', keyH: 'My author key', keySub: 'Keep it private. With it you can sign in on another device.', copy: 'Copy', settings: 'Settings', interestsNote: 'Your interests are learned on this device only, from what you save, pick and open.', cleared: 'Interests cleared', clearInterests: 'Clear my interests', nOk: 'Your post is live', nNo: 'Your post was not published', nOff: 'Your post was taken down', nTop: 'The big story today', nRec: 'New from {a}', notesH: 'Notifications', notesEmpty: 'Nothing new.', lv0: 'Newcomer', lv1: 'Author', lv2: 'Expert', lv3: 'Legend', st_pending: 'In review', st_live: 'Published', st_rejected: 'Not published', eLimit: 'You can send 3 posts a day', eName: 'Pen name: 3–24 letters or digits', eTaken: 'This pen name is taken', eSlow: 'Slow down a little'
     }
   };
@@ -58,7 +58,9 @@
   var memStore = null;
   function load() { try { return JSON.parse(localStorage.getItem('newzeem.v1') || 'null') || memStore; } catch (e) { return memStore; } }
   var S = Object.assign({ lang: guess(), topics: [], read: {}, last: '', streak: 0, cache: null, mins: 5, days: [], rx: {}, did: '', pr: {}, hist: {},
-    saved: {}, picks: { day: '', items: [] }, pref: { t: {}, w: {}, n: 0, day: '' }, notes: [], bellSeen: 0, feedSeen: 0, ak: '', me: null, voted: {} }, load() || {});
+    saved: {}, picks: { day: '', items: [] }, pref: { t: {}, w: {}, n: 0, day: '' }, notes: [], bellSeen: 0, feedSeen: 0, ak: '', me: null, voted: {}, crs: { on: '', p: {} }, bk: { cur: '', p: {}, done: [] } }, load() || {});
+  if (!S.crs || typeof S.crs.p !== 'object') S.crs = { on: '', p: {} };
+  if (!S.bk || typeof S.bk.p !== 'object' || !Array.isArray(S.bk.done)) S.bk = { cur: '', p: {}, done: [] };
   if (TP.langs.indexOf(S.lang) < 0) S.lang = 'en';
   var MINS = [1, 3, 5, 10];
   if (MINS.indexOf(S.mins) < 0) S.mins = 5;
@@ -158,7 +160,7 @@
 
   /* ---------- the frame: header tabs, bottom bar, bell, footer ---------- */
   var TABS = [['issue', 'paper', 'tabIssue'], ['learn', 'paper', 'tabLearn'], ['feed', 'people', 'tabAuthors'], ['me', 'user', 'tabMe']];
-  function tabOf(r) { return r === 'learn' ? 'learn' : r === 'feed' || r === 'top' || r === 'chat' || r === 'write' || r === 'post' || r === 'author' ? 'feed' : r === 'me' || r === 'bell' ? 'me' : 'issue'; }
+  function tabOf(r) { return r === 'learn' || r === 'course' || r === 'book' ? 'learn' : r === 'feed' || r === 'top' || r === 'chat' || r === 'write' || r === 'post' || r === 'author' ? 'feed' : r === 'me' || r === 'bell' ? 'me' : 'issue'; }
   function chrome(route) {
     document.documentElement.lang = S.lang;
     document.documentElement.dir = TP.rtl.indexOf(S.lang) >= 0 ? 'rtl' : 'ltr';
@@ -574,6 +576,8 @@
     var hb = h('button.hbtn', { type: 'button', 'aria-expanded': 'false' }, it.headline);
     var more = h('button.more', { type: 'button' }, t('more'));
     var detail = h('div.detail', { hidden: 'hidden' }), rxBox = h('div.rx', { hidden: 'hidden' });
+    var ctxBox = h('div.ctx', { hidden: 'hidden' }), ctxB = it.raw ? null : h('button.ctxb', { type: 'button', 'aria-expanded': 'false' }, t('ctxBtn'));
+    if (ctxB) ctxB.addEventListener('click', function () { ctxToggle(it, ctxB, ctxBox); });
     Rx.probe.then(function () { if (Rx.on) rxInit(it, rxBox); });
     var open = false, state = '';
     function load() {
@@ -605,8 +609,9 @@
       pts,
       it.why ? h('p.why', h('b', t('why')), ' ', it.why) : null,
       detail,
+      ctxBox,
       rxBox,
-      h('div.ifoot', a, more, h('span.grow'),
+      h('div.ifoot', a, more, ctxB, h('span.grow'),
         actBtn('plus', t('pickAdd'), isPicked(it.id), function () { var on = togglePick(it); toast(on ? t('picked') : t('unpicked')); return on; }),
         actBtn('save', t('saveL'), isSaved(it.id), function () { var on = toggleSave(it); toast(on ? t('saved') : t('unsaved')); return on; }),
         actBtn('share', t('share'), null, function () { shareNews(it); })));
@@ -667,6 +672,7 @@
     progress();
     hit('issue');
     Say.mount();
+    glossary(col);
     if (lead && lead.weight >= 3) Bell.important(lead);
   }
 
@@ -1359,18 +1365,12 @@
       if (j && (L || (j.onthisday || []).length)) learnMemo[k] = j;
       if (!j || (!L && !(j.onthisday || []).length && !j.image)) { box.appendChild(h('div.empty', h('p', t('learnFail')), h('button.btn.dark', { type: 'button', onclick: renderLearn }, t('retry')))); return; }
       if (L) {
-        var art = h('article.lesson', { 'data-id': 'lesson' },
-          h('h2.kicker', h('i'), h('span', t('lessonH'))),
-          L.img ? h('figure.photo', h('img', { src: L.img, alt: '', loading: 'lazy', referrerpolicy: 'no-referrer' })) : null,
-          h('h3', L.title),
-          h('p.gist', L.intro),
-          (L.points || []).length ? h('ul.pts', L.points.map(function (x) { return h('li', x); })) : null,
-          L.why ? h('p.why', h('b', t('why')), ' ', L.why) : null,
-          h('p.lsrc', t('lessonSrc'), ' ', h('a.src', { href: safeUrl(L.url), target: '_blank', rel: 'noopener noreferrer' }, L.src + ' ↗')));
-        box.appendChild(art);
+        box.appendChild(lessonArticle(L, t('lessonH')));
         if ((L.quiz || []).length >= 2) box.appendChild(learnQuiz(L.quiz, k));
         Pref.like('science', L.title, 1);
       }
+      box.appendChild(coursesBlock());
+      box.appendChild(classicsBlock());
       if ((j.onthisday || []).length) {
         box.appendChild(h('section.otd', h('h2.kicker', h('i'), h('span', t('otdH'))),
           h('ol.otdl', j.onthisday.map(function (e) {
@@ -1416,6 +1416,172 @@
     return box;
   }
 
+  /* ---------- context under a story: background from Wikipedia ---------- */
+  var ctxMemo = {};
+  function ctxToggle(it, btn, box) {
+    var k = S.lang + '|' + it.id, st = box.getAttribute('data-st') || '';
+    if (st === 'busy') return;
+    if (st === 'done' || st === 'fail') { box.hidden = !box.hidden; btn.setAttribute('aria-expanded', box.hidden ? 'false' : 'true'); if (st === 'fail' && !box.hidden) { box.setAttribute('data-st', ''); ctxToggle(it, btn, box); } return; }
+    box.setAttribute('data-st', 'busy'); box.hidden = false; btn.setAttribute('aria-expanded', 'true');
+    clear(box).appendChild(h('p.dload', t('ctxLoad')));
+    var go = ctxMemo[k] ? Promise.resolve(ctxMemo[k]) : api('/api/learn', { body: { a: 'ctx', id: it.id, h: it.headline, g: it.gist || '', p: it.points || [], lang: S.lang } }).then(function (j) { return j && j.ctx ? j.ctx : null; });
+    go.then(function (c) {
+      clear(box);
+      if (!c) { box.setAttribute('data-st', 'fail'); box.appendChild(h('p.dfail', t('ctxFail'))); return; }
+      ctxMemo[k] = c; box.setAttribute('data-st', 'done');
+      box.appendChild(h('p.ctxk', t('ctxBtn')));
+      c.bg.forEach(function (x) { box.appendChild(h('p', x)); });
+      if (c.stake) box.appendChild(h('p.ctxs', h('b', t('ctxStake')), ' ', c.stake));
+      if ((c.terms || []).length) box.appendChild(h('dl.cterms', c.terms.map(function (x) { return [h('dt', x.t), h('dd', x.d)]; })));
+      if ((c.src || []).length) box.appendChild(h('p.lsrc', t('ctxSrc'), ' ', c.src.map(function (x, i) { return [i ? ', ' : '', h('a.src', { href: safeUrl(x.u), target: '_blank', rel: 'noopener noreferrer' }, x.t + ' ↗')]; })));
+      Pref.like(it.topic, it.headline, 2);
+    });
+  }
+
+  /* ---------- hard words in the issue: tap for Wikipedia's explanation ---------- */
+  var glossMemo = {};
+  function glossary(col) {
+    var texts = spoken.slice(0, 20).map(function (x) { return [x.it.headline, x.it.gist || '', (x.it.points || []).join(' '), x.it.why || ''].join(' ').replace(/\s+/g, ' ').trim(); }).filter(Boolean);
+    if (!texts.length || spoken.every(function (x) { return x.it.raw; })) return;
+    var k = S.lang + '|' + texts.join('|');
+    var go = glossMemo[k] ? Promise.resolve(glossMemo[k]) : api('/api/learn', { body: { a: 'terms', lang: S.lang, texts: texts } }).then(function (j) { return j && Array.isArray(j.terms) ? j.terms : null; });
+    go.then(function (terms) {
+      if (!terms || !col.isConnected) return;
+      glossMemo[k] = terms;
+      var blocks = Array.prototype.slice.call(col.querySelectorAll('.item .gist, .item .pts li, .item .why'));
+      terms.forEach(function (x) {
+        for (var i = 0; i < blocks.length; i++) {
+          var w = document.createTreeWalker(blocks[i], NodeFilter.SHOW_TEXT), n;
+          while ((n = w.nextNode())) {
+            var at = n.nodeValue.indexOf(x.t);
+            if (at < 0 || (n.parentNode && n.parentNode.closest && n.parentNode.closest('.term, .gloss, b'))) continue;
+            var rest = n.splitText(at); rest.splitText(x.t.length);
+            var b = h('button.term', { type: 'button', 'aria-expanded': 'false' }, x.t);
+            rest.parentNode.replaceChild(b, rest);
+            b.addEventListener('click', glossOpen(b, x, blocks[i]));
+            return;
+          }
+        }
+      });
+    });
+  }
+  function glossOpen(b, x, block) {
+    var box = null;
+    return function () {
+      if (box && box.isConnected) { box.remove(); b.setAttribute('aria-expanded', 'false'); return; }
+      box = h('div.gloss', { role: 'note' }, h('b', x.t), ' — ', x.d, ' ', h('a.src', { href: safeUrl(x.u), target: '_blank', rel: 'noopener noreferrer' }, t('termWiki') + ' ↗'));
+      block.parentNode.insertBefore(box, block.nextSibling);
+      b.setAttribute('aria-expanded', 'true');
+    };
+  }
+
+  function lessonArticle(L, kick) {
+    return h('article.lesson', { 'data-id': 'lesson' },
+      h('h2.kicker', h('i'), h('span', kick)),
+      L.img ? h('figure.photo', h('img', { src: L.img, alt: '', loading: 'lazy', referrerpolicy: 'no-referrer' })) : null,
+      h('h3', L.title),
+      h('p.gist', L.intro),
+      (L.points || []).length ? h('ul.pts', L.points.map(function (x) { return h('li', x); })) : null,
+      L.why ? h('p.why', h('b', t('why')), ' ', L.why) : null,
+      h('p.lsrc', t('ctxSrc'), ' ', h('a.src', { href: safeUrl(L.url), target: '_blank', rel: 'noopener noreferrer' }, L.src + ' ↗'), ' (CC BY-SA)'));
+  }
+
+  /* ---------- seven-day courses: one lesson a day ---------- */
+  var CR = window.NZ_COURSES || { list: [], byId: {}, DAYS: 7 };
+  function crName(c) { return c.n[S.lang] || c.n.en; }
+  function crProg(id) { var p = S.crs.p[id]; return p && typeof p.n === 'number' ? p : { n: 0, last: '' }; }
+  function coursesBlock() {
+    var sec = h('section.courses', h('h2.kicker', h('i'), h('span', t('coursesH'))), h('p.csub', t('coursesSub')));
+    var order = CR.list.slice().sort(function (a, b) { return (b.id === S.crs.on) - (a.id === S.crs.on); });
+    sec.appendChild(h('ul.clist', order.map(function (c) {
+      var p = crProg(c.id), nm = crName(c), done = p.n >= CR.DAYS;
+      var state = done ? t('courseDone') : p.last === today() ? t('courseTomorrow') : p.n ? t('courseDay', { n: p.n + 1, d: CR.DAYS }) : '';
+      return h('li', { style: '--c:' + c.c },
+        h('a.course' + (c.id === S.crs.on && !done ? '.on' : ''), { href: '#/course/' + c.id },
+          h('span.ct', h('b', nm[0]), h('span', nm[1])),
+          h('span.cside', h('span.cbar', { 'aria-hidden': 'true' }, h('i', { style: 'width:' + Math.round(Math.min(p.n, CR.DAYS) / CR.DAYS * 100) + '%' })), h('small', state || t('courseStart')))));
+    })));
+    return sec;
+  }
+  function renderCourse(id) {
+    var c = CR.byId[id]; if (!c) { location.hash = '#/learn'; return; }
+    chrome('learn'); var main = view(), nm = crName(c), p = crProg(id);
+    var head = h('header.phead', { style: '--c:' + c.c }, h('a.back', { href: '#/learn' }, ico('back'), t('courseAll')), h('div.kick', nm[0]), h('h1', dotted(nm[1] + '.')));
+    main.appendChild(head);
+    if (p.n >= CR.DAYS) { main.appendChild(h('section.feedend', h('b', t('courseDone')), h('a.more2', { href: '#/learn' }, t('courseAll') + ' →'))); return; }
+    var idx = p.last === today() && p.n > 0 ? p.n - 1 : p.n, doneToday = p.last === today();
+    head.appendChild(h('p.cday', t('courseDay', { n: idx + 1, d: CR.DAYS })));
+    var box = h('div', h('div.skel'), h('div.skel')); main.appendChild(box);
+    fetch('/api/learn?a=course&id=' + id + '&n=' + idx + '&lang=' + S.lang).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (j) {
+      if (!box.isConnected) return;
+      clear(box);
+      var L = j && j.lesson;
+      if (L && L.ai === false && j.from !== S.lang) L = null;
+      if (!L) { box.appendChild(h('div.empty', h('p', t('courseFail')), h('button.btn.dark', { type: 'button', onclick: function () { renderCourse(id); } }, t('retry')))); return; }
+      box.appendChild(lessonArticle(L, t('courseLesson', { n: idx + 1, d: CR.DAYS })));
+      if ((L.quiz || []).length >= 2) box.appendChild(learnQuiz(L.quiz, 'c:' + id + ':' + idx));
+      var foot = h('section.feedend.cfoot');
+      function after() { clear(foot); var q = crProg(id); foot.appendChild(h('b', q.n >= CR.DAYS ? t('courseDone') : t('courseMarked'))); foot.appendChild(h('a.more2', { href: '#/learn' }, t('courseAll') + ' →')); }
+      if (doneToday) after();
+      else foot.appendChild(h('button.btn.dark', { type: 'button', onclick: function () { S.crs.p[id] = { n: idx + 1, last: today() }; S.crs.on = id; save(); after(); } }, t('courseMark')));
+      box.appendChild(foot);
+      Pref.like('science', L.title, 1);
+    });
+  }
+
+  /* ---------- ten minutes of classics: one part of a public-domain book a day ---------- */
+  var shelfMemo = {};
+  function bkKey(bl, id) { return bl + ':' + id; }
+  function bkProg(k) { var p = S.bk.p[k]; return p && typeof p.n === 'number' ? p : { n: 0, last: '' }; }
+  function classicsBlock() {
+    var box = h('div', h('div.skel'));
+    var sec = h('section.classics', h('h2.kicker', h('i'), h('span', t('classicsH'))), h('p.csub', t('classicsSub')), box);
+    var go = shelfMemo[S.lang] ? Promise.resolve(shelfMemo[S.lang]) : fetch('/api/learn?a=books&lang=' + S.lang).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    go.then(function (j) {
+      if (!box.isConnected) return;
+      clear(box);
+      if (!j || !(j.books || []).length) { box.appendChild(h('p.empty2', t('bookFail'))); return; }
+      shelfMemo[S.lang] = j;
+      if (j.from !== S.lang) box.appendChild(h('p.notice', t('bookOther')));
+      var books = j.books.slice().sort(function (a, b) { return (bkKey(j.from, b.id) === S.bk.cur) - (bkKey(j.from, a.id) === S.bk.cur); });
+      box.appendChild(h('ul.blist', books.map(function (b) {
+        var k = bkKey(j.from, b.id), p = bkProg(k), fin = S.bk.done.indexOf(k) >= 0, total = b.mins.reduce(function (x, y) { return x + y; }, 0);
+        var state = fin ? t('bookFinished') : p.last === today() ? t('bookNext') : p.n ? t('bookPart', { n: p.n + 1, k: b.parts, m: b.mins[Math.min(p.n, b.parts - 1)] }) : b.parts + ' × ' + t('rt', { m: Math.round(total / b.parts) });
+        return h('li', h('a.book' + (k === S.bk.cur && !fin ? '.on' : ''), { href: '#/book/' + k }, h('span.ct', h('b', b.t), h('span', b.a)), h('small', state)));
+      })));
+    });
+    return sec;
+  }
+  function renderBook(k) {
+    var m = /^([a-z]{2}):([a-z0-9]{2,20})$/.exec(k); if (!m) { location.hash = '#/learn'; return; }
+    chrome('learn'); var main = view(), bl = m[1], id = m[2], p = bkProg(k);
+    var idx = p.last === today() && p.n > 0 ? p.n - 1 : p.n, doneToday = p.last === today();
+    if (S.bk.done.indexOf(k) >= 0 && !doneToday) idx = 0;
+    var box = h('div', h('div.skel'), h('div.skel'), h('div.skel')); main.appendChild(box);
+    fetch('/api/learn?a=book&id=' + id + '&bl=' + bl + '&p=' + idx + '&lang=' + S.lang).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (j) {
+      if (!box.isConnected) return;
+      clear(box);
+      if (!j || !j.part) { box.appendChild(h('div.empty', h('p', t('bookFail')), h('a.btn', { href: '#/learn' }, t('tabLearn')))); return; }
+      S.bk.cur = k; save();
+      box.appendChild(h('header.phead', h('a.back', { href: '#/learn' }, ico('back'), t('classicsH')), h('div.kick', j.a), h('h1', j.t), h('p.cday', t('bookPart', { n: j.n + 1, k: j.parts, m: j.min }))));
+      box.appendChild(h('article.reader', { lang: j.lang }, j.part.map(function (x) { return h('p', x); })));
+      var foot = h('section.feedend.cfoot');
+      function after() {
+        clear(foot); var last = S.bk.done.indexOf(k) >= 0;
+        foot.appendChild(h('b', last ? t('bookEnd') : t('bookNext')));
+        foot.appendChild(h('a.more2', { href: '#/learn' }, t('tabLearn') + ' →'));
+      }
+      if (doneToday) after();
+      else foot.appendChild(h('button.btn.dark', { type: 'button', onclick: function () {
+        S.bk.p[k] = { n: j.n + 1, last: today() };
+        if (j.n + 1 >= j.parts) { if (S.bk.done.indexOf(k) < 0) S.bk.done.push(k); S.bk.p[k] = { n: 0, last: today() }; if (S.bk.cur === k) S.bk.cur = ''; }
+        save(); after();
+      } }, t('bookDoneBtn')));
+      box.appendChild(foot);
+      box.appendChild(h('p.lsrc', t('bookFrom'), ' ', h('a.src', { href: safeUrl(j.url), target: '_blank', rel: 'noopener noreferrer' }, 'Wikisource ↗')));
+    });
+  }
+
   /* ---------- routes ---------- */
   function route() {
     var p = (location.hash || '').replace(/^#\/?/, '').split('/');
@@ -1425,6 +1591,8 @@
     var r = route();
     if (r.name === 'issue') { if (S.topics.length) renderDigest(); else renderPick(false); }
     else if (r.name === 'learn') renderLearn();
+    else if (r.name === 'course') renderCourse(r.arg);
+    else if (r.name === 'book') renderBook(r.arg);
     else if ((r.name === 'feed' || r.name === 'top' || r.name === 'chat' || r.name === 'post' || r.name === 'author') && Budget.over()) Budget.wall(r.name);
     else if (r.name === 'feed') renderFeed();
     else if (r.name === 'top') renderTop();
