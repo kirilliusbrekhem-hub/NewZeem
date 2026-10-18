@@ -164,6 +164,8 @@ const BOOKS = {
     { id: 'wallpaper', t: 'The Yellow Wallpaper', a: 'Charlotte Perkins Gilman', p: ['The Yellow Wall-Paper', 'The Yellow Wallpaper', 'The Yellow Wall-paper'] },
     { id: 'magi', t: 'The Gift of the Magi', a: 'O. Henry', p: ['The Four Million/The Gift of the Magi', 'The Gift of the Magi'] },
     { id: 'morgue', t: 'The Murders in the Rue Morgue', a: 'Edgar Allan Poe', p: ['The Murders in the Rue Morgue', 'The Works of the Late Edgar Allan Poe/Volume 1/The Murders in the Rue Morgue'] },
+    { id: 'amontillado', t: 'The Cask of Amontillado', a: 'Edgar Allan Poe', p: ['The Cask of Amontillado'] },
+    { id: 'paw', t: 'The Monkey’s Paw', a: 'W. W. Jacobs', p: ["The Monkey's Paw", "The Lady of the Barge/The Monkey's Paw"] },
     { id: 'frog', t: 'The Celebrated Jumping Frog of Calaveras County', a: 'Mark Twain', p: ['The Celebrated Jumping Frog of Calaveras County', 'The Celebrated Jumping Frog of Calaveras County, and Other Sketches/The Celebrated Jumping Frog of Calaveras County'] }
   ],
   ru: [
@@ -195,20 +197,27 @@ const BOOKS = {
     { id: 'mateo', t: 'Mateo Falcone', a: 'Prosper Mérimée', p: ['Mateo Falcone'] },
     { id: 'horla', t: 'Le Horla', a: 'Guy de Maupassant', p: ['Le Horla (1887)', 'Le Horla'] },
     { id: 'boule', t: 'Boule de suif', a: 'Guy de Maupassant', p: ['Boule de suif', 'Boule de suif (Maupassant)'] },
-    { id: 'candide', t: 'Candide', a: 'Voltaire', p: ['Candide, ou l’Optimisme', 'Candide'] }
+    { id: 'candide', t: 'Candide', a: 'Voltaire', p: ['Candide, ou l’Optimisme', 'Candide'] },
+    { id: 'coeur', t: 'Un cœur simple', a: 'Gustave Flaubert', p: ['Un cœur simple', 'Trois Contes/Un cœur simple'] },
+    { id: 'chevre', t: 'La Chèvre de monsieur Seguin', a: 'Alphonse Daudet', p: ['La Chèvre de monsieur Seguin', 'Lettres de mon moulin/La Chèvre de M. Seguin'] }
   ],
   de: [
     { id: 'verwandlung', t: 'Die Verwandlung', a: 'Franz Kafka', p: ['Die Verwandlung'] },
     { id: 'immensee', t: 'Immensee', a: 'Theodor Storm', p: ['Immensee'] },
     { id: 'landarzt', t: 'Ein Landarzt', a: 'Franz Kafka', p: ['Ein Landarzt'] },
     { id: 'schimmelreiter', t: 'Der Schimmelreiter', a: 'Theodor Storm', p: ['Der Schimmelreiter'] },
-    { id: 'kohlhaas', t: 'Michael Kohlhaas', a: 'Heinrich von Kleist', p: ['Michael Kohlhaas'] }
+    { id: 'kohlhaas', t: 'Michael Kohlhaas', a: 'Heinrich von Kleist', p: ['Michael Kohlhaas', 'Michael Kohlhaas (Kleist)'] },
+    { id: 'gesetz', t: 'Vor dem Gesetz', a: 'Franz Kafka', p: ['Vor dem Gesetz'] }
   ],
   hi: [
     { id: 'idgah', t: 'ईदगाह', a: 'प्रेमचंद', p: ['ईदगाह', 'ईदगाह (प्रेमचंद)', 'मानसरोवर १/ईदगाह'] },
     { id: 'panch', t: 'पंच परमेश्वर', a: 'प्रेमचंद', p: ['पंच परमेश्वर', 'पंच परमेश्वर (प्रेमचंद)'] },
     { id: 'namak', t: 'नमक का दारोगा', a: 'प्रेमचंद', p: ['नमक का दारोगा', 'नमक का दारोग़ा'] },
-    { id: 'bade', t: 'बड़े भाई साहब', a: 'प्रेमचंद', p: ['बड़े भाई साहब'] }
+    { id: 'bade', t: 'बड़े भाई साहब', a: 'प्रेमचंद', p: ['बड़े भाई साहब'] },
+    { id: 'kafan', t: 'कफ़न', a: 'प्रेमचंद', p: ['कफ़न', 'कफन'] },
+    { id: 'poos', t: 'पूस की रात', a: 'प्रेमचंद', p: ['पूस की रात'] },
+    { id: 'bail', t: 'दो बैलों की कथा', a: 'प्रेमचंद', p: ['दो बैलों की कथा'] },
+    { id: 'kuan', t: 'ठाकुर का कुआँ', a: 'प्रेमचंद', p: ['ठाकुर का कुआँ', 'ठाकुर का कुआं'] }
   ],
   zh: [
     { id: 'kuangren', t: '狂人日记', a: '鲁迅', p: ['狂人日記', '狂人日记'] },
@@ -220,7 +229,10 @@ const BOOKS = {
   ar: [
     { id: 'ajniha', t: 'الأجنحة المتكسرة', a: 'جبران خليل جبران', p: ['الأجنحة المتكسرة'] },
     { id: 'abarat', t: 'العبرات', a: 'مصطفى لطفي المنفلوطي', p: ['العبرات'] },
-    { id: 'arwah', t: 'الأرواح المتمردة', a: 'جبران خليل جبران', p: ['الأرواح المتمردة'] }
+    { id: 'arwah', t: 'الأرواح المتمردة', a: 'جبران خليل جبران', p: ['الأرواح المتمردة', 'الأرواح المتمردة (جبران)'] },
+    { id: 'dama', t: 'دمعة وابتسامة', a: 'جبران خليل جبران', p: ['دمعة وابتسامة'] },
+    { id: 'arais', t: 'عرائس المروج', a: 'جبران خليل جبران', p: ['عرائس المروج'] },
+    { id: 'nazarat', t: 'النظرات', a: 'مصطفى لطفي المنفلوطي', p: ['النظرات'] }
   ]
 };
 const NOSPACE = { zh: 1 };
@@ -266,14 +278,43 @@ async function wsParse(lg, page) {
   const html = typeof j.parse.text === 'string' ? j.parse.text : j.parse.text && j.parse.text['*'];
   return html ? { title: String(j.parse.title || page), html } : null;
 }
-async function wsWork(lg, page) { // { title, paras, url } or { why }
+// A page sometimes holds two editions one after the other (old and modern spelling): keep one, the modern one.
+const norm = (s) => String(s).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/ѣ/g, 'е').replace(/[іѵ]/g, 'и').replace(/ѳ/g, 'ф').replace(/ъ(?=[^\p{L}]|$)/gu, '').replace(/[^\p{L}\p{N}]/gu, '');
+const oldness = (ps) => ps.reduce((n, p) => n + (String(p).match(/[ѣіѵѳ]|ъ(?=[^\p{L}]|$)|\u0300/gu) || []).length, 0);
+function oneEdition(paras) {
+  const head = norm(paras[0] || '').slice(0, 40);
+  if (head.length < 24) return paras;
+  for (let i = 3; i < paras.length; i++) {
+    if (norm(paras[i]).startsWith(head)) { const a = paras.slice(0, i), b = paras.slice(i); return oldness(b) < oldness(a) ? b : a; }
+  }
+  return paras;
+}
+// Editors' notes at the end (first printing, scan source, a library's address) are not part of the story.
+const NOTE = /https?:\/\/|www\.|Впервые (напечатан|опубликован)|Источник:|Печатается по|First published in|Source:/i;
+const OTHER_NS = /^(Author|Автор|Auteur|Autor|Category|Категория|Catégorie|Kategorie|Categoría|Categoria|Wikisource|Викитека|Portal|Портал|Special|Служебная|Help|Справка|File|Файл|Index|Индекс|Page|Страница|Talk|Обсуждение|Template|Шаблон)\s*:/i;
+function wsRelated(html, title) { // a list of editions links to the editions: same name with something added
+  const base = title.split('/').pop().replace(/\s*\(.*\)\s*$/, '');
+  const out = [], seen = new Set([title]);
+  for (const m of String(html).matchAll(/<a\s([^>]*)>/gi)) {
+    const tm = /title="([^"]+)"/.exec(m[1]);
+    if (!tm || /class="[^"]*\bnew\b/.test(m[1])) continue;
+    const t = decode(tm[1]);
+    if (!seen.has(t) && !OTHER_NS.test(t) && t.includes(base)) { seen.add(t); out.push(t); }
+  }
+  return out.slice(0, 3);
+}
+async function wsWork(lg, page, depth) { // { title, paras, url } or { why }
   const r = await wsParse(lg, page);
   if (!r) return { why: 'missing' };
   let paras = wsText(r.html);
   const min = 500;
   if (paras.reduce((n, p) => n + sizeOf(p, lg), 0) < min) {
     const subs = wsSubpages(r.html, r.title);
-    if (subs.length < 2) return { why: 'short' };
+    if (subs.length < 2) {
+      if (depth) return { why: 'short' };
+      for (const t of wsRelated(r.html, r.title)) { const w = await wsWork(lg, t, 1); if (!w.why) return w; }
+      return { why: 'short' };
+    }
     paras = [];
     for (let i = 0; i < subs.length; i += 6) {
       const got = await Promise.all(subs.slice(i, i + 6).map((s) => wsParse(lg, s)));
@@ -281,6 +322,7 @@ async function wsWork(lg, page) { // { title, paras, url } or { why }
     }
     if (paras.reduce((n, p) => n + sizeOf(p, lg), 0) < min) return { why: 'short' };
   }
+  paras = oneEdition(paras).filter((p) => !NOTE.test(p));
   return { title: r.title, paras, url: 'https://' + lg + '.wikisource.org/wiki/' + enc(r.title.replace(/ /g, '_')) };
 }
 function cut(paras, lg) {
@@ -293,7 +335,7 @@ async function bookText(lg, b, report) {
   const build = async () => {
     for (const page of b.p) {
       const w = await wsWork(lg, page);
-      if (report) report.push({ id: b.id, page, ok: !w.why, why: w.why || '', words: w.paras ? w.paras.reduce((n, p) => n + sizeOf(p, lg), 0) : 0 });
+      if (report) report.push({ id: b.id, page, ok: !w.why, why: w.why || '', used: w.title || '', words: w.paras ? w.paras.reduce((n, p) => n + sizeOf(p, lg), 0) : 0 });
       if (!w.why) {
         const parts = cut(w.paras, lg);
         return { v: { id: b.id, t: b.t, a: b.a, url: w.url, parts, mins: parts.map((p) => Math.max(1, Math.round(p.reduce((n, x) => n + sizeOf(x, lg), 0) / 200))) }, ttl: 30 * 86400 };
@@ -302,10 +344,10 @@ async function bookText(lg, b, report) {
     return { v: null, ttl: 0 };
   };
   if (report) { const r = await build(); return r.v; }
-  return cached('bk:' + lg + ':' + b.id, build);
+  return cached('bk2:' + lg + ':' + b.id, build);
 }
 async function shelf(lg) {
-  return cached('bks:' + lg, async () => {
+  return cached('bks2:' + lg, async () => {
     const list = BOOKS[lg] || [];
     const got = await Promise.all(list.map((b) => bookText(lg, b).catch(() => null)));
     const books = got.filter(Boolean).map((b) => ({ id: b.id, t: b.t, a: b.a, parts: b.parts.length, mins: b.mins }));
@@ -406,8 +448,8 @@ module.exports = async (req, res) => {
     if (a === 'books') {
       if (u.searchParams.get('check')) { // which pages of the shelf can be read (for the owner, to fix titles)
         if (!(await allowed(req, 'check', 6, 200))) return send(429, { error: 'limit' });
-        const report = []; for (const b of BOOKS[lg] || []) { mem.delete('bk:' + lg + ':' + b.id); await bookText(lg, b, report).catch((e) => report.push({ id: b.id, why: String(e && e.message) })); }
-        mem.delete('bks:' + lg);
+        const report = []; for (const b of BOOKS[lg] || []) { mem.delete('bk2:' + lg + ':' + b.id); await bookText(lg, b, report).catch((e) => report.push({ id: b.id, why: String(e && e.message) })); }
+        mem.delete('bks2:' + lg);
         return send(200, { lang: lg, report });
       }
       let books = await shelf(lg), from = lg;
@@ -434,4 +476,4 @@ module.exports = async (req, res) => {
     return send(200, { lang: 'en', lesson: null, onthisday: [], image: null }, 'public, s-maxage=60');
   }
 };
-module.exports._test = { wsText, wsSubpages, cut, sentences, BOOKS };
+module.exports._test = { wsText, wsSubpages, wsRelated, oneEdition, cut, sentences, BOOKS };
