@@ -158,80 +158,67 @@ async function courseLesson(c, n, lg) {
 // editions or too short is skipped; a page made of chapter subpages is read chapter by chapter).
 const BOOKS = {
   en: [
-    { id: 'holmes', t: 'A Scandal in Bohemia', a: 'Arthur Conan Doyle', p: ['The Adventures of Sherlock Holmes (1892)/A Scandal in Bohemia', 'The Adventures of Sherlock Holmes/A Scandal in Bohemia', 'A Scandal in Bohemia'] },
-    { id: 'sleepy', t: 'The Legend of Sleepy Hollow', a: 'Washington Irving', p: ['The Legend of Sleepy Hollow', 'The Sketch Book of Geoffrey Crayon, Gent./The Legend of Sleepy Hollow'] },
-    { id: 'rip', t: 'Rip Van Winkle', a: 'Washington Irving', p: ['Rip Van Winkle', 'The Sketch Book of Geoffrey Crayon, Gent./Rip Van Winkle'] },
-    { id: 'wallpaper', t: 'The Yellow Wallpaper', a: 'Charlotte Perkins Gilman', p: ['The Yellow Wall-Paper', 'The Yellow Wallpaper', 'The Yellow Wall-paper'] },
-    { id: 'magi', t: 'The Gift of the Magi', a: 'O. Henry', p: ['The Four Million/The Gift of the Magi', 'The Gift of the Magi'] },
-    { id: 'morgue', t: 'The Murders in the Rue Morgue', a: 'Edgar Allan Poe', p: ['The Murders in the Rue Morgue', 'The Works of the Late Edgar Allan Poe/Volume 1/The Murders in the Rue Morgue'] },
-    { id: 'amontillado', t: 'The Cask of Amontillado', a: 'Edgar Allan Poe', p: ['The Cask of Amontillado'] },
-    { id: 'paw', t: 'The Monkey’s Paw', a: 'W. W. Jacobs', p: ["The Monkey's Paw", "The Lady of the Barge/The Monkey's Paw"] },
-    { id: 'frog', t: 'The Celebrated Jumping Frog of Calaveras County', a: 'Mark Twain', p: ['The Celebrated Jumping Frog of Calaveras County', 'The Celebrated Jumping Frog of Calaveras County, and Other Sketches/The Celebrated Jumping Frog of Calaveras County'] }
+    { id: 'holmes', t: 'A Scandal in Bohemia', a: 'Arthur Conan Doyle', p: ['The Strand Magazine/Volume 2/Issue 7/A Scandal in Bohemia'] },
+    { id: 'sleepy', t: 'The Legend of Sleepy Hollow', a: 'Washington Irving', p: ['The Sketchbook of Geoffrey Crayon (1819)/The Legend of Sleepy Hollow'] },
+    { id: 'rip', t: 'Rip Van Winkle', a: 'Washington Irving', p: ['The Sketchbook of Geoffrey Crayon (1819)/Rip Van Winkle'] },
+    { id: 'wallpaper', t: 'The Yellow Wallpaper', a: 'Charlotte Perkins Gilman', p: ['The Yellow Wall Paper', 'The Yellow Wall-Paper'] },
+    { id: 'magi', t: 'The Gift of the Magi', a: 'O. Henry', p: ['The Four Million/The Gift of the Magi'] },
+    { id: 'morgue', t: 'The Murders in the Rue Morgue', a: 'Edgar Allan Poe', p: ['Tales (Poe)/The Murders in the Rue Morgue'] },
+    { id: 'amontillado', t: 'The Cask of Amontillado', a: 'Edgar Allan Poe', p: ['The Works of the Late Edgar Allan Poe (1850)/Volume 1/The Cask of Amontillado'] },
+    { id: 'paw', t: 'The Monkey’s Paw', a: 'W. W. Jacobs', p: ["The Lady of the Barge/The Monkey's Paw"] },
+    { id: 'frog', t: 'The Celebrated Jumping Frog of Calaveras County', a: 'Mark Twain', p: ['The Celebrated Jumping Frog of Calaveras County, and Other Sketches/The Celebrated Jumping Frog of Calaveras County'] }
   ],
   ru: [
-    { id: 'shinel', t: 'Шинель', a: 'Николай Гоголь', p: ['Шинель (Гоголь)', 'Шинель'] },
-    { id: 'pikovaya', t: 'Пиковая дама', a: 'Александр Пушкин', p: ['Пиковая дама (Пушкин)', 'Пиковая дама'] },
-    { id: 'dama', t: 'Дама с собачкой', a: 'Антон Чехов', p: ['Дама с собачкой (Чехов)', 'Дама с собачкой'] },
-    { id: 'mumu', t: 'Муму', a: 'Иван Тургенев', p: ['Муму (Тургенев)', 'Муму'] },
-    { id: 'nos', t: 'Нос', a: 'Николай Гоголь', p: ['Нос (Гоголь)', 'Нос'] },
-    { id: 'liza', t: 'Бедная Лиза', a: 'Николай Карамзин', p: ['Бедная Лиза (Карамзин)', 'Бедная Лиза'] },
-    { id: 'palata', t: 'Палата № 6', a: 'Антон Чехов', p: ['Палата № 6 (Чехов)', 'Палата № 6'] }
+    { id: 'shinel', t: 'Шинель', a: 'Николай Гоголь', p: ['Шинель (Гоголь)'] },
+    { id: 'pikovaya', t: 'Пиковая дама', a: 'Александр Пушкин', p: ['Пиковая дама (Пушкин)'] },
+    { id: 'dama', t: 'Дама с собачкой', a: 'Антон Чехов', p: ['Дама с собачкой (Чехов)'] },
+    { id: 'mumu', t: 'Муму', a: 'Иван Тургенев', p: ['Муму (Тургенев)'] },
+    { id: 'nos', t: 'Нос', a: 'Николай Гоголь', p: ['Нос (Гоголь)'] },
+    { id: 'liza', t: 'Бедная Лиза', a: 'Николай Карамзин', p: ['Бедная Лиза (Карамзин)'] },
+    { id: 'palata', t: 'Палата № 6', a: 'Антон Чехов', p: ['Палата № 6 (Чехов)'] }
   ],
   es: [
-    { id: 'animas', t: 'El monte de las ánimas', a: 'Gustavo Adolfo Bécquer', p: ['El monte de las ánimas', 'El monte de las ánimas (Bécquer)', 'Leyendas (Bécquer)/El monte de las ánimas'] },
-    { id: 'ojos', t: 'Los ojos verdes', a: 'Gustavo Adolfo Bécquer', p: ['Los ojos verdes', 'Los ojos verdes (Bécquer)'] },
-    { id: 'almohadon', t: 'El almohadón de plumas', a: 'Horacio Quiroga', p: ['El almohadón de plumas', 'Cuentos de amor de locura y de muerte/El almohadón de plumas'] },
-    { id: 'gallina', t: 'La gallina degollada', a: 'Horacio Quiroga', p: ['La gallina degollada', 'Cuentos de amor de locura y de muerte/La gallina degollada'] },
-    { id: 'rinconete', t: 'Rinconete y Cortadillo', a: 'Miguel de Cervantes', p: ['Rinconete y Cortadillo', 'Novelas ejemplares/Rinconete y Cortadillo'] },
-    { id: 'rayo', t: 'El rayo de luna', a: 'Gustavo Adolfo Bécquer', p: ['El rayo de luna', 'El rayo de luna (Bécquer)'] }
+    { id: 'animas', t: 'El monte de las ánimas', a: 'Gustavo Adolfo Bécquer', p: ['El monte de las ánimas'] },
+    { id: 'ojos', t: 'Los ojos verdes', a: 'Gustavo Adolfo Bécquer', p: ['Los ojos verdes'] },
+    { id: 'gallina', t: 'La gallina degollada', a: 'Horacio Quiroga', p: ['La gallina degollada'] },
+    { id: 'rayo', t: 'El rayo de luna', a: 'Gustavo Adolfo Bécquer', p: ['El rayo de luna'] },
+    { id: 'rinconete', t: 'Rinconete y Cortadillo', a: 'Miguel de Cervantes', p: ['Rinconete y Cortadillo (1825)'] }
   ],
   pt: [
-    { id: 'cartomante', t: 'A Cartomante', a: 'Machado de Assis', p: ['A Cartomante', 'A Cartomante (Machado de Assis)', 'Várias Histórias/A Cartomante'] },
-    { id: 'missa', t: 'Missa do Galo', a: 'Machado de Assis', p: ['Missa do Galo', 'Missa do Galo (Machado de Assis)', 'Páginas Recolhidas/Missa do Galo'] },
-    { id: 'espelho', t: 'O Espelho', a: 'Machado de Assis', p: ['O Espelho', 'O Espelho (Machado de Assis)', 'Papéis Avulsos/O Espelho'] },
-    { id: 'alienista', t: 'O Alienista', a: 'Machado de Assis', p: ['O Alienista', 'Papéis Avulsos/O Alienista'] },
-    { id: 'enfermeiro', t: 'O Enfermeiro', a: 'Machado de Assis', p: ['O Enfermeiro', 'Várias Histórias/O Enfermeiro'] }
+    { id: 'cartomante', t: 'A Cartomante', a: 'Machado de Assis', p: ['A Cartomante'] },
+    { id: 'missa', t: 'Missa do Galo', a: 'Machado de Assis', p: ['Missa do Galo'] },
+    { id: 'espelho', t: 'O Espelho', a: 'Machado de Assis', p: ['O Espelho'] },
+    { id: 'enfermeiro', t: 'O Enfermeiro', a: 'Machado de Assis', p: ['O Enfermeiro'] },
+    { id: 'alienista', t: 'O Alienista', a: 'Machado de Assis', p: ['O Alienista'] }
   ],
   fr: [
-    { id: 'parure', t: 'La Parure', a: 'Guy de Maupassant', p: ['La Parure', 'La Parure (Maupassant)'] },
-    { id: 'mateo', t: 'Mateo Falcone', a: 'Prosper Mérimée', p: ['Mateo Falcone'] },
-    { id: 'horla', t: 'Le Horla', a: 'Guy de Maupassant', p: ['Le Horla (1887)', 'Le Horla'] },
-    { id: 'boule', t: 'Boule de suif', a: 'Guy de Maupassant', p: ['Boule de suif', 'Boule de suif (Maupassant)'] },
-    { id: 'candide', t: 'Candide', a: 'Voltaire', p: ['Candide, ou l’Optimisme', 'Candide'] },
-    { id: 'coeur', t: 'Un cœur simple', a: 'Gustave Flaubert', p: ['Un cœur simple', 'Trois Contes/Un cœur simple'] },
-    { id: 'chevre', t: 'La Chèvre de monsieur Seguin', a: 'Alphonse Daudet', p: ['La Chèvre de monsieur Seguin', 'Lettres de mon moulin/La Chèvre de M. Seguin'] }
+    { id: 'parure', t: 'La Parure', a: 'Guy de Maupassant', p: ['Contes du jour et de la nuit (éd. Flammarion, 1885)/La Parure'] },
+    { id: 'chevre', t: 'La Chèvre de monsieur Seguin', a: 'Alphonse Daudet', p: ['Lettres de mon moulin/La chèvre de monsieur Seguin'] },
+    { id: 'mateo', t: 'Mateo Falcone', a: 'Prosper Mérimée', p: ['Colomba et autres contes et nouvelles/Mateo Falcone'] },
+    { id: 'coeur', t: 'Un cœur simple', a: 'Gustave Flaubert', p: ['Trois Contes (Flaubert)/Un Cœur simple'] },
+    { id: 'boule', t: 'Boule de suif', a: 'Guy de Maupassant', p: ['Les Soirées de Médan/Boule de suif'] }
   ],
   de: [
-    { id: 'verwandlung', t: 'Die Verwandlung', a: 'Franz Kafka', p: ['Die Verwandlung'] },
-    { id: 'immensee', t: 'Immensee', a: 'Theodor Storm', p: ['Immensee'] },
+    { id: 'gesetz', t: 'Vor dem Gesetz', a: 'Franz Kafka', p: ['Vor dem Gesetz'] },
     { id: 'landarzt', t: 'Ein Landarzt', a: 'Franz Kafka', p: ['Ein Landarzt'] },
-    { id: 'schimmelreiter', t: 'Der Schimmelreiter', a: 'Theodor Storm', p: ['Der Schimmelreiter'] },
-    { id: 'kohlhaas', t: 'Michael Kohlhaas', a: 'Heinrich von Kleist', p: ['Michael Kohlhaas', 'Michael Kohlhaas (Kleist)'] },
-    { id: 'gesetz', t: 'Vor dem Gesetz', a: 'Franz Kafka', p: ['Vor dem Gesetz'] }
+    { id: 'immensee', t: 'Immensee', a: 'Theodor Storm', p: ['Immensee'] },
+    { id: 'schimmelreiter', t: 'Der Schimmelreiter', a: 'Theodor Storm', p: ['Der Schimmelreiter'] }
   ],
   hi: [
-    { id: 'idgah', t: 'ईदगाह', a: 'प्रेमचंद', p: ['ईदगाह', 'ईदगाह (प्रेमचंद)', 'मानसरोवर १/ईदगाह'] },
-    { id: 'panch', t: 'पंच परमेश्वर', a: 'प्रेमचंद', p: ['पंच परमेश्वर', 'पंच परमेश्वर (प्रेमचंद)'] },
-    { id: 'namak', t: 'नमक का दारोगा', a: 'प्रेमचंद', p: ['नमक का दारोगा', 'नमक का दारोग़ा'] },
-    { id: 'bade', t: 'बड़े भाई साहब', a: 'प्रेमचंद', p: ['बड़े भाई साहब'] },
-    { id: 'kafan', t: 'कफ़न', a: 'प्रेमचंद', p: ['कफ़न', 'कफन'] },
-    { id: 'poos', t: 'पूस की रात', a: 'प्रेमचंद', p: ['पूस की रात'] },
-    { id: 'bail', t: 'दो बैलों की कथा', a: 'प्रेमचंद', p: ['दो बैलों की कथा'] },
-    { id: 'kuan', t: 'ठाकुर का कुआँ', a: 'प्रेमचंद', p: ['ठाकुर का कुआँ', 'ठाकुर का कुआं'] }
+    { id: 'idgah', t: 'ईदगाह', a: 'प्रेमचंद', p: ['मानसरोवर १/ईदगाह'] },
+    { id: 'kuan', t: 'ठाकुर का कुआँ', a: 'प्रेमचंद', p: ['मानसरोवर १/ठाकुर का कुआँ'] },
+    { id: 'bade', t: 'बड़े भाई साहब', a: 'प्रेमचंद', p: ['प्रेमचंद की सर्वश्रेष्ठ कहानियां/बड़े भाई साहब'] },
+    { id: 'bail', t: 'दो बैलों की कथा', a: 'प्रेमचंद', p: ['प्रेमचंद की सर्वश्रेष्ठ कहानियां/दो बैलों की कथा'] }
   ],
   zh: [
-    { id: 'kuangren', t: '狂人日记', a: '鲁迅', p: ['狂人日記', '狂人日记'] },
     { id: 'kongyiji', t: '孔乙己', a: '鲁迅', p: ['孔乙己'] },
-    { id: 'guxiang', t: '故乡', a: '鲁迅', p: ['故鄉 (魯迅)', '故鄉'] },
-    { id: 'yao', t: '药', a: '鲁迅', p: ['藥 (魯迅)', '藥'] },
+    { id: 'kuangren', t: '狂人日记', a: '鲁迅', p: ['狂人日記'] },
+    { id: 'guxiang', t: '故乡', a: '鲁迅', p: ['故鄉'] },
+    { id: 'yao', t: '药', a: '鲁迅', p: ['藥'] },
     { id: 'ahq', t: '阿Q正传', a: '鲁迅', p: ['阿Q正傳'] }
   ],
   ar: [
     { id: 'ajniha', t: 'الأجنحة المتكسرة', a: 'جبران خليل جبران', p: ['الأجنحة المتكسرة'] },
-    { id: 'abarat', t: 'العبرات', a: 'مصطفى لطفي المنفلوطي', p: ['العبرات'] },
-    { id: 'arwah', t: 'الأرواح المتمردة', a: 'جبران خليل جبران', p: ['الأرواح المتمردة', 'الأرواح المتمردة (جبران)'] },
-    { id: 'dama', t: 'دمعة وابتسامة', a: 'جبران خليل جبران', p: ['دمعة وابتسامة'] },
-    { id: 'arais', t: 'عرائس المروج', a: 'جبران خليل جبران', p: ['عرائس المروج'] },
     { id: 'nazarat', t: 'النظرات', a: 'مصطفى لطفي المنفلوطي', p: ['النظرات'] }
   ]
 };
@@ -344,10 +331,10 @@ async function bookText(lg, b, report) {
     return { v: null, ttl: 0 };
   };
   if (report) { const r = await build(); return r.v; }
-  return cached('bk2:' + lg + ':' + b.id, build);
+  return cached('bk3:' + lg + ':' + b.id, build);
 }
 async function shelf(lg) {
-  return cached('bks2:' + lg, async () => {
+  return cached('bks3:' + lg, async () => {
     const list = BOOKS[lg] || [];
     const got = await Promise.all(list.map((b) => bookText(lg, b).catch(() => null)));
     const books = got.filter(Boolean).map((b) => ({ id: b.id, t: b.t, a: b.a, parts: b.parts.length, mins: b.mins }));
@@ -448,8 +435,8 @@ module.exports = async (req, res) => {
     if (a === 'books') {
       if (u.searchParams.get('check')) { // which pages of the shelf can be read (for the owner, to fix titles)
         if (!(await allowed(req, 'check', 6, 200))) return send(429, { error: 'limit' });
-        const report = []; for (const b of BOOKS[lg] || []) { mem.delete('bk2:' + lg + ':' + b.id); await bookText(lg, b, report).catch((e) => report.push({ id: b.id, why: String(e && e.message) })); }
-        mem.delete('bks2:' + lg);
+        const report = []; for (const b of BOOKS[lg] || []) { mem.delete('bk3:' + lg + ':' + b.id); await bookText(lg, b, report).catch((e) => report.push({ id: b.id, why: String(e && e.message) })); }
+        mem.delete('bks3:' + lg);
         return send(200, { lang: lg, report });
       }
       let books = await shelf(lg), from = lg;
